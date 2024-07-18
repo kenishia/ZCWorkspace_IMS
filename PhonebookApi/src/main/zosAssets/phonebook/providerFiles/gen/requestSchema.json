@@ -1,0 +1,89 @@
+{
+  "$schema" : "http://json-schema.org/draft-04/schema#",
+  "type" : "object",
+  "properties" : {
+    "message" : {
+      "type" : "object",
+      "properties" : {
+        "INPUT-MSG" : {
+          "type" : "object",
+          "properties" : {
+            "IN-LL" : {
+              "minimum" : -32768,
+              "maximum" : 32767,
+              "type" : "integer",
+              "x-ibm-zcon-metadata" : {
+                "type" : "02 IN-LL PIC S9(4) USAGE COMP-5.",
+                "name" : "IN-LL"
+              }
+            },
+            "IN-ZZ" : {
+              "minimum" : -32768,
+              "maximum" : 32767,
+              "type" : "integer",
+              "x-ibm-zcon-metadata" : {
+                "type" : "02 IN-ZZ PIC S9(4) USAGE COMP-5.",
+                "name" : "IN-ZZ"
+              }
+            },
+            "IN-TRANCDE" : {
+              "maxLength" : 10,
+              "type" : "string",
+              "x-ibm-zcon-metadata" : {
+                "type" : "02 IN-TRANCDE PIC X(10) USAGE DISPLAY.",
+                "name" : "IN-TRANCDE"
+              }
+            },
+            "IN-COMMAND" : {
+              "maxLength" : 8,
+              "type" : "string",
+              "x-ibm-zcon-metadata" : {
+                "type" : "02 IN-COMMAND PIC X(8) USAGE DISPLAY.",
+                "name" : "IN-COMMAND"
+              }
+            },
+            "IN-RECORD" : {
+              "type" : "object",
+              "properties" : {
+                "IN-LAST-NAME" : {
+                  "maxLength" : 10,
+                  "type" : "string",
+                  "x-ibm-zcon-metadata" : {
+                    "type" : "05 IN-LAST-NAME PIC X(10) USAGE DISPLAY.",
+                    "name" : "IN-LAST-NAME"
+                  }
+                },
+                "IN-FIRST-NAME" : {
+                  "maxLength" : 10,
+                  "type" : "string",
+                  "x-ibm-zcon-metadata" : {
+                    "type" : "05 IN-FIRST-NAME PIC X(10) USAGE DISPLAY.",
+                    "name" : "IN-FIRST-NAME"
+                  }
+                },
+                "IN-EXTENSION" : {
+                  "maxLength" : 10,
+                  "type" : "string",
+                  "x-ibm-zcon-metadata" : {
+                    "type" : "05 IN-EXTENSION PIC X(10) USAGE DISPLAY.",
+                    "name" : "IN-EXTENSION"
+                  }
+                },
+                "IN-ZIP-CODE" : {
+                  "maxLength" : 7,
+                  "type" : "string",
+                  "x-ibm-zcon-metadata" : {
+                    "type" : "05 IN-ZIP-CODE PIC X(7) USAGE DISPLAY.",
+                    "name" : "IN-ZIP-CODE"
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  },
+  "required" : [ "message" ],
+  "description" : "General wrapper for IMS Transaction message z/OS Asset requests"
+}

@@ -1,0 +1,8 @@
+
+ Index  Count  Time of first Occurrence    Time of last Occurrence     Exception SourceId ProbeId
+------+------+---------------------------+---------------------------+---------------------------
+     0      1   7/17/24, 20:39:56:106 UTC   7/17/24, 20:39:56:106 UTC javax.resource.spi.CommException com.ibm.zosconnect.zosasset.ims.internal.ImsTranZosAsset 221
+                                                                            - /logs/ffdc/ffdc_24.07.17_20.39.56.0.log
+     1      1   7/17/24, 20:39:56:476 UTC   7/17/24, 20:39:56:476 UTC javax.resource.spi.IllegalStateException com.ibm.zosconnect.zosasset.ims.internal.ImsTranZosAsset 228
+                                                                            - /logs/ffdc/ffdc_24.07.17_20.39.56.1.log
+------+------+---------------------------+---------------------------+---------------------------

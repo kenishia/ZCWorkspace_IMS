@@ -1,0 +1,24 @@
+version: "3.2"
+services:
+    zosConnect:
+        #edit line below with correct image name
+        image: icr.io/zosconnect/ibm-zcon-designer:3.0.82
+        user: root
+        #edit line below with correct environment variables for the subsystem
+        #will need to update credentials.  Last changed Jul2024
+        environment:
+            #ims connection info.  delete if not using.  edit if you are
+            - IMS_USER=IMPOT01
+            - IMS_PASSWORD={aes}AOtdQqBijtazlf9ARTrVYvy8NCdi2BeLPRWRSMOoOBYy
+            #- IMS_HOST=esysmvs1.ztec.dmz
+            - IMS_HOST=esysmvs1.wsclab.washington.ibm.com
+            - IMS_PORT=7000
+            - HTTP_PORT=9080
+        ports:
+            - "39443:9443"
+            - "39080:9080"
+        #edit first volume below to match name of API
+        volumes:
+            - ./PhonebookApi:/workspace/project
+            - ./logs/:/logs/
+            - ./certs:/config/resources/security/:ro

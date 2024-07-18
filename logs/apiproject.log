@@ -1,0 +1,18 @@
+[7/18/24 15:56:23:940 UTC] - BAQW0056I: Undeploying API project.
+[7/18/24 15:56:23:941 UTC] - BAQW0063I: Building API project.
+
+> Task :clean
+BAQG0001I: Deleting generated Java in /workspace/project/src/gen
+BAQG0002I: Deleting generated config in /workspace/project/src/main/webapp
+
+> Task :zosConnectPreBuildTask
+
+> Task :openApiGenerate
+################################################################################
+# Thanks for using OpenAPI Generator.                                          #
+# Please consider donation to help us maintain this project 🙏                 #
+# https://opencollective.com/openapi_generator/donate                          #
+################################################################################
+Successfully generated code to /workspace/project
+
+> Task :zosConnectApiFilter

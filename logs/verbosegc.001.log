@@ -1,0 +1,2780 @@
+<?xml version="1.0" ?>
+
+<verbosegc xmlns="http://www.ibm.com/j9/verbosegc" version="254af5a04_CMPRSS">
+
+<initialized id="1" timestamp="2024-07-17T19:33:24.396">
+  <attribute name="gcPolicy" value="-Xgcpolicy:gencon" />
+  <attribute name="maxHeapSize" value="0x20000000" />
+  <attribute name="initialHeapSize" value="0x10000000" />
+  <attribute name="compressedRefs" value="true" />
+  <attribute name="compressedRefsDisplacement" value="0x0" />
+  <attribute name="compressedRefsShift" value="0x3" />
+  <attribute name="pageSize" value="0x1000" />
+  <attribute name="pageType" value="not used" />
+  <attribute name="requestedPageSize" value="0x1000" />
+  <attribute name="requestedPageType" value="not used" />
+  <attribute name="gcthreads" value="12" />
+  <attribute name="gcthreads Concurrent Mark" value="1" />
+  <attribute name="packetListSplit" value="2" />
+  <attribute name="cacheListSplit" value="2" />
+  <attribute name="splitFreeListSplitAmount" value="2" />
+  <attribute name="numaNodes" value="0" />
+  <system>
+    <attribute name="physicalMemory" value="16621170688" />
+    <attribute name="addressablePhysicalMemory" value="16621170688" />
+    <attribute name="container memory limit set" value="false" />
+    <attribute name="numCPUs" value="12" />
+    <attribute name="numCPUs active" value="12" />
+    <attribute name="architecture" value="amd64" />
+    <attribute name="os" value="Linux" />
+    <attribute name="osVersion" value="5.15.153.1-microsoft-standard-WSL2" />
+  </system>
+  <vmargs>
+    <vmarg name="-Xoptionsfile=/opt/java/openjdk/lib/options.default" />
+    <vmarg name="-Xlockword:mode=default,noLockword=java/lang/String,noLockword=java/util/MapEntry,noLockword=java/util/HashMap$Entry,noLockword..." />
+    <vmarg name="-XX:+EnsureHashed:java/lang/Class,java/lang/Thread" />
+    <vmarg name="-Xjcl:jclse29" />
+    <vmarg name="-Dcom.ibm.oti.vm.bootstrap.library.path=/opt/java/openjdk/lib/default:/opt/java/openjdk/lib" />
+    <vmarg name="-Dsun.boot.library.path=/opt/java/openjdk/lib/default:/opt/java/openjdk/lib" />
+    <vmarg name="-Djava.library.path=/opt/java/openjdk/lib/default:/opt/java/openjdk/lib:/usr/lib64:/usr/lib" />
+    <vmarg name="-Djava.home=/opt/java/openjdk" />
+    <vmarg name="-Duser.dir=/gradle/daemon/8.8" />
+    <vmarg name="-XX:+IgnoreUnrecognizedVMOptions" />
+    <vmarg name="-XX:+PortableSharedCache" />
+    <vmarg name="-XX:+IdleTuningGcOnIdle" />
+    <vmarg name="-Xshareclasses:name=openj9_system_scc,cacheDir=/opt/java/.scc,readonly,nonFatal" />
+    <vmarg name="-Xverbosegclog:/logs/verbosegc.%seq.log,10,1024" />
+    <vmarg name="-XX:+IgnoreUnrecognizedVMOptions" />
+    <vmarg name="-XX:+IdleTuningGcOnIdle" />
+    <vmarg name="-Xshareclasses:name=openj9_system_scc,cacheDir=/opt/java/.scc,readonly,nonFatal" />
+    <vmarg name="-Dosgi.checkConfiguration=false" />
+    <vmarg name="-XX:+IgnoreUnrecognizedVMOptions" />
+    <vmarg name="-XX:+IdleTuningGcOnIdle" />
+    <vmarg name="-Xshareclasses:name=openj9_system_scc,cacheDir=/opt/java/.scc,readonly,nonFatal" />
+    <vmarg name="-Dosgi.checkConfiguration=false" />
+    <vmarg name="--add-opens=java.base/java.util=ALL-UNNAMED" />
+    <vmarg name="--add-opens=java.base/java.lang=ALL-UNNAMED" />
+    <vmarg name="--add-opens=java.base/java.lang.invoke=ALL-UNNAMED" />
+    <vmarg name="--add-opens=java.prefs/java.util.prefs=ALL-UNNAMED" />
+    <vmarg name="--add-opens=java.base/java.nio.charset=ALL-UNNAMED" />
+    <vmarg name="--add-opens=java.base/java.net=ALL-UNNAMED" />
+    <vmarg name="--add-opens=java.base/java.util.concurrent.atomic=ALL-UNNAMED" />
+    <vmarg name="-XX:MaxMetaspaceSize=384m" />
+    <vmarg name="-XX:+HeapDumpOnOutOfMemoryError" />
+    <vmarg name="-Xms256m" />
+    <vmarg name="-Xmx512m" />
+    <vmarg name="-Dfile.encoding=UTF-8" />
+    <vmarg name="-Duser.country=US" />
+    <vmarg name="-Duser.language=en" />
+    <vmarg name="-Duser.variant" />
+    <vmarg name="-Djava.class.path=/opt/gradle/lib/gradle-launcher-8.8.jar" />
+    <vmarg name="-javaagent:/opt/gradle/lib/agents/gradle-instrumentation-agent-8.8.jar" />
+    <vmarg name="-Dsun.java.command=org.gradle.launcher.daemon.bootstrap.GradleDaemon 8.8" />
+    <vmarg name="-Dsun.java.launcher=SUN_STANDARD" />
+  </vmargs>
+</initialized>
+
+<exclusive-start id="2" timestamp="2024-07-17T19:33:24.841" intervalms="445.197">
+  <response-info timems="0.016" idlems="0.016" threads="0" lastid="000000000001E500" lastname="main" />
+</exclusive-start>
+<af-start id="3" threadId="000000000001EF38" totalBytesRequested="64" timestamp="2024-07-17T19:33:24.841" intervalms="445.638" type="nursery" />
+<cycle-start id="4" type="scavenge" contextid="0" timestamp="2024-07-17T19:33:24.842" intervalms="446.037" />
+<gc-start id="5" type="scavenge" contextid="4" timestamp="2024-07-17T19:33:24.842">
+  <mem-info id="6" free="200844176" total="268435456" percent="74">
+    <mem type="nursery" free="0" total="67108864" percent="0">
+      <mem type="allocate" free="0" total="33554432" percent="0" />
+      <mem type="survivor" free="0" total="33554432" percent="0" />
+    </mem>
+    <mem type="tenure" free="200844176" total="201326592" percent="99">
+      <mem type="soa" free="190777232" total="191259648" percent="99" />
+      <mem type="loa" free="10066944" total="10066944" percent="100" />
+    </mem>
+    <remembered-set count="6305" />
+  </mem-info>
+</gc-start>
+<allocation-stats totalBytes="34019432" discardedBytes="17416" >
+  <allocated-bytes non-tlh="6963920" tlh="27055512" />
+  <largest-consumer threadName="main" threadId="000000000001E500" bytes="33896560" />
+</allocation-stats>
+<gc-op id="7" type="scavenge" timems="7.353" contextid="4" timestamp="2024-07-17T19:33:24.850">
+  <scavenger-info tenureage="1" tenuremask="fffe" tiltratio="50" />
+  <memory-copied type="nursery" objects="41386" bytes="9563816" bytesdiscarded="452056" />
+  <finalization candidates="672" enqueued="425" />
+  <ownableSynchronizers candidates="7" cleared="0" />
+  <references type="soft" candidates="367" cleared="0" enqueued="0" dynamicThreshold="32" maxThreshold="32" />
+  <references type="weak" candidates="2540" cleared="2236" enqueued="2234" />
+  <references type="phantom" candidates="540" cleared="66" enqueued="66" />
+  <object-monitors candidates="1" cleared="0"  />
+</gc-op>
+<gc-end id="8" type="scavenge" contextid="4" durationms="8.395" usertimems="16.756" systemtimems="12.320" stalltimems="42.181" timestamp="2024-07-17T19:33:24.850" activeThreads="12">
+  <mem-info id="9" free="224378672" total="268435456" percent="83">
+    <mem type="nursery" free="23534496" total="67108864" percent="35">
+      <mem type="allocate" free="23534496" total="33554432" percent="70" />
+      <mem type="survivor" free="0" total="33554432" percent="0" />
+    </mem>
+    <mem type="tenure" free="200844176" total="201326592" percent="99">
+      <mem type="soa" free="190777232" total="191259648" percent="99" />
+      <mem type="loa" free="10066944" total="10066944" percent="100" />
+    </mem>
+    <pending-finalizers system="425" default="0" reference="2300" classloader="0" />
+    <remembered-set count="6305" />
+  </mem-info>
+</gc-end>
+<cycle-end id="10" type="scavenge" contextid="4" timestamp="2024-07-17T19:33:24.851" />
+<allocation-satisfied id="11" threadId="000000000001E500" bytesRequested="64" />
+<af-end id="12" timestamp="2024-07-17T19:33:24.851" threadId="000000000001EF38" success="true" from="nursery"/>
+<exclusive-end id="13" timestamp="2024-07-17T19:33:24.851" durationms="10.604" />
+
+<exclusive-start id="14" timestamp="2024-07-17T19:33:24.951" intervalms="110.034">
+  <response-info timems="0.030" idlems="0.030" threads="0" lastid="000000000001E500" lastname="main" />
+</exclusive-start>
+<af-start id="15" threadId="000000000001EF38" totalBytesRequested="16392" timestamp="2024-07-17T19:33:24.951" intervalms="110.084" type="nursery" />
+<cycle-start id="16" type="scavenge" contextid="0" timestamp="2024-07-17T19:33:24.952" intervalms="110.071" />
+<gc-start id="17" type="scavenge" contextid="16" timestamp="2024-07-17T19:33:24.952">
+  <mem-info id="18" free="200827816" total="268435456" percent="74">
+    <mem type="nursery" free="0" total="67108864" percent="0">
+      <mem type="allocate" free="0" total="33554432" percent="0" />
+      <mem type="survivor" free="0" total="33554432" percent="0" />
+    </mem>
+    <mem type="tenure" free="200827816" total="201326592" percent="99">
+      <mem type="soa" free="190760872" total="191259648" percent="99" />
+      <mem type="loa" free="10066944" total="10066944" percent="100" />
+    </mem>
+    <remembered-set count="6479" />
+  </mem-info>
+</gc-start>
+<allocation-stats totalBytes="23458752" discardedBytes="92104" >
+  <allocated-bytes non-tlh="3023448" tlh="20435304" />
+  <largest-consumer threadName="main" threadId="000000000001E500" bytes="23434856" />
+</allocation-stats>
+<gc-op id="19" type="scavenge" timems="5.713" contextid="16" timestamp="2024-07-17T19:33:24.959">
+  <scavenger-info tenureage="1" tenuremask="7ffe" tiltratio="50" />
+  <memory-copied type="nursery" objects="24121" bytes="4292312" bytesdiscarded="402704" />
+  <memory-copied type="tenure" objects="34704" bytes="9331536" bytesdiscarded="4336" />
+  <finalization candidates="268" enqueued="12" />
+  <ownableSynchronizers candidates="8" cleared="0" />
+  <references type="soft" candidates="28" cleared="0" enqueued="0" dynamicThreshold="32" maxThreshold="32" />
+  <references type="weak" candidates="225" cleared="217" enqueued="215" />
+  <references type="phantom" candidates="517" cleared="10" enqueued="10" />
+  <object-monitors candidates="1" cleared="0"  />
+</gc-op>
+<gc-end id="20" type="scavenge" contextid="16" durationms="6.835" usertimems="22.519" systemtimems="0.218" stalltimems="35.724" timestamp="2024-07-17T19:33:24.959" activeThreads="11">
+  <mem-info id="21" free="220010792" total="268435456" percent="81">
+    <mem type="nursery" free="28858184" total="67108864" percent="43">
+      <mem type="allocate" free="28858184" total="33554432" percent="86" />
+      <mem type="survivor" free="0" total="33554432" percent="0" />
+    </mem>
+    <mem type="tenure" free="191152608" total="201326592" percent="94">
+      <mem type="soa" free="181085664" total="191259648" percent="94" />
+      <mem type="loa" free="10066944" total="10066944" percent="100" />
+    </mem>
+    <pending-finalizers system="12" default="0" reference="225" classloader="0" />
+    <remembered-set count="6661" />
+  </mem-info>
+</gc-end>
+<cycle-end id="22" type="scavenge" contextid="16" timestamp="2024-07-17T19:33:24.959" />
+<allocation-satisfied id="23" threadId="000000000001E500" bytesRequested="16392" />
+<af-end id="24" timestamp="2024-07-17T19:33:24.960" threadId="000000000001EF38" success="true" from="nursery"/>
+<exclusive-end id="25" timestamp="2024-07-17T19:33:24.960" durationms="9.103" />
+
+<exclusive-start id="26" timestamp="2024-07-17T19:33:25.414" intervalms="463.122">
+  <response-info timems="0.030" idlems="0.030" threads="0" lastid="00000000005FC700" lastname="Daemon worker" />
+</exclusive-start>
+<af-start id="27" threadId="00000000005FD138" totalBytesRequested="3032" timestamp="2024-07-17T19:33:25.414" intervalms="462.988" type="nursery" />
+<cycle-start id="28" type="scavenge" contextid="0" timestamp="2024-07-17T19:33:25.415" intervalms="463.050" />
+<gc-start id="29" type="scavenge" contextid="28" timestamp="2024-07-17T19:33:25.415">
+  <mem-info id="30" free="190494936" total="268435456" percent="70">
+    <mem type="nursery" free="0" total="67108864" percent="0">
+      <mem type="allocate" free="0" total="33554432" percent="0" />
+      <mem type="survivor" free="0" total="33554432" percent="0" />
+    </mem>
+    <mem type="tenure" free="190494936" total="201326592" percent="94">
+      <mem type="soa" free="180427992" total="191259648" percent="94" />
+      <mem type="loa" free="10066944" total="10066944" percent="100" />
+    </mem>
+    <remembered-set count="16437" />
+  </mem-info>
+</gc-start>
+<allocation-stats totalBytes="29469080" discardedBytes="46776" >
+  <allocated-bytes non-tlh="937528" tlh="28531552" />
+  <largest-consumer threadName="main" threadId="000000000001E500" bytes="15638904" />
+</allocation-stats>
+<gc-op id="31" type="scavenge" timems="4.792" contextid="28" timestamp="2024-07-17T19:33:25.421">
+  <scavenger-info tenureage="1" tenuremask="7ffe" tiltratio="50" />
+  <memory-copied type="nursery" objects="62169" bytes="2215696" bytesdiscarded="479984" />
+  <memory-copied type="tenure" objects="23404" bytes="4257232" bytesdiscarded="4344" />
+  <finalization candidates="1117" enqueued="698" />
+  <ownableSynchronizers candidates="73" cleared="6" />
+  <references type="soft" candidates="3739" cleared="0" enqueued="0" dynamicThreshold="32" maxThreshold="32" />
+  <references type="weak" candidates="4746" cleared="4306" enqueued="4259" />
+  <references type="phantom" candidates="128" cleared="101" enqueued="101" />
+  <object-monitors candidates="2" cleared="0"  />
+</gc-op>
+<gc-end id="32" type="scavenge" contextid="28" durationms="5.867" usertimems="21.687" systemtimems="2.243" stalltimems="18.324" timestamp="2024-07-17T19:33:25.421" activeThreads="9">
+  <mem-info id="33" free="217071224" total="268435456" percent="80">
+    <mem type="nursery" free="30855144" total="67108864" percent="45">
+      <mem type="allocate" free="30855144" total="33554432" percent="91" />
+      <mem type="survivor" free="0" total="33554432" percent="0" />
+    </mem>
+    <mem type="tenure" free="186216080" total="201326592" percent="92">
+      <mem type="soa" free="176149136" total="191259648" percent="92" />
+      <mem type="loa" free="10066944" total="10066944" percent="100" />
+    </mem>
+    <pending-finalizers system="698" default="0" reference="4360" classloader="0" />
+    <remembered-set count="9864" />
+  </mem-info>
+</gc-end>
+<cycle-end id="34" type="scavenge" contextid="28" timestamp="2024-07-17T19:33:25.421" />
+<allocation-satisfied id="35" threadId="00000000005FC700" bytesRequested="3032" />
+<af-end id="36" timestamp="2024-07-17T19:33:25.422" threadId="00000000005FD138" success="true" from="nursery"/>
+<exclusive-end id="37" timestamp="2024-07-17T19:33:25.422" durationms="8.216" />
+
+<exclusive-start id="38" timestamp="2024-07-17T19:33:25.907" intervalms="492.966">
+  <response-info timems="0.036" idlems="0.036" threads="0" lastid="00000000005FC700" lastname="Daemon worker" />
+</exclusive-start>
+<af-start id="39" threadId="00000000005FD138" totalBytesRequested="2304" timestamp="2024-07-17T19:33:25.907" intervalms="492.958" type="nursery" />
+<cycle-start id="40" type="scavenge" contextid="0" timestamp="2024-07-17T19:33:25.908" intervalms="492.833" />
+<gc-start id="41" type="scavenge" contextid="40" timestamp="2024-07-17T19:33:25.908">
+  <mem-info id="42" free="185764864" total="268435456" percent="69">
+    <mem type="nursery" free="0" total="67108864" percent="0">
+      <mem type="allocate" free="0" total="33554432" percent="0" />
+      <mem type="survivor" free="0" total="33554432" percent="0" />
+    </mem>
+    <mem type="tenure" free="185764864" total="201326592" percent="92">
+      <mem type="soa" free="175697920" total="191259648" percent="91" />
+      <mem type="loa" free="10066944" total="10066944" percent="100" />
+    </mem>
+    <remembered-set count="15423" />
+  </mem-info>
+</gc-start>
+<allocation-stats totalBytes="31269752" discardedBytes="36608" >
+  <allocated-bytes non-tlh="454248" tlh="30815504" />
+  <largest-consumer threadName="Daemon worker" threadId="00000000005FC700" bytes="31162688" />
+</allocation-stats>
+<gc-op id="43" type="scavenge" timems="5.055" contextid="40" timestamp="2024-07-17T19:33:25.914">
+  <scavenger-info tenureage="2" tenuremask="7ffc" tiltratio="50" />
+  <memory-copied type="nursery" objects="95992" bytes="3359352" bytesdiscarded="316888" />
+  <finalization candidates="786" enqueued="321" />
+  <ownableSynchronizers candidates="248" cleared="5" />
+  <references type="soft" candidates="4534" cleared="0" enqueued="0" dynamicThreshold="32" maxThreshold="32" />
+  <references type="weak" candidates="5638" cleared="4914" enqueued="4914" />
+  <references type="phantom" candidates="94" cleared="62" enqueued="62" />
+  <object-monitors candidates="2" cleared="0"  />
+</gc-op>
+<gc-end id="44" type="scavenge" contextid="40" durationms="6.298" usertimems="2.453" systemtimems="21.041" stalltimems="16.712" timestamp="2024-07-17T19:33:25.914" activeThreads="8">
+  <mem-info id="45" free="215638952" total="268435456" percent="80">
+    <mem type="nursery" free="29874088" total="67108864" percent="44">
+      <mem type="allocate" free="29874088" total="33554432" percent="89" />
+      <mem type="survivor" free="0" total="33554432" percent="0" />
+    </mem>
+    <mem type="tenure" free="185764864" total="201326592" percent="92">
+      <mem type="soa" free="175697920" total="191259648" percent="91" />
+      <mem type="loa" free="10066944" total="10066944" percent="100" />
+    </mem>
+    <pending-finalizers system="321" default="0" reference="4976" classloader="0" />
+    <remembered-set count="14772" />
+  </mem-info>
+</gc-end>
+<cycle-end id="46" type="scavenge" contextid="40" timestamp="2024-07-17T19:33:25.915" />
+<allocation-satisfied id="47" threadId="00000000005FC700" bytesRequested="2304" />
+<af-end id="48" timestamp="2024-07-17T19:33:25.915" threadId="00000000005FD138" success="true" from="nursery"/>
+<exclusive-end id="49" timestamp="2024-07-17T19:33:25.916" durationms="8.866" />
+
+<exclusive-start id="50" timestamp="2024-07-17T19:33:26.393" intervalms="486.269">
+  <response-info timems="0.032" idlems="0.032" threads="0" lastid="00000000005FC700" lastname="Daemon worker" />
+</exclusive-start>
+<af-start id="51" threadId="00000000005FD138" totalBytesRequested="3280" timestamp="2024-07-17T19:33:26.394" intervalms="486.314" type="nursery" />
+<cycle-start id="52" type="scavenge" contextid="0" timestamp="2024-07-17T19:33:26.394" intervalms="486.351" />
+<gc-start id="53" type="scavenge" contextid="52" timestamp="2024-07-17T19:33:26.394">
+  <mem-info id="54" free="185415152" total="268435456" percent="69">
+    <mem type="nursery" free="0" total="67108864" percent="0">
+      <mem type="allocate" free="0" total="33554432" percent="0" />
+      <mem type="survivor" free="0" total="33554432" percent="0" />
+    </mem>
+    <mem type="tenure" free="185415152" total="201326592" percent="92">
+      <mem type="soa" free="175348208" total="191259648" percent="91" />
+      <mem type="loa" free="10066944" total="10066944" percent="100" />
+    </mem>
+    <remembered-set count="18803" />
+  </mem-info>
+</gc-start>
+<allocation-stats totalBytes="30133064" discardedBytes="90736" >
+  <allocated-bytes non-tlh="537120" tlh="29595944" />
+  <largest-consumer threadName="Daemon worker" threadId="00000000005FC700" bytes="30104312" />
+</allocation-stats>
+<gc-op id="55" type="scavenge" timems="5.361" contextid="52" timestamp="2024-07-17T19:33:26.400">
+  <scavenger-info tenureage="2" tenuremask="7ffc" tiltratio="50" />
+  <memory-copied type="nursery" objects="70633" bytes="2389936" bytesdiscarded="403568" />
+  <memory-copied type="tenure" objects="54007" bytes="1932928" bytesdiscarded="712" />
+  <finalization candidates="766" enqueued="296" />
+  <ownableSynchronizers candidates="444" cleared="2" />
+  <references type="soft" candidates="1701" cleared="0" enqueued="0" dynamicThreshold="32" maxThreshold="32" />
+  <references type="weak" candidates="4606" cleared="3964" enqueued="3961" />
+  <references type="phantom" candidates="120" cleared="108" enqueued="108" />
+  <object-monitors candidates="2" cleared="0"  />
+</gc-op>
+<gc-end id="56" type="scavenge" contextid="52" durationms="6.419" usertimems="25.341" systemtimems="2.372" stalltimems="14.520" timestamp="2024-07-17T19:33:26.401" activeThreads="8">
+  <mem-info id="57" free="215692912" total="268435456" percent="80">
+    <mem type="nursery" free="32199288" total="67108864" percent="47">
+      <mem type="allocate" free="32199288" total="34996224" percent="92" />
+      <mem type="survivor" free="0" total="32112640" percent="0" />
+    </mem>
+    <mem type="tenure" free="183493624" total="201326592" percent="91">
+      <mem type="soa" free="173426680" total="191259648" percent="90" />
+      <mem type="loa" free="10066944" total="10066944" percent="100" />
+    </mem>
+    <pending-finalizers system="296" default="0" reference="4069" classloader="0" />
+    <remembered-set count="9806" />
+  </mem-info>
+</gc-end>
+<cycle-end id="58" type="scavenge" contextid="52" timestamp="2024-07-17T19:33:26.401" />
+<allocation-satisfied id="59" threadId="00000000005FC700" bytesRequested="3280" />
+<af-end id="60" timestamp="2024-07-17T19:33:26.402" threadId="00000000005FD138" success="true" from="nursery"/>
+<exclusive-end id="61" timestamp="2024-07-17T19:33:26.402" durationms="8.601" />
+
+<exclusive-start id="62" timestamp="2024-07-17T19:33:26.934" intervalms="540.380">
+  <response-info timems="0.042" idlems="0.042" threads="0" lastid="00000000005FC700" lastname="Daemon worker" />
+</exclusive-start>
+<af-start id="63" threadId="00000000005FD138" totalBytesRequested="32" timestamp="2024-07-17T19:33:26.934" intervalms="540.436" type="nursery" />
+<cycle-start id="64" type="scavenge" contextid="0" timestamp="2024-07-17T19:33:26.934" intervalms="540.503" />
+<gc-start id="65" type="scavenge" contextid="64" timestamp="2024-07-17T19:33:26.935">
+  <mem-info id="66" free="182942672" total="268435456" percent="68">
+    <mem type="nursery" free="0" total="67108864" percent="0">
+      <mem type="allocate" free="0" total="34996224" percent="0" />
+      <mem type="survivor" free="0" total="32112640" percent="0" />
+    </mem>
+    <mem type="tenure" free="182942672" total="201326592" percent="90">
+      <mem type="soa" free="172875728" total="191259648" percent="90" />
+      <mem type="loa" free="10066944" total="10066944" percent="100" />
+    </mem>
+    <remembered-set count="17309" />
+  </mem-info>
+</gc-start>
+<allocation-stats totalBytes="32720040" discardedBytes="30200" >
+  <allocated-bytes non-tlh="1791584" tlh="30928456" />
+  <largest-consumer threadName="Daemon worker" threadId="00000000005FC700" bytes="32699560" />
+</allocation-stats>
+<gc-op id="67" type="scavenge" timems="6.470" contextid="64" timestamp="2024-07-17T19:33:26.942">
+  <scavenger-info tenureage="3" tenuremask="7ff8" tiltratio="52" />
+  <memory-copied type="nursery" objects="124121" bytes="4343696" bytesdiscarded="100120" />
+  <finalization candidates="383" enqueued="323" />
+  <ownableSynchronizers candidates="2804" cleared="8" />
+  <references type="soft" candidates="6246" cleared="0" enqueued="0" dynamicThreshold="32" maxThreshold="32" />
+  <references type="weak" candidates="5103" cleared="3257" enqueued="3257" />
+  <references type="phantom" candidates="144" cleared="126" enqueued="126" />
+  <object-monitors candidates="2" cleared="0"  />
+</gc-op>
+<gc-end id="68" type="scavenge" contextid="64" durationms="7.760" usertimems="28.199" systemtimems="2.214" stalltimems="21.116" timestamp="2024-07-17T19:33:26.943" activeThreads="8">
+  <mem-info id="69" free="218469944" total="268435456" percent="81">
+    <mem type="nursery" free="35527272" total="67108864" percent="52">
+      <mem type="allocate" free="35527272" total="39976960" percent="88" />
+      <mem type="survivor" free="0" total="27131904" percent="0" />
+    </mem>
+    <mem type="tenure" free="182942672" total="201326592" percent="90">
+      <mem type="soa" free="172875728" total="191259648" percent="90" />
+      <mem type="loa" free="10066944" total="10066944" percent="100" />
+    </mem>
+    <pending-finalizers system="323" default="0" reference="3383" classloader="0" />
+    <remembered-set count="13583" />
+  </mem-info>
+</gc-end>
+<cycle-end id="70" type="scavenge" contextid="64" timestamp="2024-07-17T19:33:26.943" />
+<allocation-satisfied id="71" threadId="00000000005FC700" bytesRequested="32" />
+<af-end id="72" timestamp="2024-07-17T19:33:26.944" threadId="00000000005FD138" success="true" from="nursery"/>
+<exclusive-end id="73" timestamp="2024-07-17T19:33:26.944" durationms="10.788" />
+
+<exclusive-start id="74" timestamp="2024-07-17T19:33:27.409" intervalms="474.973">
+  <response-info timems="0.037" idlems="0.037" threads="0" lastid="00000000005FC700" lastname="Daemon worker" />
+</exclusive-start>
+<af-start id="75" threadId="00000000005FD138" totalBytesRequested="1848" timestamp="2024-07-17T19:33:27.409" intervalms="474.901" type="nursery" />
+<cycle-start id="76" type="scavenge" contextid="0" timestamp="2024-07-17T19:33:27.409" intervalms="474.818" />
+<gc-start id="77" type="scavenge" contextid="76" timestamp="2024-07-17T19:33:27.410">
+  <mem-info id="78" free="182709528" total="268435456" percent="68">
+    <mem type="nursery" free="0" total="67108864" percent="0">
+      <mem type="allocate" free="0" total="39976960" percent="0" />
+      <mem type="survivor" free="0" total="27131904" percent="0" />
+    </mem>
+    <mem type="tenure" free="182709528" total="201326592" percent="90">
+      <mem type="soa" free="172642584" total="191259648" percent="90" />
+      <mem type="loa" free="10066944" total="10066944" percent="100" />
+    </mem>
+    <remembered-set count="16673" />
+  </mem-info>
+</gc-start>
+<allocation-stats totalBytes="35615792" discardedBytes="144624" >
+  <allocated-bytes non-tlh="2913960" tlh="32701832" />
+  <largest-consumer threadName="Daemon worker" threadId="00000000005FC700" bytes="34799440" />
+</allocation-stats>
+<gc-op id="79" type="scavenge" timems="7.846" contextid="76" timestamp="2024-07-17T19:33:27.418">
+  <scavenger-info tenureage="3" tenuremask="7ff8" tiltratio="59" />
+  <memory-copied type="nursery" objects="147664" bytes="5893824" bytesdiscarded="141832" />
+  <memory-copied type="tenure" objects="27966" bytes="959816" bytesdiscarded="160" />
+  <finalization candidates="397" enqueued="337" />
+  <ownableSynchronizers candidates="3456" cleared="0" />
+  <references type="soft" candidates="7198" cleared="0" enqueued="0" dynamicThreshold="32" maxThreshold="32" />
+  <references type="weak" candidates="4678" cleared="1925" enqueued="1925" />
+  <references type="phantom" candidates="170" cleared="156" enqueued="156" />
+  <object-monitors candidates="2" cleared="0"  />
+</gc-op>
+<gc-end id="80" type="scavenge" contextid="76" durationms="9.130" usertimems="44.024" systemtimems="0.000" stalltimems="18.430" timestamp="2024-07-17T19:33:27.419" activeThreads="8">
+  <mem-info id="81" free="219146080" total="268435456" percent="81">
+    <mem type="nursery" free="37605144" total="67108864" percent="56">
+      <mem type="allocate" free="37605144" total="43646976" percent="86" />
+      <mem type="survivor" free="0" total="23461888" percent="0" />
+    </mem>
+    <mem type="tenure" free="181540936" total="201326592" percent="90">
+      <mem type="soa" free="171473992" total="191259648" percent="89" />
+      <mem type="loa" free="10066944" total="10066944" percent="100" />
+    </mem>
+    <pending-finalizers system="336" default="1" reference="2081" classloader="0" />
+    <remembered-set count="13272" />
+  </mem-info>
+</gc-end>
+<cycle-end id="82" type="scavenge" contextid="76" timestamp="2024-07-17T19:33:27.419" />
+<allocation-satisfied id="83" threadId="00000000005FC700" bytesRequested="1848" />
+<af-end id="84" timestamp="2024-07-17T19:33:27.420" threadId="00000000005FD138" success="true" from="nursery"/>
+<exclusive-end id="85" timestamp="2024-07-17T19:33:27.420" durationms="11.934" />
+
+<exclusive-start id="86" timestamp="2024-07-17T19:33:28.033" intervalms="623.962">
+  <response-info timems="0.039" idlems="0.039" threads="0" lastid="0000000000FBAF00" lastname="jar transforms" />
+</exclusive-start>
+<af-start id="87" threadId="0000000000FBB938" totalBytesRequested="48" timestamp="2024-07-17T19:33:28.033" intervalms="623.935" type="nursery" />
+<cycle-start id="88" type="scavenge" contextid="0" timestamp="2024-07-17T19:33:28.033" intervalms="624.020" />
+<gc-start id="89" type="scavenge" contextid="88" timestamp="2024-07-17T19:33:28.034">
+  <mem-info id="90" free="181187312" total="268435456" percent="67">
+    <mem type="nursery" free="0" total="67108864" percent="0">
+      <mem type="allocate" free="0" total="43646976" percent="0" />
+      <mem type="survivor" free="0" total="23461888" percent="0" />
+    </mem>
+    <mem type="tenure" free="181187312" total="201326592" percent="89">
+      <mem type="soa" free="171120368" total="191259648" percent="89" />
+      <mem type="loa" free="10066944" total="10066944" percent="100" />
+    </mem>
+    <remembered-set count="17291" />
+  </mem-info>
+</gc-start>
+<allocation-stats totalBytes="37922488" discardedBytes="36280" >
+  <allocated-bytes non-tlh="1169912" tlh="36752576" />
+  <largest-consumer threadName="Daemon worker" threadId="00000000005FC700" bytes="37402632" />
+</allocation-stats>
+<gc-op id="91" type="scavenge" timems="8.157" contextid="88" timestamp="2024-07-17T19:33:28.043">
+  <scavenger-info tenureage="3" tenuremask="7ff8" tiltratio="65" />
+  <memory-copied type="nursery" objects="184862" bytes="6761312" bytesdiscarded="485392" />
+  <memory-copied type="tenure" objects="31210" bytes="1045280" bytesdiscarded="1008" />
+  <finalization candidates="359" enqueued="354" />
+  <ownableSynchronizers candidates="3309" cleared="25" />
+  <references type="soft" candidates="7193" cleared="0" enqueued="0" dynamicThreshold="32" maxThreshold="32" />
+  <references type="weak" candidates="5314" cleared="2655" enqueued="2387" />
+  <references type="phantom" candidates="167" cleared="156" enqueued="156" />
+  <object-monitors candidates="2" cleared="0"  />
+</gc-op>
+<gc-end id="92" type="scavenge" contextid="88" durationms="9.436" usertimems="47.824" systemtimems="2.663" stalltimems="21.831" timestamp="2024-07-17T19:33:28.043" activeThreads="9">
+  <mem-info id="93" free="219109888" total="268435456" percent="81">
+    <mem type="nursery" free="39266096" total="67108864" percent="58">
+      <mem type="allocate" free="39266096" total="46530560" percent="84" />
+      <mem type="survivor" free="0" total="20578304" percent="0" />
+    </mem>
+    <mem type="tenure" free="179843792" total="201326592" percent="89">
+      <mem type="soa" free="169776848" total="191259648" percent="88" />
+      <mem type="loa" free="10066944" total="10066944" percent="100" />
+    </mem>
+    <pending-finalizers system="354" default="0" reference="2543" classloader="0" />
+    <remembered-set count="9161" />
+  </mem-info>
+</gc-end>
+<cycle-end id="94" type="scavenge" contextid="88" timestamp="2024-07-17T19:33:28.044" />
+<allocation-satisfied id="95" threadId="0000000000FBAF00" bytesRequested="48" />
+<af-end id="96" timestamp="2024-07-17T19:33:28.044" threadId="0000000000FBB938" success="true" from="nursery"/>
+<exclusive-end id="97" timestamp="2024-07-17T19:33:28.045" durationms="12.043" />
+
+<exclusive-start id="98" timestamp="2024-07-17T19:33:28.528" intervalms="495.008">
+  <response-info timems="0.040" idlems="0.040" threads="0" lastid="00000000005FC700" lastname="Daemon worker" />
+</exclusive-start>
+<af-start id="99" threadId="00000000005FD138" totalBytesRequested="4808" timestamp="2024-07-17T19:33:28.528" intervalms="495.006" type="nursery" />
+<cycle-start id="100" type="scavenge" contextid="0" timestamp="2024-07-17T19:33:28.528" intervalms="494.916" />
+<gc-start id="101" type="scavenge" contextid="100" timestamp="2024-07-17T19:33:28.529">
+  <mem-info id="102" free="179555608" total="268435456" percent="66">
+    <mem type="nursery" free="0" total="67108864" percent="0">
+      <mem type="allocate" free="0" total="46530560" percent="0" />
+      <mem type="survivor" free="0" total="20578304" percent="0" />
+    </mem>
+    <mem type="tenure" free="179555608" total="201326592" percent="89">
+      <mem type="soa" free="169488664" total="191259648" percent="88" />
+      <mem type="loa" free="10066944" total="10066944" percent="100" />
+    </mem>
+    <remembered-set count="13338" />
+  </mem-info>
+</gc-start>
+<allocation-stats totalBytes="39526968" discardedBytes="27312" >
+  <allocated-bytes non-tlh="4445568" tlh="35081400" />
+  <largest-consumer threadName="Daemon worker" threadId="00000000005FC700" bytes="38833160" />
+</allocation-stats>
+<gc-op id="103" type="scavenge" timems="8.768" contextid="100" timestamp="2024-07-17T19:33:28.538">
+  <scavenger-info tenureage="3" tenuremask="7ff8" tiltratio="69" />
+  <memory-copied type="nursery" objects="194766" bytes="7087128" bytesdiscarded="240160" />
+  <memory-copied type="tenure" objects="54684" bytes="2008432" bytesdiscarded="656" />
+  <finalization candidates="240" enqueued="240" />
+  <ownableSynchronizers candidates="4196" cleared="19" />
+  <references type="soft" candidates="6640" cleared="0" enqueued="0" dynamicThreshold="32" maxThreshold="32" />
+  <references type="weak" candidates="7563" cleared="2891" enqueued="2743" />
+  <references type="phantom" candidates="85" cleared="74" enqueued="74" />
+  <object-monitors candidates="2" cleared="0"  />
+</gc-op>
+<gc-end id="104" type="scavenge" contextid="100" durationms="9.722" usertimems="55.389" systemtimems="0.000" stalltimems="31.990" timestamp="2024-07-17T19:33:28.538" activeThreads="10">
+  <mem-info id="105" free="219216904" total="268435456" percent="81">
+    <mem type="nursery" free="41610736" total="67108864" percent="62">
+      <mem type="allocate" free="41610736" total="48955392" percent="84" />
+      <mem type="survivor" free="0" total="18153472" percent="0" />
+    </mem>
+    <mem type="tenure" free="177606168" total="201326592" percent="88">
+      <mem type="soa" free="167539224" total="191259648" percent="87" />
+      <mem type="loa" free="10066944" total="10066944" percent="100" />
+    </mem>
+    <pending-finalizers system="240" default="0" reference="2817" classloader="0" />
+    <remembered-set count="10296" />
+  </mem-info>
+</gc-end>
+<cycle-end id="106" type="scavenge" contextid="100" timestamp="2024-07-17T19:33:28.539" />
+<allocation-satisfied id="107" threadId="00000000005FC700" bytesRequested="4808" />
+<af-end id="108" timestamp="2024-07-17T19:33:28.539" threadId="00000000005FD138" success="true" from="nursery"/>
+<exclusive-end id="109" timestamp="2024-07-17T19:33:28.539" durationms="11.747" />
+
+<exclusive-start id="110" timestamp="2024-07-17T19:33:29.084" intervalms="556.173">
+  <response-info timems="0.038" idlems="0.038" threads="0" lastid="00000000005FC700" lastname="Daemon worker" />
+</exclusive-start>
+<af-start id="111" threadId="00000000005FD138" totalBytesRequested="7176" timestamp="2024-07-17T19:33:29.084" intervalms="556.142" type="nursery" />
+<cycle-start id="112" type="scavenge" contextid="0" timestamp="2024-07-17T19:33:29.084" intervalms="556.118" />
+<gc-start id="113" type="scavenge" contextid="112" timestamp="2024-07-17T19:33:29.085">
+  <mem-info id="114" free="177241752" total="268435456" percent="66">
+    <mem type="nursery" free="0" total="67108864" percent="0">
+      <mem type="allocate" free="0" total="48955392" percent="0" />
+      <mem type="survivor" free="0" total="18153472" percent="0" />
+    </mem>
+    <mem type="tenure" free="177241752" total="201326592" percent="88">
+      <mem type="soa" free="167174808" total="191259648" percent="87" />
+      <mem type="loa" free="10066944" total="10066944" percent="100" />
+    </mem>
+    <remembered-set count="15145" />
+  </mem-info>
+</gc-start>
+<allocation-stats totalBytes="41800184" discardedBytes="174968" >
+  <allocated-bytes non-tlh="3275328" tlh="38524856" />
+  <largest-consumer threadName="Daemon worker" threadId="00000000005FC700" bytes="41427608" />
+</allocation-stats>
+<gc-op id="115" type="scavenge" timems="7.338" contextid="112" timestamp="2024-07-17T19:33:29.093">
+  <scavenger-info tenureage="3" tenuremask="7ff8" tiltratio="72" />
+  <memory-copied type="nursery" objects="171947" bytes="6294848" bytesdiscarded="205088" />
+  <memory-copied type="tenure" objects="54962" bytes="2135352" bytesdiscarded="504" />
+  <finalization candidates="656" enqueued="655" />
+  <ownableSynchronizers candidates="1946" cleared="24" />
+  <references type="soft" candidates="6409" cleared="0" enqueued="0" dynamicThreshold="32" maxThreshold="32" />
+  <references type="weak" candidates="7584" cleared="3410" enqueued="3409" />
+  <references type="phantom" candidates="145" cleared="126" enqueued="126" />
+  <object-monitors candidates="2" cleared="0"  />
+</gc-op>
+<gc-end id="116" type="scavenge" contextid="112" durationms="8.308" usertimems="48.525" systemtimems="2.394" stalltimems="21.716" timestamp="2024-07-17T19:33:29.093" activeThreads="10">
+  <mem-info id="117" free="219728144" total="268435456" percent="81">
+    <mem type="nursery" free="44404352" total="67108864" percent="66">
+      <mem type="allocate" free="44404352" total="50921472" percent="87" />
+      <mem type="survivor" free="0" total="16187392" percent="0" />
+    </mem>
+    <mem type="tenure" free="175323792" total="201326592" percent="87">
+      <mem type="soa" free="165256848" total="191259648" percent="86" />
+      <mem type="loa" free="10066944" total="10066944" percent="100" />
+    </mem>
+    <pending-finalizers system="655" default="0" reference="3535" classloader="0" />
+    <remembered-set count="10798" />
+  </mem-info>
+</gc-end>
+<cycle-end id="118" type="scavenge" contextid="112" timestamp="2024-07-17T19:33:29.093" />
+<allocation-satisfied id="119" threadId="00000000005FC700" bytesRequested="7176" />
+<af-end id="120" timestamp="2024-07-17T19:33:29.094" threadId="00000000005FD138" success="true" from="nursery"/>
+<exclusive-end id="121" timestamp="2024-07-17T19:33:29.094" durationms="10.447" />
+
+<exclusive-start id="122" timestamp="2024-07-17T19:33:29.596" intervalms="512.667">
+  <response-info timems="0.041" idlems="0.041" threads="0" lastid="00000000005FC700" lastname="Daemon worker" />
+</exclusive-start>
+<af-start id="123" threadId="00000000005FD138" totalBytesRequested="136" timestamp="2024-07-17T19:33:29.597" intervalms="512.662" type="nursery" />
+<cycle-start id="124" type="scavenge" contextid="0" timestamp="2024-07-17T19:33:29.597" intervalms="512.694" />
+<gc-start id="125" type="scavenge" contextid="124" timestamp="2024-07-17T19:33:29.597">
+  <mem-info id="126" free="175087728" total="268435456" percent="65">
+    <mem type="nursery" free="0" total="67108864" percent="0">
+      <mem type="allocate" free="0" total="50921472" percent="0" />
+      <mem type="survivor" free="0" total="16187392" percent="0" />
+    </mem>
+    <mem type="tenure" free="175087728" total="201326592" percent="86">
+      <mem type="soa" free="165020784" total="191259648" percent="86" />
+      <mem type="loa" free="10066944" total="10066944" percent="100" />
+    </mem>
+    <remembered-set count="14298" />
+  </mem-info>
+</gc-start>
+<allocation-stats totalBytes="44573520" discardedBytes="66896" >
+  <allocated-bytes non-tlh="333408" tlh="44240112" />
+  <largest-consumer threadName="Daemon worker" threadId="00000000005FC700" bytes="32505232" />
+</allocation-stats>
+<gc-op id="127" type="scavenge" timems="7.218" contextid="124" timestamp="2024-07-17T19:33:29.605">
+  <scavenger-info tenureage="3" tenuremask="7ff8" tiltratio="75" />
+  <memory-copied type="nursery" objects="140999" bytes="5591480" bytesdiscarded="251880" />
+  <memory-copied type="tenure" objects="67530" bytes="2365392" bytesdiscarded="760" />
+  <finalization candidates="482" enqueued="481" />
+  <ownableSynchronizers candidates="1379" cleared="74" />
+  <references type="soft" candidates="6277" cleared="0" enqueued="0" dynamicThreshold="32" maxThreshold="32" />
+  <references type="weak" candidates="5661" cleared="1488" enqueued="1488" />
+  <references type="phantom" candidates="205" cleared="188" enqueued="188" />
+  <object-monitors candidates="6" cleared="4"  />
+</gc-op>
+<gc-end id="128" type="scavenge" contextid="124" durationms="8.303" usertimems="29.145" systemtimems="21.817" stalltimems="27.875" timestamp="2024-07-17T19:33:29.606" activeThreads="11">
+  <mem-info id="129" free="219308424" total="268435456" percent="81">
+    <mem type="nursery" free="46838296" total="67108864" percent="69">
+      <mem type="allocate" free="46838296" total="52690944" percent="88" />
+      <mem type="survivor" free="0" total="14417920" percent="0" />
+    </mem>
+    <mem type="tenure" free="172470128" total="201326592" percent="85">
+      <mem type="soa" free="162403184" total="191259648" percent="84" />
+      <mem type="loa" free="10066944" total="10066944" percent="100" />
+    </mem>
+    <pending-finalizers system="481" default="0" reference="1676" classloader="0" />
+    <remembered-set count="10331" />
+  </mem-info>
+</gc-end>
+<cycle-end id="130" type="scavenge" contextid="124" timestamp="2024-07-17T19:33:29.606" />
+<allocation-satisfied id="131" threadId="00000000005FC700" bytesRequested="136" />
+<af-end id="132" timestamp="2024-07-17T19:33:29.607" threadId="00000000005FD138" success="true" from="nursery"/>
+<exclusive-end id="133" timestamp="2024-07-17T19:33:29.607" durationms="10.376" />
+
+<exclusive-start id="134" timestamp="2024-07-17T19:33:29.832" intervalms="235.698">
+  <response-info timems="0.054" idlems="0.054" threads="0" lastid="0000000000602B00" lastname="Cache worker for checksums cache (/workspace/project/.gradle/8." />
+</exclusive-start>
+<af-start id="135" threadId="0000000000603538" totalBytesRequested="4104" timestamp="2024-07-17T19:33:29.832" intervalms="235.709" type="nursery" />
+<cycle-start id="136" type="scavenge" contextid="0" timestamp="2024-07-17T19:33:29.833" intervalms="235.727" />
+<gc-start id="137" type="scavenge" contextid="136" timestamp="2024-07-17T19:33:29.833">
+  <mem-info id="138" free="172458584" total="268435456" percent="64">
+    <mem type="nursery" free="0" total="67108864" percent="0">
+      <mem type="allocate" free="0" total="52690944" percent="0" />
+      <mem type="survivor" free="0" total="14417920" percent="0" />
+    </mem>
+    <mem type="tenure" free="172458584" total="201326592" percent="85">
+      <mem type="soa" free="162391640" total="191259648" percent="84" />
+      <mem type="loa" free="10066944" total="10066944" percent="100" />
+    </mem>
+    <remembered-set count="10574" />
+  </mem-info>
+</gc-start>
+<allocation-stats totalBytes="46774176" discardedBytes="75664" >
+  <allocated-bytes non-tlh="897064" tlh="45877112" />
+  <largest-consumer threadName="Daemon worker" threadId="00000000005FC700" bytes="17888504" />
+</allocation-stats>
+<gc-op id="139" type="scavenge" timems="6.193" contextid="136" timestamp="2024-07-17T19:33:29.840">
+  <scavenger-info tenureage="3" tenuremask="7ff8" tiltratio="78" />
+  <memory-copied type="nursery" objects="109805" bytes="5302032" bytesdiscarded="304240" />
+  <memory-copied type="tenure" objects="63958" bytes="2302136" bytesdiscarded="496" />
+  <finalization candidates="6" enqueued="5" />
+  <ownableSynchronizers candidates="1420" cleared="80" />
+  <references type="soft" candidates="2314" cleared="0" enqueued="0" dynamicThreshold="32" maxThreshold="32" />
+  <references type="weak" candidates="1316" cleared="67" enqueued="67" />
+  <references type="phantom" candidates="12" cleared="0" enqueued="0" />
+  <object-monitors candidates="2" cleared="0"  />
+</gc-op>
+<gc-end id="140" type="scavenge" contextid="136" durationms="7.108" usertimems="38.656" systemtimems="2.059" stalltimems="26.660" timestamp="2024-07-17T19:33:29.840" activeThreads="11">
+  <mem-info id="141" free="218478760" total="268435456" percent="81">
+    <mem type="nursery" free="48645464" total="67108864" percent="72">
+      <mem type="allocate" free="48645464" total="54263808" percent="89" />
+      <mem type="survivor" free="0" total="12845056" percent="0" />
+    </mem>
+    <mem type="tenure" free="169833296" total="201326592" percent="84">
+      <mem type="soa" free="159766352" total="191259648" percent="83" />
+      <mem type="loa" free="10066944" total="10066944" percent="100" />
+    </mem>
+    <pending-finalizers system="5" default="0" reference="67" classloader="0" />
+    <remembered-set count="5836" />
+  </mem-info>
+</gc-end>
+<cycle-end id="142" type="scavenge" contextid="136" timestamp="2024-07-17T19:33:29.841" />
+<allocation-satisfied id="143" threadId="0000000000602B00" bytesRequested="4104" />
+<af-end id="144" timestamp="2024-07-17T19:33:29.841" threadId="0000000000603538" success="true" from="nursery"/>
+<exclusive-end id="145" timestamp="2024-07-17T19:33:29.841" durationms="9.244" />
+
+<exclusive-start id="146" timestamp="2024-07-17T19:33:30.135" intervalms="303.262">
+  <response-info timems="0.042" idlems="0.042" threads="0" lastid="00000000005FC700" lastname="Daemon worker" />
+</exclusive-start>
+<af-start id="147" threadId="00000000005FD138" totalBytesRequested="88" timestamp="2024-07-17T19:33:30.136" intervalms="303.347" type="nursery" />
+<cycle-start id="148" type="scavenge" contextid="0" timestamp="2024-07-17T19:33:30.136" intervalms="303.378" />
+<gc-start id="149" type="scavenge" contextid="148" timestamp="2024-07-17T19:33:30.137">
+  <mem-info id="150" free="169816056" total="268435456" percent="63">
+    <mem type="nursery" free="0" total="67108864" percent="0">
+      <mem type="allocate" free="0" total="54263808" percent="0" />
+      <mem type="survivor" free="0" total="12845056" percent="0" />
+    </mem>
+    <mem type="tenure" free="169816056" total="201326592" percent="84">
+      <mem type="soa" free="159749112" total="191259648" percent="83" />
+      <mem type="loa" free="10066944" total="10066944" percent="100" />
+    </mem>
+    <remembered-set count="6151" />
+  </mem-info>
+</gc-start>
+<allocation-stats totalBytes="48601520" discardedBytes="61184" >
+  <allocated-bytes non-tlh="382056" tlh="48219464" />
+  <largest-consumer threadName="Daemon worker" threadId="00000000005FC700" bytes="22044984" />
+</allocation-stats>
+<gc-op id="151" type="scavenge" timems="6.000" contextid="148" timestamp="2024-07-17T19:33:30.143">
+  <scavenger-info tenureage="3" tenuremask="7ff8" tiltratio="80" />
+  <memory-copied type="nursery" objects="87916" bytes="4213016" bytesdiscarded="147384" />
+  <memory-copied type="tenure" objects="28996" bytes="1177728" bytesdiscarded="320" />
+  <finalization candidates="22" enqueued="21" />
+  <ownableSynchronizers candidates="370" cleared="114" />
+  <references type="soft" candidates="823" cleared="0" enqueued="0" dynamicThreshold="32" maxThreshold="32" />
+  <references type="weak" candidates="783" cleared="121" enqueued="121" />
+  <references type="phantom" candidates="13" cleared="11" enqueued="11" />
+  <object-monitors candidates="2" cleared="0"  />
+</gc-op>
+<gc-end id="152" type="scavenge" contextid="148" durationms="7.002" usertimems="18.186" systemtimems="11.428" stalltimems="35.324" timestamp="2024-07-17T19:33:30.144" activeThreads="11">
+  <mem-info id="153" free="219899552" total="268435456" percent="81">
+    <mem type="nursery" free="51196120" total="67108864" percent="76">
+      <mem type="allocate" free="51196120" total="55574528" percent="92" />
+      <mem type="survivor" free="0" total="11534336" percent="0" />
+    </mem>
+    <mem type="tenure" free="168703432" total="201326592" percent="83">
+      <mem type="soa" free="158636488" total="191259648" percent="82" />
+      <mem type="loa" free="10066944" total="10066944" percent="100" />
+    </mem>
+    <pending-finalizers system="21" default="0" reference="132" classloader="0" />
+    <remembered-set count="2142" />
+  </mem-info>
+</gc-end>
+<cycle-end id="154" type="scavenge" contextid="148" timestamp="2024-07-17T19:33:30.144" />
+<allocation-satisfied id="155" threadId="00000000005FC700" bytesRequested="88" />
+<af-end id="156" timestamp="2024-07-17T19:33:30.144" threadId="00000000005FD138" success="true" from="nursery"/>
+<exclusive-end id="157" timestamp="2024-07-17T19:33:30.145" durationms="9.214" />
+
+<exclusive-start id="158" timestamp="2024-07-17T19:33:30.444" intervalms="308.539">
+  <response-info timems="0.088" idlems="0.074" threads="1" lastid="000000000138C700" lastname="Unconstrained build operations Thread 77" />
+</exclusive-start>
+<af-start id="159" threadId="0000000000770838" totalBytesRequested="4104" timestamp="2024-07-17T19:33:30.444" intervalms="308.510" type="nursery" />
+<cycle-start id="160" type="scavenge" contextid="0" timestamp="2024-07-17T19:33:30.445" intervalms="308.586" />
+<gc-start id="161" type="scavenge" contextid="160" timestamp="2024-07-17T19:33:30.445">
+  <mem-info id="162" free="168642192" total="268435456" percent="62">
+    <mem type="nursery" free="0" total="67108864" percent="0">
+      <mem type="allocate" free="0" total="55574528" percent="0" />
+      <mem type="survivor" free="0" total="11534336" percent="0" />
+    </mem>
+    <mem type="tenure" free="168642192" total="201326592" percent="83">
+      <mem type="soa" free="158575248" total="191259648" percent="82" />
+      <mem type="loa" free="10066944" total="10066944" percent="100" />
+    </mem>
+    <remembered-set count="3149" />
+  </mem-info>
+</gc-start>
+<allocation-stats totalBytes="50581416" discardedBytes="675944" >
+  <allocated-bytes non-tlh="1686264" tlh="48895152" />
+  <largest-consumer threadName="Daemon worker" threadId="00000000005FC700" bytes="15057808" />
+</allocation-stats>
+<gc-op id="163" type="scavenge" timems="4.750" contextid="160" timestamp="2024-07-17T19:33:30.450">
+  <scavenger-info tenureage="3" tenuremask="7fe8" tiltratio="82" />
+  <memory-copied type="nursery" objects="76072" bytes="4037424" bytesdiscarded="182240" />
+  <memory-copied type="tenure" objects="29256" bytes="1258920" bytesdiscarded="176" />
+  <finalization candidates="181" enqueued="181" />
+  <ownableSynchronizers candidates="516" cleared="249" />
+  <references type="soft" candidates="167" cleared="0" enqueued="0" dynamicThreshold="32" maxThreshold="32" />
+  <references type="weak" candidates="1279" cleared="671" enqueued="671" />
+  <references type="phantom" candidates="141" cleared="95" enqueued="95" />
+  <object-monitors candidates="36" cleared="34"  />
+</gc-op>
+<gc-end id="164" type="scavenge" contextid="160" durationms="5.859" usertimems="24.099" systemtimems="1.361" stalltimems="21.402" timestamp="2024-07-17T19:33:30.451" activeThreads="10">
+  <mem-info id="165" free="220152208" total="268435456" percent="82">
+    <mem type="nursery" free="52717224" total="67108864" percent="78">
+      <mem type="allocate" free="52717224" total="56950784" percent="92" />
+      <mem type="survivor" free="0" total="10158080" percent="0" />
+    </mem>
+    <mem type="tenure" free="167434984" total="201326592" percent="83">
+      <mem type="soa" free="157368040" total="191259648" percent="82" />
+      <mem type="loa" free="10066944" total="10066944" percent="100" />
+    </mem>
+    <pending-finalizers system="181" default="0" reference="766" classloader="0" />
+    <remembered-set count="2038" />
+  </mem-info>
+</gc-end>
+<cycle-end id="166" type="scavenge" contextid="160" timestamp="2024-07-17T19:33:30.451" />
+<allocation-satisfied id="167" threadId="000000000076FE00" bytesRequested="4104" />
+<af-end id="168" timestamp="2024-07-17T19:33:30.452" threadId="0000000000770838" success="true" from="nursery"/>
+<exclusive-end id="169" timestamp="2024-07-17T19:33:30.452" durationms="7.965" />
+
+<exclusive-start id="170" timestamp="2024-07-17T19:33:30.527" intervalms="83.011">
+  <response-info timems="0.107" idlems="0.102" threads="1" lastid="0000000001575400" lastname="Unconstrained build operations Thread 85" />
+</exclusive-start>
+<af-start id="171" threadId="000000000156F138" totalBytesRequested="4896" timestamp="2024-07-17T19:33:30.527" intervalms="82.841" type="nursery" />
+<cycle-start id="172" type="scavenge" contextid="0" timestamp="2024-07-17T19:33:30.527" intervalms="82.666" />
+<gc-start id="173" type="scavenge" contextid="172" timestamp="2024-07-17T19:33:30.528">
+  <mem-info id="174" free="167434872" total="268435456" percent="62">
+    <mem type="nursery" free="0" total="67108864" percent="0">
+      <mem type="allocate" free="0" total="56950784" percent="0" />
+      <mem type="survivor" free="0" total="10158080" percent="0" />
+    </mem>
+    <mem type="tenure" free="167434872" total="201326592" percent="83">
+      <mem type="soa" free="157367928" total="191259648" percent="82" />
+      <mem type="loa" free="10066944" total="10066944" percent="100" />
+    </mem>
+    <remembered-set count="2138" />
+  </mem-info>
+</gc-start>
+<allocation-stats totalBytes="52436640" discardedBytes="280696" >
+  <allocated-bytes non-tlh="1394128" tlh="51042512" />
+  <largest-consumer threadName="Unconstrained build operations Thread 80" threadId="000000000094F900" bytes="11968016" />
+</allocation-stats>
+<gc-op id="175" type="scavenge" timems="4.990" contextid="172" timestamp="2024-07-17T19:33:30.533">
+  <scavenger-info tenureage="6" tenuremask="7fc0" tiltratio="84" />
+  <memory-copied type="nursery" objects="93216" bytes="4898384" bytesdiscarded="120368" />
+  <finalization candidates="1" enqueued="1" />
+  <ownableSynchronizers candidates="286" cleared="103" />
+  <references type="soft" candidates="167" cleared="0" enqueued="0" dynamicThreshold="32" maxThreshold="32" />
+  <references type="weak" candidates="908" cleared="65" enqueued="65" />
+  <references type="phantom" candidates="54" cleared="0" enqueued="0" />
+  <object-monitors candidates="2" cleared="0"  />
+</gc-op>
+<gc-end id="176" type="scavenge" contextid="172" durationms="5.687" usertimems="11.709" systemtimems="10.982" stalltimems="21.477" timestamp="2024-07-17T19:33:30.533" activeThreads="9">
+  <mem-info id="177" free="220011264" total="268435456" percent="81">
+    <mem type="nursery" free="52576392" total="67108864" percent="78">
+      <mem type="allocate" free="52576392" total="57606144" percent="91" />
+      <mem type="survivor" free="0" total="9502720" percent="0" />
+    </mem>
+    <mem type="tenure" free="167434872" total="201326592" percent="83">
+      <mem type="soa" free="157367928" total="191259648" percent="82" />
+      <mem type="loa" free="10066944" total="10066944" percent="100" />
+    </mem>
+    <pending-finalizers system="1" default="0" reference="65" classloader="0" />
+    <remembered-set count="1752" />
+  </mem-info>
+</gc-end>
+<cycle-end id="178" type="scavenge" contextid="172" timestamp="2024-07-17T19:33:30.534" />
+<allocation-satisfied id="179" threadId="000000000156E700" bytesRequested="4896" />
+<af-end id="180" timestamp="2024-07-17T19:33:30.534" threadId="000000000156F138" success="true" from="nursery"/>
+<exclusive-end id="181" timestamp="2024-07-17T19:33:30.534" durationms="7.313" />
+
+<exclusive-start id="182" timestamp="2024-07-17T19:33:30.586" intervalms="59.573">
+  <response-info timems="0.091" idlems="0.080" threads="4" lastid="0000000001576C00" lastname="Unconstrained build operations Thread 87" />
+</exclusive-start>
+<af-start id="183" threadId="000000000138DD38" totalBytesRequested="6312" timestamp="2024-07-17T19:33:30.587" intervalms="59.682" type="nursery" />
+<cycle-start id="184" type="scavenge" contextid="0" timestamp="2024-07-17T19:33:30.587" intervalms="59.662" />
+<gc-start id="185" type="scavenge" contextid="184" timestamp="2024-07-17T19:33:30.587">
+  <mem-info id="186" free="167434872" total="268435456" percent="62">
+    <mem type="nursery" free="0" total="67108864" percent="0">
+      <mem type="allocate" free="0" total="57606144" percent="0" />
+      <mem type="survivor" free="0" total="9502720" percent="0" />
+    </mem>
+    <mem type="tenure" free="167434872" total="201326592" percent="83">
+      <mem type="soa" free="157367928" total="191259648" percent="82" />
+      <mem type="loa" free="10066944" total="10066944" percent="100" />
+    </mem>
+    <remembered-set count="1840" />
+  </mem-info>
+</gc-start>
+<allocation-stats totalBytes="52171144" discardedBytes="405248" >
+  <allocated-bytes non-tlh="2716176" tlh="49454968" />
+  <largest-consumer threadName="Unconstrained build operations Thread 79" threadId="000000000156DB00" bytes="9801504" />
+</allocation-stats>
+<gc-op id="187" type="scavenge" timems="4.855" contextid="184" timestamp="2024-07-17T19:33:30.593">
+  <scavenger-info tenureage="3" tenuremask="7f98" tiltratio="85" />
+  <memory-copied type="nursery" objects="70063" bytes="3774640" bytesdiscarded="145080" />
+  <memory-copied type="tenure" objects="42360" bytes="2195056" bytesdiscarded="872" />
+  <ownableSynchronizers candidates="239" cleared="63" />
+  <references type="soft" candidates="114" cleared="0" enqueued="0" dynamicThreshold="32" maxThreshold="32" />
+  <references type="weak" candidates="985" cleared="61" enqueued="61" />
+  <references type="phantom" candidates="65" cleared="0" enqueued="0" />
+  <object-monitors candidates="3" cleared="1"  />
+</gc-op>
+<heap-resize id="188" type="expand" space="nursery" amount="3801088" count="1" timems="0.095" reason="excessive time being spent scavenging" timestamp="2024-07-17T19:33:30.593" />
+<gc-end id="189" type="scavenge" contextid="184" durationms="5.811" usertimems="13.763" systemtimems="11.155" stalltimems="12.688" timestamp="2024-07-17T19:33:30.593" activeThreads="8">
+  <mem-info id="190" free="223059952" total="272236544" percent="81">
+    <mem type="nursery" free="57812896" total="70909952" percent="81">
+      <mem type="allocate" free="57812896" total="61734912" percent="93" />
+      <mem type="survivor" free="0" total="9175040" percent="0" />
+    </mem>
+    <mem type="tenure" free="165247056" total="201326592" percent="82">
+      <mem type="soa" free="155180112" total="191259648" percent="81" />
+      <mem type="loa" free="10066944" total="10066944" percent="100" />
+    </mem>
+    <pending-finalizers system="0" default="0" reference="61" classloader="0" />
+    <remembered-set count="1365" />
+  </mem-info>
+</gc-end>
+<cycle-end id="191" type="scavenge" contextid="184" timestamp="2024-07-17T19:33:30.593" />
+<allocation-satisfied id="192" threadId="000000000138D300" bytesRequested="6312" />
+<af-end id="193" timestamp="2024-07-17T19:33:30.594" threadId="000000000138DD38" success="true" from="nursery"/>
+<exclusive-end id="194" timestamp="2024-07-17T19:33:30.594" durationms="7.520" />
+
+<exclusive-start id="195" timestamp="2024-07-17T19:33:30.639" intervalms="53.025">
+  <response-info timems="0.132" idlems="0.093" threads="2" lastid="000000000138C700" lastname="Unconstrained build operations Thread 77" />
+</exclusive-start>
+<af-start id="196" threadId="000000000156E538" totalBytesRequested="14704" timestamp="2024-07-17T19:33:30.640" intervalms="53.033" type="nursery" />
+<cycle-start id="197" type="scavenge" contextid="0" timestamp="2024-07-17T19:33:30.640" intervalms="53.102" />
+<gc-start id="198" type="scavenge" contextid="197" timestamp="2024-07-17T19:33:30.641">
+  <mem-info id="199" free="165247056" total="272236544" percent="60">
+    <mem type="nursery" free="0" total="70909952" percent="0">
+      <mem type="allocate" free="0" total="61734912" percent="0" />
+      <mem type="survivor" free="0" total="9175040" percent="0" />
+    </mem>
+    <mem type="tenure" free="165247056" total="201326592" percent="82">
+      <mem type="soa" free="155180112" total="191259648" percent="81" />
+      <mem type="loa" free="10066944" total="10066944" percent="100" />
+    </mem>
+    <remembered-set count="1436" />
+  </mem-info>
+</gc-start>
+<allocation-stats totalBytes="57392824" discardedBytes="420072" >
+  <allocated-bytes non-tlh="817648" tlh="56575176" />
+  <largest-consumer threadName="Unconstrained build operations Thread 79" threadId="000000000156DB00" bytes="9673200" />
+</allocation-stats>
+<gc-op id="200" type="scavenge" timems="3.780" contextid="197" timestamp="2024-07-17T19:33:30.645">
+  <scavenger-info tenureage="8" tenuremask="7f00" tiltratio="87" />
+  <memory-copied type="nursery" objects="72886" bytes="3532584" bytesdiscarded="150288" />
+  <ownableSynchronizers candidates="164" cleared="32" />
+  <references type="soft" candidates="114" cleared="0" enqueued="0" dynamicThreshold="32" maxThreshold="32" />
+  <references type="weak" candidates="1077" cleared="33" enqueued="33" />
+  <references type="phantom" candidates="59" cleared="0" enqueued="0" />
+  <object-monitors candidates="2" cleared="0"  />
+</gc-op>
+<heap-resize id="201" type="expand" space="nursery" amount="2621440" count="1" timems="0.025" reason="excessive time being spent scavenging" timestamp="2024-07-17T19:33:30.645" />
+<gc-end id="202" type="scavenge" contextid="197" durationms="4.693" usertimems="11.526" systemtimems="6.863" stalltimems="10.403" timestamp="2024-07-17T19:33:30.645" activeThreads="8">
+  <mem-info id="203" free="226901248" total="274857984" percent="82">
+    <mem type="nursery" free="61654192" total="73531392" percent="83">
+      <mem type="allocate" free="61654192" total="65339392" percent="94" />
+      <mem type="survivor" free="0" total="8192000" percent="0" />
+    </mem>
+    <mem type="tenure" free="165247056" total="201326592" percent="82">
+      <mem type="soa" free="155180112" total="191259648" percent="81" />
+      <mem type="loa" free="10066944" total="10066944" percent="100" />
+    </mem>
+    <pending-finalizers system="0" default="0" reference="33" classloader="0" />
+    <remembered-set count="1368" />
+  </mem-info>
+</gc-end>
+<cycle-end id="204" type="scavenge" contextid="197" timestamp="2024-07-17T19:33:30.645" />
+<allocation-satisfied id="205" threadId="000000000156DB00" bytesRequested="14704" />
+<af-end id="206" timestamp="2024-07-17T19:33:30.646" threadId="000000000156E538" success="true" from="nursery"/>
+<exclusive-end id="207" timestamp="2024-07-17T19:33:30.646" durationms="6.474" />
+
+<exclusive-start id="208" timestamp="2024-07-17T19:33:30.724" intervalms="84.308">
+  <response-info timems="0.094" idlems="0.081" threads="2" lastid="0000000001576C00" lastname="Unconstrained build operations Thread 87" />
+</exclusive-start>
+<af-start id="209" threadId="000000000138D138" totalBytesRequested="24" timestamp="2024-07-17T19:33:30.724" intervalms="84.323" type="nursery" />
+<cycle-start id="210" type="scavenge" contextid="0" timestamp="2024-07-17T19:33:30.724" intervalms="84.298" />
+<gc-start id="211" type="scavenge" contextid="210" timestamp="2024-07-17T19:33:30.725">
+  <mem-info id="212" free="165247056" total="274857984" percent="60">
+    <mem type="nursery" free="0" total="73531392" percent="0">
+      <mem type="allocate" free="0" total="65339392" percent="0" />
+      <mem type="survivor" free="0" total="8192000" percent="0" />
+    </mem>
+    <mem type="tenure" free="165247056" total="201326592" percent="82">
+      <mem type="soa" free="155180112" total="191259648" percent="81" />
+      <mem type="loa" free="10066944" total="10066944" percent="100" />
+    </mem>
+    <remembered-set count="1461" />
+  </mem-info>
+</gc-start>
+<allocation-stats totalBytes="61485008" discardedBytes="169184" >
+  <allocated-bytes non-tlh="435904" tlh="61049104" />
+  <largest-consumer threadName="Unconstrained build operations Thread 79" threadId="000000000156DB00" bytes="8196136" />
+</allocation-stats>
+<gc-op id="213" type="scavenge" timems="3.050" contextid="210" timestamp="2024-07-17T19:33:30.728">
+  <scavenger-info tenureage="4" tenuremask="7e10" tiltratio="88" />
+  <memory-copied type="nursery" objects="18231" bytes="778480" bytesdiscarded="223912" />
+  <memory-copied type="tenure" objects="24325" bytes="916024" bytesdiscarded="704" />
+  <ownableSynchronizers candidates="245" cleared="112" />
+  <references type="weak" candidates="1122" cleared="109" enqueued="109" />
+  <references type="phantom" candidates="21" cleared="0" enqueued="0" />
+  <object-monitors candidates="3" cleared="1"  />
+</gc-op>
+<gc-end id="214" type="scavenge" contextid="210" durationms="3.730" usertimems="12.354" systemtimems="0.919" stalltimems="9.897" timestamp="2024-07-17T19:33:30.729" activeThreads="8">
+  <mem-info id="215" free="229552920" total="274857984" percent="83">
+    <mem type="nursery" free="65123328" total="73531392" percent="88">
+      <mem type="allocate" free="65123328" total="66125824" percent="98" />
+      <mem type="survivor" free="0" total="7405568" percent="0" />
+    </mem>
+    <mem type="tenure" free="164429592" total="201326592" percent="81">
+      <mem type="soa" free="154362648" total="191259648" percent="80" />
+      <mem type="loa" free="10066944" total="10066944" percent="100" />
+    </mem>
+    <pending-finalizers system="0" default="0" reference="109" classloader="0" />
+    <remembered-set count="1281" />
+  </mem-info>
+</gc-end>
+<cycle-end id="216" type="scavenge" contextid="210" timestamp="2024-07-17T19:33:30.729" />
+<allocation-satisfied id="217" threadId="000000000138C700" bytesRequested="24" />
+<af-end id="218" timestamp="2024-07-17T19:33:30.729" threadId="000000000138D138" success="true" from="nursery"/>
+<exclusive-end id="219" timestamp="2024-07-17T19:33:30.729" durationms="5.638" />
+
+<exclusive-start id="220" timestamp="2024-07-17T19:33:30.979" intervalms="254.957">
+  <response-info timems="0.107" idlems="0.107" threads="0" lastid="000000000157D900" lastname="Unconstrained build operations Thread 92" />
+</exclusive-start>
+<af-start id="221" threadId="000000000157E338" totalBytesRequested="1032" timestamp="2024-07-17T19:33:30.979" intervalms="254.911" type="nursery" />
+<cycle-start id="222" type="scavenge" contextid="0" timestamp="2024-07-17T19:33:30.979" intervalms="254.925" />
+<gc-start id="223" type="scavenge" contextid="222" timestamp="2024-07-17T19:33:30.980">
+  <mem-info id="224" free="164379144" total="274857984" percent="59">
+    <mem type="nursery" free="0" total="73531392" percent="0">
+      <mem type="allocate" free="0" total="66125824" percent="0" />
+      <mem type="survivor" free="0" total="7405568" percent="0" />
+    </mem>
+    <mem type="tenure" free="164379144" total="201326592" percent="81">
+      <mem type="soa" free="154312200" total="191259648" percent="80" />
+      <mem type="loa" free="10066944" total="10066944" percent="100" />
+    </mem>
+    <remembered-set count="2407" />
+  </mem-info>
+</gc-start>
+<allocation-stats totalBytes="64979216" discardedBytes="194560" >
+  <allocated-bytes non-tlh="1214640" tlh="63764576" />
+  <largest-consumer threadName="Daemon worker" threadId="00000000005FC700" bytes="5340728" />
+</allocation-stats>
+<gc-op id="225" type="scavenge" timems="3.237" contextid="222" timestamp="2024-07-17T19:33:30.983">
+  <scavenger-info tenureage="10" tenuremask="7c00" tiltratio="89" />
+  <memory-copied type="nursery" objects="46004" bytes="3393024" bytesdiscarded="320632" />
+  <finalization candidates="117" enqueued="117" />
+  <ownableSynchronizers candidates="250" cleared="237" />
+  <references type="soft" candidates="111" cleared="0" enqueued="0" dynamicThreshold="32" maxThreshold="32" />
+  <references type="weak" candidates="4572" cleared="2683" enqueued="2683" />
+  <references type="phantom" candidates="149" cleared="64" enqueued="64" />
+  <object-monitors candidates="56" cleared="50"  />
+</gc-op>
+<gc-end id="226" type="scavenge" contextid="222" durationms="4.162" usertimems="3.504" systemtimems="8.874" stalltimems="10.411" timestamp="2024-07-17T19:33:30.984" activeThreads="7">
+  <mem-info id="227" free="226789384" total="274857984" percent="82">
+    <mem type="nursery" free="62410240" total="73531392" percent="84">
+      <mem type="allocate" free="62410240" total="66125824" percent="94" />
+      <mem type="survivor" free="0" total="7405568" percent="0" />
+    </mem>
+    <mem type="tenure" free="164379144" total="201326592" percent="81">
+      <mem type="soa" free="154312200" total="191259648" percent="80" />
+      <mem type="loa" free="10066944" total="10066944" percent="100" />
+    </mem>
+    <pending-finalizers system="117" default="0" reference="2747" classloader="0" />
+    <remembered-set count="2072" />
+  </mem-info>
+</gc-end>
+<cycle-end id="228" type="scavenge" contextid="222" timestamp="2024-07-17T19:33:30.984" />
+<allocation-satisfied id="229" threadId="000000000157D900" bytesRequested="1032" />
+<af-end id="230" timestamp="2024-07-17T19:33:30.985" threadId="000000000157E338" success="true" from="nursery"/>
+<exclusive-end id="231" timestamp="2024-07-17T19:33:30.985" durationms="5.933" />
+
+<exclusive-start id="232" timestamp="2024-07-17T19:33:31.110" intervalms="131.381">
+  <response-info timems="0.097" idlems="0.097" threads="0" lastid="0000000001582200" lastname="Unconstrained build operations Thread 96" />
+</exclusive-start>
+<af-start id="233" threadId="0000000001582C38" totalBytesRequested="3120" timestamp="2024-07-17T19:33:31.110" intervalms="131.357" type="nursery" />
+<cycle-start id="234" type="scavenge" contextid="0" timestamp="2024-07-17T19:33:31.111" intervalms="131.316" />
+<gc-start id="235" type="scavenge" contextid="234" timestamp="2024-07-17T19:33:31.111">
+  <mem-info id="236" free="164378936" total="274857984" percent="59">
+    <mem type="nursery" free="0" total="73531392" percent="0">
+      <mem type="allocate" free="0" total="66125824" percent="0" />
+      <mem type="survivor" free="0" total="7405568" percent="0" />
+    </mem>
+    <mem type="tenure" free="164378936" total="201326592" percent="81">
+      <mem type="soa" free="154311992" total="191259648" percent="80" />
+      <mem type="loa" free="10066944" total="10066944" percent="100" />
+    </mem>
+    <remembered-set count="2184" />
+  </mem-info>
+</gc-start>
+<allocation-stats totalBytes="62316816" discardedBytes="93632" >
+  <allocated-bytes non-tlh="918360" tlh="61398456" />
+  <largest-consumer threadName="Unconstrained build operations Thread 90" threadId="000000000157A900" bytes="14253496" />
+</allocation-stats>
+<gc-op id="237" type="scavenge" timems="2.731" contextid="234" timestamp="2024-07-17T19:33:31.114">
+  <scavenger-info tenureage="11" tenuremask="7800" tiltratio="89" />
+  <memory-copied type="nursery" objects="41726" bytes="2461992" bytesdiscarded="180736" />
+  <ownableSynchronizers candidates="183" cleared="170" />
+  <references type="soft" candidates="111" cleared="0" enqueued="0" dynamicThreshold="32" maxThreshold="32" />
+  <references type="weak" candidates="4340" cleared="1939" enqueued="1939" />
+  <references type="phantom" candidates="60" cleared="0" enqueued="0" />
+  <object-monitors candidates="9" cleared="3"  />
+</gc-op>
+<gc-end id="238" type="scavenge" contextid="234" durationms="3.563" usertimems="9.252" systemtimems="0.000" stalltimems="7.232" timestamp="2024-07-17T19:33:31.115" activeThreads="6">
+  <mem-info id="239" free="227861280" total="274857984" percent="82">
+    <mem type="nursery" free="63482344" total="73531392" percent="86">
+      <mem type="allocate" free="63482344" total="66125824" percent="96" />
+      <mem type="survivor" free="0" total="7405568" percent="0" />
+    </mem>
+    <mem type="tenure" free="164378936" total="201326592" percent="81">
+      <mem type="soa" free="154311992" total="191259648" percent="80" />
+      <mem type="loa" free="10066944" total="10066944" percent="100" />
+    </mem>
+    <pending-finalizers system="0" default="0" reference="1939" classloader="0" />
+    <remembered-set count="2022" />
+  </mem-info>
+</gc-end>
+<cycle-end id="240" type="scavenge" contextid="234" timestamp="2024-07-17T19:33:31.115" />
+<allocation-satisfied id="241" threadId="0000000001582200" bytesRequested="3120" />
+<af-end id="242" timestamp="2024-07-17T19:33:31.115" threadId="0000000001582C38" success="true" from="nursery"/>
+<exclusive-end id="243" timestamp="2024-07-17T19:33:31.115" durationms="5.146" />
+
+<exclusive-start id="244" timestamp="2024-07-17T19:33:31.200" intervalms="89.437">
+  <response-info timems="0.091" idlems="0.091" threads="0" lastid="0000000001581600" lastname="Unconstrained build operations Thread 95" />
+</exclusive-start>
+<af-start id="245" threadId="0000000001582038" totalBytesRequested="56" timestamp="2024-07-17T19:33:31.200" intervalms="89.453" type="nursery" />
+<cycle-start id="246" type="scavenge" contextid="0" timestamp="2024-07-17T19:33:31.200" intervalms="89.450" />
+<gc-start id="247" type="scavenge" contextid="246" timestamp="2024-07-17T19:33:31.201">
+  <mem-info id="248" free="164378872" total="274857984" percent="59">
+    <mem type="nursery" free="0" total="73531392" percent="0">
+      <mem type="allocate" free="0" total="66125824" percent="0" />
+      <mem type="survivor" free="0" total="7405568" percent="0" />
+    </mem>
+    <mem type="tenure" free="164378872" total="201326592" percent="81">
+      <mem type="soa" free="154311928" total="191259648" percent="80" />
+      <mem type="loa" free="10066944" total="10066944" percent="100" />
+    </mem>
+    <remembered-set count="2113" />
+  </mem-info>
+</gc-start>
+<allocation-stats totalBytes="63391720" discardedBytes="90688" >
+  <allocated-bytes non-tlh="836304" tlh="62555416" />
+  <largest-consumer threadName="Unconstrained build operations Thread 90" threadId="000000000157A900" bytes="15095688" />
+</allocation-stats>
+<gc-op id="249" type="scavenge" timems="2.619" contextid="246" timestamp="2024-07-17T19:33:31.203">
+  <scavenger-info tenureage="12" tenuremask="7000" tiltratio="89" />
+  <memory-copied type="nursery" objects="49070" bytes="3047008" bytesdiscarded="178256" />
+  <ownableSynchronizers candidates="159" cleared="145" />
+  <references type="soft" candidates="111" cleared="0" enqueued="0" dynamicThreshold="32" maxThreshold="32" />
+  <references type="weak" candidates="4912" cleared="2056" enqueued="2056" />
+  <references type="phantom" candidates="60" cleared="0" enqueued="0" />
+  <object-monitors candidates="7" cleared="0"  />
+</gc-op>
+<gc-end id="250" type="scavenge" contextid="246" durationms="3.234" usertimems="0.350" systemtimems="8.689" stalltimems="4.137" timestamp="2024-07-17T19:33:31.204" activeThreads="5">
+  <mem-info id="251" free="227278688" total="274857984" percent="82">
+    <mem type="nursery" free="62899816" total="73531392" percent="85">
+      <mem type="allocate" free="62899816" total="66125824" percent="95" />
+      <mem type="survivor" free="0" total="7405568" percent="0" />
+    </mem>
+    <mem type="tenure" free="164378872" total="201326592" percent="81">
+      <mem type="soa" free="154311928" total="191259648" percent="80" />
+      <mem type="loa" free="10066944" total="10066944" percent="100" />
+    </mem>
+    <pending-finalizers system="0" default="0" reference="2056" classloader="0" />
+    <remembered-set count="1653" />
+  </mem-info>
+</gc-end>
+<cycle-end id="252" type="scavenge" contextid="246" timestamp="2024-07-17T19:33:31.204" />
+<allocation-satisfied id="253" threadId="0000000001581600" bytesRequested="56" />
+<af-end id="254" timestamp="2024-07-17T19:33:31.204" threadId="0000000001582038" success="true" from="nursery"/>
+<exclusive-end id="255" timestamp="2024-07-17T19:33:31.204" durationms="4.927" />
+
+<exclusive-start id="256" timestamp="2024-07-17T19:33:31.263" intervalms="63.252">
+  <response-info timems="0.108" idlems="0.108" threads="0" lastid="000000000157CD00" lastname="Unconstrained build operations Thread 91" />
+</exclusive-start>
+<af-start id="257" threadId="000000000157D738" totalBytesRequested="72" timestamp="2024-07-17T19:33:31.263" intervalms="63.268" type="nursery" />
+<cycle-start id="258" type="scavenge" contextid="0" timestamp="2024-07-17T19:33:31.263" intervalms="63.364" />
+<gc-start id="259" type="scavenge" contextid="258" timestamp="2024-07-17T19:33:31.264">
+  <mem-info id="260" free="164378504" total="274857984" percent="59">
+    <mem type="nursery" free="0" total="73531392" percent="0">
+      <mem type="allocate" free="0" total="66125824" percent="0" />
+      <mem type="survivor" free="0" total="7405568" percent="0" />
+    </mem>
+    <mem type="tenure" free="164378504" total="201326592" percent="81">
+      <mem type="soa" free="154311560" total="191259648" percent="80" />
+      <mem type="loa" free="10066944" total="10066944" percent="100" />
+    </mem>
+    <remembered-set count="1713" />
+  </mem-info>
+</gc-start>
+<allocation-stats totalBytes="62834880" discardedBytes="65304" >
+  <allocated-bytes non-tlh="322360" tlh="62512520" />
+  <largest-consumer threadName="Unconstrained build operations Thread 95" threadId="0000000001581600" bytes="10513104" />
+</allocation-stats>
+<gc-op id="261" type="scavenge" timems="3.278" contextid="258" timestamp="2024-07-17T19:33:31.267">
+  <scavenger-info tenureage="13" tenuremask="6000" tiltratio="89" />
+  <memory-copied type="nursery" objects="86224" bytes="4720184" bytesdiscarded="102056" />
+  <ownableSynchronizers candidates="73" cleared="61" />
+  <references type="soft" candidates="111" cleared="0" enqueued="0" dynamicThreshold="32" maxThreshold="32" />
+  <references type="weak" candidates="7289" cleared="2293" enqueued="2293" />
+  <references type="phantom" candidates="72" cleared="0" enqueued="0" />
+  <object-monitors candidates="7" cleared="1"  />
+</gc-op>
+<gc-end id="262" type="scavenge" contextid="258" durationms="3.979" usertimems="12.028" systemtimems="0.982" stalltimems="3.388" timestamp="2024-07-17T19:33:31.268" activeThreads="5">
+  <mem-info id="263" free="225681144" total="274857984" percent="82">
+    <mem type="nursery" free="61302640" total="73531392" percent="83">
+      <mem type="allocate" free="61302640" total="66125824" percent="92" />
+      <mem type="survivor" free="0" total="7405568" percent="0" />
+    </mem>
+    <mem type="tenure" free="164378504" total="201326592" percent="81">
+      <mem type="soa" free="154311560" total="191259648" percent="80" />
+      <mem type="loa" free="10066944" total="10066944" percent="100" />
+    </mem>
+    <pending-finalizers system="0" default="0" reference="2293" classloader="0" />
+    <remembered-set count="1652" />
+  </mem-info>
+</gc-end>
+<cycle-end id="264" type="scavenge" contextid="258" timestamp="2024-07-17T19:33:31.268" />
+<allocation-satisfied id="265" threadId="000000000157CD00" bytesRequested="72" />
+<af-end id="266" timestamp="2024-07-17T19:33:31.268" threadId="000000000157D738" success="true" from="nursery"/>
+<exclusive-end id="267" timestamp="2024-07-17T19:33:31.269" durationms="5.838" />
+
+<exclusive-start id="268" timestamp="2024-07-17T19:33:31.320" intervalms="57.483">
+  <response-info timems="0.087" idlems="0.087" threads="0" lastid="0000000001584600" lastname="Unconstrained build operations Thread 97" />
+</exclusive-start>
+<af-start id="269" threadId="0000000001585038" totalBytesRequested="24" timestamp="2024-07-17T19:33:31.321" intervalms="57.448" type="nursery" />
+<cycle-start id="270" type="scavenge" contextid="0" timestamp="2024-07-17T19:33:31.321" intervalms="57.348" />
+<gc-start id="271" type="scavenge" contextid="270" timestamp="2024-07-17T19:33:31.321">
+  <mem-info id="272" free="164378152" total="274857984" percent="59">
+    <mem type="nursery" free="0" total="73531392" percent="0">
+      <mem type="allocate" free="0" total="66125824" percent="0" />
+      <mem type="survivor" free="0" total="7405568" percent="0" />
+    </mem>
+    <mem type="tenure" free="164378152" total="201326592" percent="81">
+      <mem type="soa" free="154311208" total="191259648" percent="80" />
+      <mem type="loa" free="10066944" total="10066944" percent="100" />
+    </mem>
+    <remembered-set count="1724" />
+  </mem-info>
+</gc-start>
+<allocation-stats totalBytes="61213512" discardedBytes="89480" >
+  <allocated-bytes non-tlh="799200" tlh="60414312" />
+  <largest-consumer threadName="Unconstrained build operations Thread 95" threadId="0000000001581600" bytes="9265672" />
+</allocation-stats>
+<gc-op id="273" type="scavenge" timems="3.404" contextid="270" timestamp="2024-07-17T19:33:31.325">
+  <scavenger-info tenureage="14" tenuremask="4000" tiltratio="89" />
+  <memory-copied type="nursery" objects="66417" bytes="4739552" bytesdiscarded="135488" />
+  <ownableSynchronizers candidates="61" cleared="48" />
+  <references type="soft" candidates="111" cleared="0" enqueued="0" dynamicThreshold="32" maxThreshold="32" />
+  <references type="weak" candidates="7051" cleared="3879" enqueued="3879" />
+  <references type="phantom" candidates="84" cleared="0" enqueued="0" />
+  <object-monitors candidates="6" cleared="0"  />
+</gc-op>
+<heap-resize id="274" type="expand" space="nursery" amount="3538944" count="1" timems="0.029" reason="excessive time being spent scavenging" timestamp="2024-07-17T19:33:31.325" />
+<gc-end id="275" type="scavenge" contextid="270" durationms="4.310" usertimems="13.624" systemtimems="0.000" stalltimems="6.627" timestamp="2024-07-17T19:33:31.326" activeThreads="6">
+  <mem-info id="276" free="228773648" total="278396928" percent="82">
+    <mem type="nursery" free="64395496" total="77070336" percent="83">
+      <mem type="allocate" free="64395496" total="69271552" percent="92" />
+      <mem type="survivor" free="0" total="7798784" percent="0" />
+    </mem>
+    <mem type="tenure" free="164378152" total="201326592" percent="81">
+      <mem type="soa" free="154311208" total="191259648" percent="80" />
+      <mem type="loa" free="10066944" total="10066944" percent="100" />
+    </mem>
+    <pending-finalizers system="0" default="0" reference="3879" classloader="0" />
+    <remembered-set count="1662" />
+  </mem-info>
+</gc-end>
+<cycle-end id="277" type="scavenge" contextid="270" timestamp="2024-07-17T19:33:31.326" />
+<allocation-satisfied id="278" threadId="0000000001584600" bytesRequested="24" />
+<af-end id="279" timestamp="2024-07-17T19:33:31.326" threadId="0000000001585038" success="true" from="nursery"/>
+<exclusive-end id="280" timestamp="2024-07-17T19:33:31.326" durationms="6.112" />
+
+<exclusive-start id="281" timestamp="2024-07-17T19:33:31.382" intervalms="61.354">
+  <response-info timems="0.108" idlems="0.072" threads="2" lastid="000000000157A900" lastname="Unconstrained build operations Thread 90" />
+</exclusive-start>
+<af-start id="282" threadId="0000000001582C38" totalBytesRequested="1032" timestamp="2024-07-17T19:33:31.382" intervalms="61.372" type="nursery" />
+<cycle-start id="283" type="scavenge" contextid="0" timestamp="2024-07-17T19:33:31.382" intervalms="61.385" />
+<gc-start id="284" type="scavenge" contextid="283" timestamp="2024-07-17T19:33:31.383">
+  <mem-info id="285" free="164378112" total="278396928" percent="59">
+    <mem type="nursery" free="0" total="77070336" percent="0">
+      <mem type="allocate" free="0" total="69271552" percent="0" />
+      <mem type="survivor" free="0" total="7798784" percent="0" />
+    </mem>
+    <mem type="tenure" free="164378112" total="201326592" percent="81">
+      <mem type="soa" free="154311168" total="191259648" percent="80" />
+      <mem type="loa" free="10066944" total="10066944" percent="100" />
+    </mem>
+    <remembered-set count="1702" />
+  </mem-info>
+</gc-start>
+<allocation-stats totalBytes="64296976" discardedBytes="98560" >
+  <allocated-bytes non-tlh="529792" tlh="63767184" />
+  <largest-consumer threadName="Unconstrained build operations Thread 95" threadId="0000000001581600" bytes="10235088" />
+</allocation-stats>
+<gc-op id="286" type="scavenge" timems="3.161" contextid="283" timestamp="2024-07-17T19:33:31.386">
+  <scavenger-info tenureage="9" tenuremask="4200" tiltratio="89" />
+  <memory-copied type="nursery" objects="60987" bytes="4390760" bytesdiscarded="98760" />
+  <memory-copied type="tenure" objects="4438" bytes="142544" bytesdiscarded="96" />
+  <ownableSynchronizers candidates="36" cleared="21" />
+  <references type="soft" candidates="111" cleared="0" enqueued="0" dynamicThreshold="32" maxThreshold="32" />
+  <references type="weak" candidates="3067" cleared="23" enqueued="23" />
+  <references type="phantom" candidates="73" cleared="0" enqueued="0" />
+  <object-monitors candidates="6" cleared="0"  />
+</gc-op>
+<gc-end id="287" type="scavenge" contextid="283" durationms="3.902" usertimems="12.821" systemtimems="1.022" stalltimems="4.920" timestamp="2024-07-17T19:33:31.387" activeThreads="6">
+  <mem-info id="288" free="228943464" total="278396928" percent="82">
+    <mem type="nursery" free="64846696" total="77070336" percent="84">
+      <mem type="allocate" free="64846696" total="69337088" percent="93" />
+      <mem type="survivor" free="0" total="7733248" percent="0" />
+    </mem>
+    <mem type="tenure" free="164096768" total="201326592" percent="81">
+      <mem type="soa" free="154029824" total="191259648" percent="80" />
+      <mem type="loa" free="10066944" total="10066944" percent="100" />
+    </mem>
+    <pending-finalizers system="0" default="0" reference="23" classloader="0" />
+    <remembered-set count="1792" />
+  </mem-info>
+</gc-end>
+<cycle-end id="289" type="scavenge" contextid="283" timestamp="2024-07-17T19:33:31.387" />
+<allocation-satisfied id="290" threadId="0000000001582200" bytesRequested="1032" />
+<af-end id="291" timestamp="2024-07-17T19:33:31.387" threadId="0000000001582C38" success="true" from="nursery"/>
+<exclusive-end id="292" timestamp="2024-07-17T19:33:31.387" durationms="5.608" />
+
+<exclusive-start id="293" timestamp="2024-07-17T19:33:31.436" intervalms="54.836">
+  <response-info timems="0.165" idlems="0.108" threads="1" lastid="0000000001581600" lastname="Unconstrained build operations Thread 95" />
+</exclusive-start>
+<af-start id="294" threadId="0000000001585C38" totalBytesRequested="72" timestamp="2024-07-17T19:33:31.437" intervalms="54.827" type="nursery" />
+<cycle-start id="295" type="scavenge" contextid="0" timestamp="2024-07-17T19:33:31.437" intervalms="54.814" />
+<gc-start id="296" type="scavenge" contextid="295" timestamp="2024-07-17T19:33:31.437">
+  <mem-info id="297" free="164096400" total="278396928" percent="58">
+    <mem type="nursery" free="0" total="77070336" percent="0">
+      <mem type="allocate" free="0" total="69337088" percent="0" />
+      <mem type="survivor" free="0" total="7733248" percent="0" />
+    </mem>
+    <mem type="tenure" free="164096400" total="201326592" percent="81">
+      <mem type="soa" free="154029456" total="191259648" percent="80" />
+      <mem type="loa" free="10066944" total="10066944" percent="100" />
+    </mem>
+    <remembered-set count="1858" />
+  </mem-info>
+</gc-start>
+<allocation-stats totalBytes="64759304" discardedBytes="87760" >
+  <allocated-bytes non-tlh="1728720" tlh="63030584" />
+  <largest-consumer threadName="Unconstrained build operations Thread 95" threadId="0000000001581600" bytes="9829168" />
+</allocation-stats>
+<gc-op id="298" type="scavenge" timems="3.960" contextid="295" timestamp="2024-07-17T19:33:31.442">
+  <scavenger-info tenureage="6" tenuremask="42c0" tiltratio="89" />
+  <memory-copied type="nursery" objects="62942" bytes="5407336" bytesdiscarded="127560" />
+  <memory-copied type="tenure" objects="20456" bytes="1295600" bytesdiscarded="424" />
+  <ownableSynchronizers candidates="62" cleared="43" />
+  <references type="weak" candidates="1956" cleared="155" enqueued="155" />
+  <references type="phantom" candidates="47" cleared="0" enqueued="0" />
+  <object-monitors candidates="6" cleared="0"  />
+</gc-op>
+<heap-resize id="299" type="expand" space="nursery" amount="3801088" count="1" timems="0.026" reason="excessive time being spent scavenging" timestamp="2024-07-17T19:33:31.442" />
+<gc-end id="300" type="scavenge" contextid="295" durationms="4.839" usertimems="15.302" systemtimems="1.207" stalltimems="5.960" timestamp="2024-07-17T19:33:31.442" activeThreads="6">
+  <mem-info id="301" free="229657112" total="282198016" percent="81">
+    <mem type="nursery" free="67209664" total="80871424" percent="83">
+      <mem type="allocate" free="67209664" total="72744960" percent="92" />
+      <mem type="survivor" free="0" total="8126464" percent="0" />
+    </mem>
+    <mem type="tenure" free="162447448" total="201326592" percent="80">
+      <mem type="soa" free="152380504" total="191259648" percent="79" />
+      <mem type="loa" free="10066944" total="10066944" percent="100" />
+    </mem>
+    <pending-finalizers system="0" default="0" reference="155" classloader="0" />
+    <remembered-set count="1645" />
+  </mem-info>
+</gc-end>
+<cycle-end id="302" type="scavenge" contextid="295" timestamp="2024-07-17T19:33:31.442" />
+<allocation-satisfied id="303" threadId="0000000001585200" bytesRequested="72" />
+<af-end id="304" timestamp="2024-07-17T19:33:31.443" threadId="0000000001585C38" success="true" from="nursery"/>
+<exclusive-end id="305" timestamp="2024-07-17T19:33:31.443" durationms="6.463" />
+
+<exclusive-start id="306" timestamp="2024-07-17T19:33:31.501" intervalms="64.678">
+  <response-info timems="0.130" idlems="0.084" threads="2" lastid="000000000157E500" lastname="Unconstrained build operations Thread 93" />
+</exclusive-start>
+<af-start id="307" threadId="0000000001585C38" totalBytesRequested="121600" timestamp="2024-07-17T19:33:31.501" intervalms="64.699" type="nursery" />
+<cycle-start id="308" type="scavenge" contextid="0" timestamp="2024-07-17T19:33:31.502" intervalms="64.786" />
+<gc-start id="309" type="scavenge" contextid="308" timestamp="2024-07-17T19:33:31.502">
+  <mem-info id="310" free="162447192" total="282198016" percent="57">
+    <mem type="nursery" free="0" total="80871424" percent="0">
+      <mem type="allocate" free="0" total="72744960" percent="0" />
+      <mem type="survivor" free="0" total="8126464" percent="0" />
+    </mem>
+    <mem type="tenure" free="162447192" total="201326592" percent="80">
+      <mem type="soa" free="152380248" total="191259648" percent="79" />
+      <mem type="loa" free="10066944" total="10066944" percent="100" />
+    </mem>
+    <remembered-set count="1777" />
+  </mem-info>
+</gc-start>
+<allocation-stats totalBytes="67137816" discardedBytes="72104" >
+  <allocated-bytes non-tlh="2208128" tlh="64929688" />
+  <largest-consumer threadName="Unconstrained build operations Thread 96" threadId="0000000001582200" bytes="10709568" />
+</allocation-stats>
+<gc-op id="311" type="scavenge" timems="3.390" contextid="308" timestamp="2024-07-17T19:33:31.506">
+  <scavenger-info tenureage="9" tenuremask="4200" tiltratio="89" />
+  <memory-copied type="nursery" objects="76431" bytes="4898448" bytesdiscarded="234800" />
+  <memory-copied type="tenure" objects="1307" bytes="54632" bytesdiscarded="16" />
+  <ownableSynchronizers candidates="63" cleared="59" />
+  <references type="weak" candidates="2924" cleared="246" enqueued="246" />
+  <references type="phantom" candidates="40" cleared="0" enqueued="0" />
+  <object-monitors candidates="7" cleared="0"  />
+</gc-op>
+<gc-end id="312" type="scavenge" contextid="308" durationms="4.050" usertimems="9.219" systemtimems="7.033" stalltimems="6.597" timestamp="2024-07-17T19:33:31.506" activeThreads="7">
+  <mem-info id="313" free="229927136" total="282198016" percent="81">
+    <mem type="nursery" free="67611272" total="80871424" percent="83">
+      <mem type="allocate" free="67611272" total="72744960" percent="92" />
+      <mem type="survivor" free="0" total="8126464" percent="0" />
+    </mem>
+    <mem type="tenure" free="162315864" total="201326592" percent="80">
+      <mem type="soa" free="152248920" total="191259648" percent="79" />
+      <mem type="loa" free="10066944" total="10066944" percent="100" />
+    </mem>
+    <pending-finalizers system="0" default="0" reference="246" classloader="0" />
+    <remembered-set count="1488" />
+  </mem-info>
+</gc-end>
+<cycle-end id="314" type="scavenge" contextid="308" timestamp="2024-07-17T19:33:31.506" />
+<allocation-satisfied id="315" threadId="0000000001585200" bytesRequested="121600" />
+<af-end id="316" timestamp="2024-07-17T19:33:31.507" threadId="0000000001585C38" success="true" from="nursery"/>
+<exclusive-end id="317" timestamp="2024-07-17T19:33:31.507" durationms="5.831" />
+
+<exclusive-start id="318" timestamp="2024-07-17T19:33:31.564" intervalms="62.564">
+  <response-info timems="0.097" idlems="0.074" threads="1" lastid="000000000157D900" lastname="Unconstrained build operations Thread 92" />
+</exclusive-start>
+<af-start id="319" threadId="0000000001585038" totalBytesRequested="48" timestamp="2024-07-17T19:33:31.564" intervalms="62.596" type="nursery" />
+<cycle-start id="320" type="scavenge" contextid="0" timestamp="2024-07-17T19:33:31.564" intervalms="62.537" />
+<gc-start id="321" type="scavenge" contextid="320" timestamp="2024-07-17T19:33:31.565">
+  <mem-info id="322" free="162315568" total="282198016" percent="57">
+    <mem type="nursery" free="0" total="80871424" percent="0">
+      <mem type="allocate" free="0" total="72744960" percent="0" />
+      <mem type="survivor" free="0" total="8126464" percent="0" />
+    </mem>
+    <mem type="tenure" free="162315568" total="201326592" percent="80">
+      <mem type="soa" free="152248624" total="191259648" percent="79" />
+      <mem type="loa" free="10066944" total="10066944" percent="100" />
+    </mem>
+    <remembered-set count="1652" />
+  </mem-info>
+</gc-start>
+<allocation-stats totalBytes="67511376" discardedBytes="100192" >
+  <allocated-bytes non-tlh="1929784" tlh="65581592" />
+  <largest-consumer threadName="Unconstrained build operations Thread 98" threadId="0000000001585200" bytes="11876576" />
+</allocation-stats>
+<gc-op id="323" type="scavenge" timems="3.224" contextid="320" timestamp="2024-07-17T19:33:31.568">
+  <scavenger-info tenureage="4" tenuremask="4010" tiltratio="89" />
+  <memory-copied type="nursery" objects="44039" bytes="2640416" bytesdiscarded="364416" />
+  <memory-copied type="tenure" objects="4793" bytes="958600" bytesdiscarded="208" />
+  <ownableSynchronizers candidates="58" cleared="52" />
+  <references type="weak" candidates="3843" cleared="1961" enqueued="1961" />
+  <references type="phantom" candidates="28" cleared="0" enqueued="0" />
+  <object-monitors candidates="7" cleared="0"  />
+</gc-op>
+<heap-resize id="324" type="expand" space="nursery" amount="3014656" count="1" timems="0.530" reason="excessive time being spent scavenging" timestamp="2024-07-17T19:33:31.569" />
+<gc-end id="325" type="scavenge" contextid="320" durationms="4.599" usertimems="13.249" systemtimems="1.034" stalltimems="6.793" timestamp="2024-07-17T19:33:31.569" activeThreads="7">
+  <mem-info id="326" free="233684640" total="285212672" percent="81">
+    <mem type="nursery" free="72426864" total="83886080" percent="86">
+      <mem type="allocate" free="72426864" total="75431936" percent="96" />
+      <mem type="survivor" free="0" total="8454144" percent="0" />
+    </mem>
+    <mem type="tenure" free="161257776" total="201326592" percent="80">
+      <mem type="soa" free="151190832" total="191259648" percent="79" />
+      <mem type="loa" free="10066944" total="10066944" percent="100" />
+    </mem>
+    <pending-finalizers system="0" default="0" reference="1961" classloader="0" />
+    <remembered-set count="1888" />
+  </mem-info>
+</gc-end>
+<cycle-end id="327" type="scavenge" contextid="320" timestamp="2024-07-17T19:33:31.570" />
+<allocation-satisfied id="328" threadId="0000000001584600" bytesRequested="48" />
+<af-end id="329" timestamp="2024-07-17T19:33:31.570" threadId="0000000001585038" success="true" from="nursery"/>
+<exclusive-end id="330" timestamp="2024-07-17T19:33:31.570" durationms="6.347" />
+
+<exclusive-start id="331" timestamp="2024-07-17T19:33:31.626" intervalms="61.984">
+  <response-info timems="0.101" idlems="0.084" threads="1" lastid="00000000005FC700" lastname="Daemon worker" />
+</exclusive-start>
+<af-start id="332" threadId="0000000001582C38" totalBytesRequested="32" timestamp="2024-07-17T19:33:31.626" intervalms="61.933" type="nursery" />
+<cycle-start id="333" type="scavenge" contextid="0" timestamp="2024-07-17T19:33:31.626" intervalms="61.912" />
+<gc-start id="334" type="scavenge" contextid="333" timestamp="2024-07-17T19:33:31.627">
+  <mem-info id="335" free="161256568" total="285212672" percent="56">
+    <mem type="nursery" free="0" total="83886080" percent="0">
+      <mem type="allocate" free="0" total="75431936" percent="0" />
+      <mem type="survivor" free="0" total="8454144" percent="0" />
+    </mem>
+    <mem type="tenure" free="161256568" total="201326592" percent="80">
+      <mem type="soa" free="151189624" total="191259648" percent="79" />
+      <mem type="loa" free="10066944" total="10066944" percent="100" />
+    </mem>
+    <remembered-set count="2066" />
+  </mem-info>
+</gc-start>
+<allocation-stats totalBytes="72363672" discardedBytes="64400" >
+  <allocated-bytes non-tlh="1099400" tlh="71264272" />
+  <largest-consumer threadName="Unconstrained build operations Thread 92" threadId="000000000157D900" bytes="12138592" />
+</allocation-stats>
+<gc-op id="336" type="scavenge" timems="2.452" contextid="333" timestamp="2024-07-17T19:33:31.629">
+  <scavenger-info tenureage="14" tenuremask="4000" tiltratio="89" />
+  <memory-copied type="nursery" objects="51209" bytes="2957040" bytesdiscarded="246432" />
+  <ownableSynchronizers candidates="46" cleared="40" />
+  <references type="weak" candidates="2110" cleared="111" enqueued="111" />
+  <references type="phantom" candidates="26" cleared="0" enqueued="0" />
+  <object-monitors candidates="7" cleared="0"  />
+</gc-op>
+<gc-end id="337" type="scavenge" contextid="333" durationms="3.064" usertimems="9.477" systemtimems="0.727" stalltimems="6.112" timestamp="2024-07-17T19:33:31.630" activeThreads="7">
+  <mem-info id="338" free="233550384" total="285212672" percent="81">
+    <mem type="nursery" free="72293816" total="83886080" percent="86">
+      <mem type="allocate" free="72293816" total="75497472" percent="95" />
+      <mem type="survivor" free="0" total="8388608" percent="0" />
+    </mem>
+    <mem type="tenure" free="161256568" total="201326592" percent="80">
+      <mem type="soa" free="151189624" total="191259648" percent="79" />
+      <mem type="loa" free="10066944" total="10066944" percent="100" />
+    </mem>
+    <pending-finalizers system="0" default="0" reference="111" classloader="0" />
+    <remembered-set count="1879" />
+  </mem-info>
+</gc-end>
+<cycle-end id="339" type="scavenge" contextid="333" timestamp="2024-07-17T19:33:31.630" />
+<allocation-satisfied id="340" threadId="0000000001582200" bytesRequested="32" />
+<af-end id="341" timestamp="2024-07-17T19:33:31.630" threadId="0000000001582C38" success="true" from="nursery"/>
+<exclusive-end id="342" timestamp="2024-07-17T19:33:31.630" durationms="4.655" />
+
+<exclusive-start id="343" timestamp="2024-07-17T19:33:31.690" intervalms="64.659">
+  <response-info timems="0.101" idlems="0.101" threads="0" lastid="00000000005FC700" lastname="Daemon worker" />
+</exclusive-start>
+<af-start id="344" threadId="00000000005FD138" totalBytesRequested="1032" timestamp="2024-07-17T19:33:31.691" intervalms="64.638" type="nursery" />
+<cycle-start id="345" type="scavenge" contextid="0" timestamp="2024-07-17T19:33:31.691" intervalms="64.640" />
+<gc-start id="346" type="scavenge" contextid="345" timestamp="2024-07-17T19:33:31.691">
+  <mem-info id="347" free="161256184" total="285212672" percent="56">
+    <mem type="nursery" free="0" total="83886080" percent="0">
+      <mem type="allocate" free="0" total="75497472" percent="0" />
+      <mem type="survivor" free="0" total="8388608" percent="0" />
+    </mem>
+    <mem type="tenure" free="161256184" total="201326592" percent="80">
+      <mem type="soa" free="151189240" total="191259648" percent="79" />
+      <mem type="loa" free="10066944" total="10066944" percent="100" />
+    </mem>
+    <remembered-set count="1969" />
+  </mem-info>
+</gc-start>
+<allocation-stats totalBytes="72145400" discardedBytes="148800" >
+  <allocated-bytes non-tlh="887240" tlh="71258160" />
+  <largest-consumer threadName="Unconstrained build operations Thread 96" threadId="0000000001582200" bytes="12702536" />
+</allocation-stats>
+<gc-op id="348" type="scavenge" timems="3.217" contextid="345" timestamp="2024-07-17T19:33:31.695">
+  <scavenger-info tenureage="14" tenuremask="4000" tiltratio="90" />
+  <memory-copied type="nursery" objects="61861" bytes="3685048" bytesdiscarded="329216" />
+  <ownableSynchronizers candidates="18" cleared="14" />
+  <references type="weak" candidates="2535" cleared="500" enqueued="500" />
+  <references type="phantom" candidates="31" cleared="0" enqueued="0" />
+  <object-monitors candidates="7" cleared="0"  />
+</gc-op>
+<gc-end id="349" type="scavenge" contextid="345" durationms="3.881" usertimems="14.380" systemtimems="0.000" stalltimems="7.312" timestamp="2024-07-17T19:33:31.695" activeThreads="7">
+  <mem-info id="350" free="232739128" total="285212672" percent="81">
+    <mem type="nursery" free="71482944" total="83886080" percent="85">
+      <mem type="allocate" free="71482944" total="75497472" percent="94" />
+      <mem type="survivor" free="0" total="8388608" percent="0" />
+    </mem>
+    <mem type="tenure" free="161256184" total="201326592" percent="80">
+      <mem type="soa" free="151189240" total="191259648" percent="79" />
+      <mem type="loa" free="10066944" total="10066944" percent="100" />
+    </mem>
+    <pending-finalizers system="0" default="0" reference="500" classloader="0" />
+    <remembered-set count="1882" />
+  </mem-info>
+</gc-end>
+<cycle-end id="351" type="scavenge" contextid="345" timestamp="2024-07-17T19:33:31.696" />
+<allocation-satisfied id="352" threadId="00000000005FC700" bytesRequested="1032" />
+<af-end id="353" timestamp="2024-07-17T19:33:31.696" threadId="00000000005FD138" success="true" from="nursery"/>
+<exclusive-end id="354" timestamp="2024-07-17T19:33:31.696" durationms="5.594" />
+
+<exclusive-start id="355" timestamp="2024-07-17T19:33:31.761" intervalms="70.158">
+  <response-info timems="0.107" idlems="0.107" threads="0" lastid="00000000005FC700" lastname="Daemon worker" />
+</exclusive-start>
+<af-start id="356" threadId="00000000005FD138" totalBytesRequested="136" timestamp="2024-07-17T19:33:31.761" intervalms="70.167" type="nursery" />
+<cycle-start id="357" type="scavenge" contextid="0" timestamp="2024-07-17T19:33:31.761" intervalms="70.179" />
+<gc-start id="358" type="scavenge" contextid="357" timestamp="2024-07-17T19:33:31.761">
+  <mem-info id="359" free="161256184" total="285212672" percent="56">
+    <mem type="nursery" free="0" total="83886080" percent="0">
+      <mem type="allocate" free="0" total="75497472" percent="0" />
+      <mem type="survivor" free="0" total="8388608" percent="0" />
+    </mem>
+    <mem type="tenure" free="161256184" total="201326592" percent="80">
+      <mem type="soa" free="151189240" total="191259648" percent="79" />
+      <mem type="loa" free="10066944" total="10066944" percent="100" />
+    </mem>
+    <remembered-set count="2096" />
+  </mem-info>
+</gc-start>
+<allocation-stats totalBytes="71418280" discardedBytes="64664" >
+  <allocated-bytes non-tlh="627240" tlh="70791040" />
+  <largest-consumer threadName="Unconstrained build operations Thread 92" threadId="000000000157D900" bytes="13074088" />
+</allocation-stats>
+<gc-op id="360" type="scavenge" timems="3.400" contextid="357" timestamp="2024-07-17T19:33:31.765">
+  <scavenger-info tenureage="14" tenuremask="4000" tiltratio="90" />
+  <memory-copied type="nursery" objects="56705" bytes="3172672" bytesdiscarded="97256" />
+  <ownableSynchronizers candidates="25" cleared="16" />
+  <references type="weak" candidates="2122" cleared="20" enqueued="20" />
+  <references type="phantom" candidates="28" cleared="0" enqueued="0" />
+  <object-monitors candidates="7" cleared="0"  />
+</gc-op>
+<heap-resize id="361" type="expand" space="nursery" amount="3407872" count="1" timems="0.025" reason="excessive time being spent scavenging" timestamp="2024-07-17T19:33:31.766" />
+<gc-end id="362" type="scavenge" contextid="357" durationms="4.743" usertimems="23.373" systemtimems="0.000" stalltimems="7.646" timestamp="2024-07-17T19:33:31.766" activeThreads="7">
+  <mem-info id="363" free="236498184" total="288620544" percent="81">
+    <mem type="nursery" free="75242000" total="87293952" percent="86">
+      <mem type="allocate" free="75242000" total="78512128" percent="95" />
+      <mem type="survivor" free="0" total="8781824" percent="0" />
+    </mem>
+    <mem type="tenure" free="161256184" total="201326592" percent="80">
+      <mem type="soa" free="151189240" total="191259648" percent="79" />
+      <mem type="loa" free="10066944" total="10066944" percent="100" />
+    </mem>
+    <pending-finalizers system="0" default="0" reference="20" classloader="0" />
+    <remembered-set count="1894" />
+  </mem-info>
+</gc-end>
+<cycle-end id="364" type="scavenge" contextid="357" timestamp="2024-07-17T19:33:31.766" />
+<allocation-satisfied id="365" threadId="00000000005FC700" bytesRequested="136" />
+<af-end id="366" timestamp="2024-07-17T19:33:31.767" threadId="00000000005FD138" success="true" from="nursery"/>
+<exclusive-end id="367" timestamp="2024-07-17T19:33:31.767" durationms="6.307" />
+
+<exclusive-start id="368" timestamp="2024-07-17T19:33:31.947" intervalms="186.547">
+  <response-info timems="0.203" idlems="0.107" threads="2" lastid="0000000001585200" lastname="Unconstrained build operations Thread 98" />
+</exclusive-start>
+<af-start id="369" threadId="0000000001582038" totalBytesRequested="16" timestamp="2024-07-17T19:33:31.947" intervalms="186.596" type="nursery" />
+<cycle-start id="370" type="scavenge" contextid="0" timestamp="2024-07-17T19:33:31.948" intervalms="186.775" />
+<gc-start id="371" type="scavenge" contextid="370" timestamp="2024-07-17T19:33:31.948">
+  <mem-info id="372" free="161255512" total="288620544" percent="55">
+    <mem type="nursery" free="0" total="87293952" percent="0">
+      <mem type="allocate" free="0" total="78512128" percent="0" />
+      <mem type="survivor" free="0" total="8781824" percent="0" />
+    </mem>
+    <mem type="tenure" free="161255512" total="201326592" percent="80">
+      <mem type="soa" free="151188568" total="191259648" percent="79" />
+      <mem type="loa" free="10066944" total="10066944" percent="100" />
+    </mem>
+    <remembered-set count="1998" />
+  </mem-info>
+</gc-start>
+<allocation-stats totalBytes="75136808" discardedBytes="105864" >
+  <allocated-bytes non-tlh="808" tlh="75136000" />
+  <largest-consumer threadName="Unconstrained build operations Thread 92" threadId="000000000157D900" bytes="17319056" />
+</allocation-stats>
+<gc-op id="373" type="scavenge" timems="6.403" contextid="370" timestamp="2024-07-17T19:33:31.955">
+  <scavenger-info tenureage="11" tenuremask="4800" tiltratio="89" />
+  <memory-copied type="nursery" objects="55731" bytes="3115288" bytesdiscarded="121584" />
+  <memory-copied type="tenure" objects="5571" bytes="210416" bytesdiscarded="32" />
+  <ownableSynchronizers candidates="24" cleared="16" />
+  <references type="weak" candidates="1661" cleared="17" enqueued="17" />
+  <references type="phantom" candidates="27" cleared="0" enqueued="0" />
+  <object-monitors candidates="7" cleared="0"  />
+</gc-op>
+<gc-end id="374" type="scavenge" contextid="370" durationms="7.907" usertimems="24.932" systemtimems="0.000" stalltimems="7.891" timestamp="2024-07-17T19:33:31.956" activeThreads="7">
+  <mem-info id="375" free="236249200" total="288620544" percent="81">
+    <mem type="nursery" free="75275032" total="87293952" percent="86">
+      <mem type="allocate" free="75275032" total="78512128" percent="95" />
+      <mem type="survivor" free="0" total="8781824" percent="0" />
+    </mem>
+    <mem type="tenure" free="160974168" total="201326592" percent="79">
+      <mem type="soa" free="150907224" total="191259648" percent="78" />
+      <mem type="loa" free="10066944" total="10066944" percent="100" />
+    </mem>
+    <pending-finalizers system="0" default="0" reference="17" classloader="0" />
+    <remembered-set count="1725" />
+  </mem-info>
+</gc-end>
+<cycle-end id="376" type="scavenge" contextid="370" timestamp="2024-07-17T19:33:31.957" />
+<allocation-satisfied id="377" threadId="0000000001581600" bytesRequested="16" />
+<af-end id="378" timestamp="2024-07-17T19:33:31.957" threadId="0000000001582038" success="true" from="nursery"/>
+<exclusive-end id="379" timestamp="2024-07-17T19:33:31.957" durationms="10.258" />
+
+<exclusive-start id="380" timestamp="2024-07-17T19:33:32.197" intervalms="249.970">
+  <response-info timems="0.101" idlems="0.101" threads="0" lastid="00000000005FC700" lastname="Daemon worker" />
+</exclusive-start>
+<af-start id="381" threadId="00000000005FD138" totalBytesRequested="16" timestamp="2024-07-17T19:33:32.197" intervalms="249.969" type="nursery" />
+<cycle-start id="382" type="scavenge" contextid="0" timestamp="2024-07-17T19:33:32.198" intervalms="249.845" />
+<gc-start id="383" type="scavenge" contextid="382" timestamp="2024-07-17T19:33:32.198">
+  <mem-info id="384" free="160974008" total="288620544" percent="55">
+    <mem type="nursery" free="0" total="87293952" percent="0">
+      <mem type="allocate" free="0" total="78512128" percent="0" />
+      <mem type="survivor" free="0" total="8781824" percent="0" />
+    </mem>
+    <mem type="tenure" free="160974008" total="201326592" percent="79">
+      <mem type="soa" free="150907064" total="191259648" percent="78" />
+      <mem type="loa" free="10066944" total="10066944" percent="100" />
+    </mem>
+    <remembered-set count="2136" />
+  </mem-info>
+</gc-start>
+<allocation-stats totalBytes="75177984" discardedBytes="97208" >
+  <allocated-bytes non-tlh="1257728" tlh="73920256" />
+  <largest-consumer threadName="Unconstrained build operations Thread 97" threadId="0000000001584600" bytes="23720648" />
+</allocation-stats>
+<gc-op id="385" type="scavenge" timems="3.326" contextid="382" timestamp="2024-07-17T19:33:32.202">
+  <scavenger-info tenureage="10" tenuremask="4400" tiltratio="89" />
+  <memory-copied type="nursery" objects="22108" bytes="1009200" bytesdiscarded="422544" />
+  <memory-copied type="tenure" objects="2172" bytes="140280" bytesdiscarded="0" />
+  <ownableSynchronizers candidates="95" cleared="89" />
+  <references type="weak" candidates="2323" cleared="803" enqueued="803" />
+  <references type="phantom" candidates="19" cleared="0" enqueued="0" />
+  <object-monitors candidates="7" cleared="0"  />
+</gc-op>
+<gc-end id="386" type="scavenge" contextid="382" durationms="4.554" usertimems="19.459" systemtimems="1.570" stalltimems="13.421" timestamp="2024-07-17T19:33:32.203" activeThreads="8">
+  <mem-info id="387" free="238019208" total="288620544" percent="82">
+    <mem type="nursery" free="77080280" total="87293952" percent="88">
+      <mem type="allocate" free="77080280" total="78512128" percent="98" />
+      <mem type="survivor" free="0" total="8781824" percent="0" />
+    </mem>
+    <mem type="tenure" free="160938928" total="201326592" percent="79">
+      <mem type="soa" free="150871984" total="191259648" percent="78" />
+      <mem type="loa" free="10066944" total="10066944" percent="100" />
+    </mem>
+    <pending-finalizers system="0" default="0" reference="803" classloader="0" />
+    <remembered-set count="1831" />
+  </mem-info>
+</gc-end>
+<cycle-end id="388" type="scavenge" contextid="382" timestamp="2024-07-17T19:33:32.203" />
+<allocation-satisfied id="389" threadId="00000000005FC700" bytesRequested="16" />
+<af-end id="390" timestamp="2024-07-17T19:33:32.204" threadId="00000000005FD138" success="true" from="nursery"/>
+<exclusive-end id="391" timestamp="2024-07-17T19:33:32.204" durationms="6.833" />
+
+<exclusive-start id="392" timestamp="2024-07-17T19:33:32.408" intervalms="210.924">
+  <response-info timems="0.129" idlems="0.129" threads="0" lastid="0000000001579000" lastname="Unconstrained build operations Thread 88" />
+</exclusive-start>
+<af-start id="393" threadId="0000000001579A38" totalBytesRequested="3904" timestamp="2024-07-17T19:33:32.408" intervalms="210.877" type="nursery" />
+<cycle-start id="394" type="scavenge" contextid="0" timestamp="2024-07-17T19:33:32.409" intervalms="210.855" />
+<gc-start id="395" type="scavenge" contextid="394" timestamp="2024-07-17T19:33:32.409">
+  <mem-info id="396" free="160938816" total="288620544" percent="55">
+    <mem type="nursery" free="0" total="87293952" percent="0">
+      <mem type="allocate" free="0" total="78512128" percent="0" />
+      <mem type="survivor" free="0" total="8781824" percent="0" />
+    </mem>
+    <mem type="tenure" free="160938816" total="201326592" percent="79">
+      <mem type="soa" free="150871872" total="191259648" percent="78" />
+      <mem type="loa" free="10066944" total="10066944" percent="100" />
+    </mem>
+    <remembered-set count="2171" />
+  </mem-info>
+</gc-start>
+<allocation-stats totalBytes="76952592" discardedBytes="127800" >
+  <allocated-bytes non-tlh="752520" tlh="76200072" />
+  <largest-consumer threadName="Unconstrained build operations Thread 88" threadId="0000000001579000" bytes="33595624" />
+</allocation-stats>
+<gc-op id="397" type="scavenge" timems="2.958" contextid="394" timestamp="2024-07-17T19:33:32.412">
+  <scavenger-info tenureage="14" tenuremask="4000" tiltratio="89" />
+  <memory-copied type="nursery" objects="35670" bytes="1878208" bytesdiscarded="161664" />
+  <ownableSynchronizers candidates="137" cleared="131" />
+  <references type="weak" candidates="3807" cleared="1881" enqueued="1881" />
+  <references type="phantom" candidates="28" cleared="0" enqueued="0" />
+  <object-monitors candidates="15" cleared="4"  />
+</gc-op>
+<gc-end id="398" type="scavenge" contextid="394" durationms="4.275" usertimems="12.064" systemtimems="0.156" stalltimems="8.090" timestamp="2024-07-17T19:33:32.413" activeThreads="7">
+  <mem-info id="399" free="237410760" total="288620544" percent="82">
+    <mem type="nursery" free="76471944" total="87293952" percent="87">
+      <mem type="allocate" free="76471944" total="78512128" percent="97" />
+      <mem type="survivor" free="0" total="8781824" percent="0" />
+    </mem>
+    <mem type="tenure" free="160938816" total="201326592" percent="79">
+      <mem type="soa" free="150871872" total="191259648" percent="78" />
+      <mem type="loa" free="10066944" total="10066944" percent="100" />
+    </mem>
+    <pending-finalizers system="0" default="0" reference="1881" classloader="0" />
+    <remembered-set count="1920" />
+  </mem-info>
+</gc-end>
+<cycle-end id="400" type="scavenge" contextid="394" timestamp="2024-07-17T19:33:32.414" />
+<allocation-satisfied id="401" threadId="0000000001579000" bytesRequested="3904" />
+<af-end id="402" timestamp="2024-07-17T19:33:32.414" threadId="0000000001579A38" success="true" from="nursery"/>
+<exclusive-end id="403" timestamp="2024-07-17T19:33:32.414" durationms="6.151" />
+
+<exclusive-start id="404" timestamp="2024-07-17T19:33:32.517" intervalms="109.218">
+  <response-info timems="0.117" idlems="0.117" threads="0" lastid="000000000157CD00" lastname="Unconstrained build operations Thread 91" />
+</exclusive-start>
+<af-start id="405" threadId="000000000157D738" totalBytesRequested="72808" timestamp="2024-07-17T19:33:32.517" intervalms="109.227" type="nursery" />
+<cycle-start id="406" type="scavenge" contextid="0" timestamp="2024-07-17T19:33:32.518" intervalms="109.188" />
+<gc-start id="407" type="scavenge" contextid="406" timestamp="2024-07-17T19:33:32.518">
+  <mem-info id="408" free="160937984" total="288620544" percent="55">
+    <mem type="nursery" free="0" total="87293952" percent="0">
+      <mem type="allocate" free="0" total="78512128" percent="0" />
+      <mem type="survivor" free="0" total="8781824" percent="0" />
+    </mem>
+    <mem type="tenure" free="160937984" total="201326592" percent="79">
+      <mem type="soa" free="150871040" total="191259648" percent="78" />
+      <mem type="loa" free="10066944" total="10066944" percent="100" />
+    </mem>
+    <remembered-set count="2164" />
+  </mem-info>
+</gc-start>
+<allocation-stats totalBytes="76376176" discardedBytes="96600" >
+  <allocated-bytes non-tlh="214760" tlh="76161416" />
+  <largest-consumer threadName="Daemon worker" threadId="00000000005FC700" bytes="20785584" />
+</allocation-stats>
+<gc-op id="409" type="scavenge" timems="2.968" contextid="406" timestamp="2024-07-17T19:33:32.522">
+  <scavenger-info tenureage="13" tenuremask="6000" tiltratio="89" />
+  <memory-copied type="nursery" objects="39176" bytes="2299192" bytesdiscarded="202448" />
+  <memory-copied type="tenure" objects="4799" bytes="176088" bytesdiscarded="88" />
+  <ownableSynchronizers candidates="163" cleared="161" />
+  <references type="weak" candidates="3686" cleared="1683" enqueued="1683" />
+  <references type="phantom" candidates="42" cleared="0" enqueued="0" />
+  <object-monitors candidates="11" cleared="1"  />
+</gc-op>
+<gc-end id="410" type="scavenge" contextid="406" durationms="4.052" usertimems="12.275" systemtimems="1.041" stalltimems="4.811" timestamp="2024-07-17T19:33:32.523" activeThreads="6">
+  <mem-info id="411" free="236584736" total="288620544" percent="81">
+    <mem type="nursery" free="76010016" total="87293952" percent="87">
+      <mem type="allocate" free="76010016" total="78512128" percent="96" />
+      <mem type="survivor" free="0" total="8781824" percent="0" />
+    </mem>
+    <mem type="tenure" free="160574720" total="201326592" percent="79">
+      <mem type="soa" free="150507776" total="191259648" percent="78" />
+      <mem type="loa" free="10066944" total="10066944" percent="100" />
+    </mem>
+    <pending-finalizers system="0" default="0" reference="1683" classloader="0" />
+    <remembered-set count="1725" />
+  </mem-info>
+</gc-end>
+<cycle-end id="412" type="scavenge" contextid="406" timestamp="2024-07-17T19:33:32.523" />
+<allocation-satisfied id="413" threadId="000000000157CD00" bytesRequested="72808" />
+<af-end id="414" timestamp="2024-07-17T19:33:32.523" threadId="000000000157D738" success="true" from="nursery"/>
+<exclusive-end id="415" timestamp="2024-07-17T19:33:32.523" durationms="6.167" />
+
+<exclusive-start id="416" timestamp="2024-07-17T19:33:32.596" intervalms="78.443">
+  <response-info timems="0.084" idlems="0.084" threads="0" lastid="000000000157CD00" lastname="Unconstrained build operations Thread 91" />
+</exclusive-start>
+<af-start id="417" threadId="000000000157D738" totalBytesRequested="1648" timestamp="2024-07-17T19:33:32.596" intervalms="78.458" type="nursery" />
+<cycle-start id="418" type="scavenge" contextid="0" timestamp="2024-07-17T19:33:32.596" intervalms="78.465" />
+<gc-start id="419" type="scavenge" contextid="418" timestamp="2024-07-17T19:33:32.597">
+  <mem-info id="420" free="160574720" total="288620544" percent="55">
+    <mem type="nursery" free="0" total="87293952" percent="0">
+      <mem type="allocate" free="0" total="78512128" percent="0" />
+      <mem type="survivor" free="0" total="8781824" percent="0" />
+    </mem>
+    <mem type="tenure" free="160574720" total="201326592" percent="79">
+      <mem type="soa" free="150507776" total="191259648" percent="78" />
+      <mem type="loa" free="10066944" total="10066944" percent="100" />
+    </mem>
+    <remembered-set count="1896" />
+  </mem-info>
+</gc-start>
+<allocation-stats totalBytes="75909472" discardedBytes="100544" >
+  <allocated-bytes non-tlh="874152" tlh="75035320" />
+  <largest-consumer threadName="Daemon worker" threadId="00000000005FC700" bytes="16196504" />
+</allocation-stats>
+<gc-op id="421" type="scavenge" timems="2.542" contextid="418" timestamp="2024-07-17T19:33:32.599">
+  <scavenger-info tenureage="14" tenuremask="4000" tiltratio="89" />
+  <memory-copied type="nursery" objects="38938" bytes="1940776" bytesdiscarded="64984" />
+  <ownableSynchronizers candidates="116" cleared="109" />
+  <references type="weak" candidates="3173" cleared="816" enqueued="816" />
+  <references type="phantom" candidates="26" cleared="0" enqueued="0" />
+  <object-monitors candidates="11" cleared="1"  />
+</gc-op>
+<gc-end id="422" type="scavenge" contextid="418" durationms="3.267" usertimems="9.136" systemtimems="0.769" stalltimems="5.351" timestamp="2024-07-17T19:33:32.600" activeThreads="6">
+  <mem-info id="423" free="237080872" total="288620544" percent="82">
+    <mem type="nursery" free="76506152" total="87293952" percent="87">
+      <mem type="allocate" free="76506152" total="78512128" percent="97" />
+      <mem type="survivor" free="0" total="8781824" percent="0" />
+    </mem>
+    <mem type="tenure" free="160574720" total="201326592" percent="79">
+      <mem type="soa" free="150507776" total="191259648" percent="78" />
+      <mem type="loa" free="10066944" total="10066944" percent="100" />
+    </mem>
+    <pending-finalizers system="0" default="0" reference="816" classloader="0" />
+    <remembered-set count="1750" />
+  </mem-info>
+</gc-end>
+<cycle-end id="424" type="scavenge" contextid="418" timestamp="2024-07-17T19:33:32.600" />
+<allocation-satisfied id="425" threadId="000000000157CD00" bytesRequested="1648" />
+<af-end id="426" timestamp="2024-07-17T19:33:32.600" threadId="000000000157D738" success="true" from="nursery"/>
+<exclusive-end id="427" timestamp="2024-07-17T19:33:32.601" durationms="4.973" />
+
+<exclusive-start id="428" timestamp="2024-07-17T19:33:32.769" intervalms="173.293">
+  <response-info timems="0.199" idlems="0.109" threads="4" lastid="000000000157D900" lastname="Unconstrained build operations Thread 92" />
+</exclusive-start>
+<af-start id="429" threadId="0000000001579A38" totalBytesRequested="24" timestamp="2024-07-17T19:33:32.769" intervalms="173.347" type="nursery" />
+<cycle-start id="430" type="scavenge" contextid="0" timestamp="2024-07-17T19:33:32.770" intervalms="173.444" />
+<gc-start id="431" type="scavenge" contextid="430" timestamp="2024-07-17T19:33:32.770">
+  <mem-info id="432" free="160574680" total="288620544" percent="55">
+    <mem type="nursery" free="0" total="87293952" percent="0">
+      <mem type="allocate" free="0" total="78512128" percent="0" />
+      <mem type="survivor" free="0" total="8781824" percent="0" />
+    </mem>
+    <mem type="tenure" free="160574680" total="201326592" percent="79">
+      <mem type="soa" free="150507736" total="191259648" percent="78" />
+      <mem type="loa" free="10066944" total="10066944" percent="100" />
+    </mem>
+    <remembered-set count="1970" />
+  </mem-info>
+</gc-start>
+<allocation-stats totalBytes="76408776" discardedBytes="97416" >
+  <allocated-bytes non-tlh="342912" tlh="76065864" />
+  <largest-consumer threadName="Unconstrained build operations Thread 96" threadId="0000000001582200" bytes="17792904" />
+</allocation-stats>
+<gc-op id="433" type="scavenge" timems="4.785" contextid="430" timestamp="2024-07-17T19:33:32.775">
+  <scavenger-info tenureage="14" tenuremask="4000" tiltratio="89" />
+  <memory-copied type="nursery" objects="40952" bytes="2012232" bytesdiscarded="90120" />
+  <ownableSynchronizers candidates="192" cleared="184" />
+  <references type="weak" candidates="4387" cleared="1477" enqueued="1477" />
+  <references type="phantom" candidates="39" cleared="0" enqueued="0" />
+  <object-monitors candidates="10" cleared="0"  />
+</gc-op>
+<gc-end id="434" type="scavenge" contextid="430" durationms="5.756" usertimems="17.209" systemtimems="0.000" stalltimems="9.166" timestamp="2024-07-17T19:33:32.776" activeThreads="6">
+  <mem-info id="435" free="236984016" total="288620544" percent="82">
+    <mem type="nursery" free="76409336" total="87293952" percent="87">
+      <mem type="allocate" free="76409336" total="78512128" percent="97" />
+      <mem type="survivor" free="0" total="8781824" percent="0" />
+    </mem>
+    <mem type="tenure" free="160574680" total="201326592" percent="79">
+      <mem type="soa" free="150507736" total="191259648" percent="78" />
+      <mem type="loa" free="10066944" total="10066944" percent="100" />
+    </mem>
+    <pending-finalizers system="0" default="0" reference="1477" classloader="0" />
+    <remembered-set count="1823" />
+  </mem-info>
+</gc-end>
+<cycle-end id="436" type="scavenge" contextid="430" timestamp="2024-07-17T19:33:32.776" />
+<allocation-satisfied id="437" threadId="0000000001579000" bytesRequested="24" />
+<af-end id="438" timestamp="2024-07-17T19:33:32.777" threadId="0000000001579A38" success="true" from="nursery"/>
+<exclusive-end id="439" timestamp="2024-07-17T19:33:32.777" durationms="8.046" />
+
+<exclusive-start id="440" timestamp="2024-07-17T19:33:32.997" intervalms="228.057">
+  <response-info timems="0.070" idlems="0.070" threads="0" lastid="00000000005FC700" lastname="Daemon worker" />
+</exclusive-start>
+<af-start id="441" threadId="00000000005FD138" totalBytesRequested="8200" timestamp="2024-07-17T19:33:32.997" intervalms="227.960" type="nursery" />
+<cycle-start id="442" type="scavenge" contextid="0" timestamp="2024-07-17T19:33:32.998" intervalms="227.885" />
+<gc-start id="443" type="scavenge" contextid="442" timestamp="2024-07-17T19:33:32.998">
+  <mem-info id="444" free="160566856" total="288620544" percent="55">
+    <mem type="nursery" free="0" total="87293952" percent="0">
+      <mem type="allocate" free="0" total="78512128" percent="0" />
+      <mem type="survivor" free="0" total="8781824" percent="0" />
+    </mem>
+    <mem type="tenure" free="160566856" total="201326592" percent="79">
+      <mem type="soa" free="150499912" total="191259648" percent="78" />
+      <mem type="loa" free="10066944" total="10066944" percent="100" />
+    </mem>
+    <remembered-set count="2226" />
+  </mem-info>
+</gc-start>
+<allocation-stats totalBytes="75771856" discardedBytes="645304" >
+  <allocated-bytes non-tlh="788832" tlh="74983024" />
+  <largest-consumer threadName="Unconstrained build operations Thread 98" threadId="0000000001585200" bytes="14246472" />
+</allocation-stats>
+<gc-op id="445" type="scavenge" timems="2.631" contextid="442" timestamp="2024-07-17T19:33:33.001">
+  <scavenger-info tenureage="14" tenuremask="4000" tiltratio="89" />
+  <memory-copied type="nursery" objects="45007" bytes="2191320" bytesdiscarded="222424" />
+  <finalization candidates="38" enqueued="38" />
+  <ownableSynchronizers candidates="148" cleared="146" />
+  <references type="soft" candidates="14" cleared="0" enqueued="0" dynamicThreshold="32" maxThreshold="32" />
+  <references type="weak" candidates="4123" cleared="727" enqueued="727" />
+  <references type="phantom" candidates="36" cleared="20" enqueued="20" />
+  <object-monitors candidates="11" cleared="0"  />
+</gc-op>
+<gc-end id="446" type="scavenge" contextid="442" durationms="3.909" usertimems="8.474" systemtimems="0.775" stalltimems="7.110" timestamp="2024-07-17T19:33:33.002" activeThreads="6">
+  <mem-info id="447" free="236661952" total="288620544" percent="81">
+    <mem type="nursery" free="76095096" total="87293952" percent="87">
+      <mem type="allocate" free="76095096" total="78512128" percent="96" />
+      <mem type="survivor" free="0" total="8781824" percent="0" />
+    </mem>
+    <mem type="tenure" free="160566856" total="201326592" percent="79">
+      <mem type="soa" free="150499912" total="191259648" percent="78" />
+      <mem type="loa" free="10066944" total="10066944" percent="100" />
+    </mem>
+    <pending-finalizers system="38" default="0" reference="747" classloader="0" />
+    <remembered-set count="2016" />
+  </mem-info>
+</gc-end>
+<cycle-end id="448" type="scavenge" contextid="442" timestamp="2024-07-17T19:33:33.002" />
+<allocation-satisfied id="449" threadId="00000000005FC700" bytesRequested="8200" />
+<af-end id="450" timestamp="2024-07-17T19:33:33.003" threadId="00000000005FD138" success="true" from="nursery"/>
+<exclusive-end id="451" timestamp="2024-07-17T19:33:33.003" durationms="6.024" />
+
+<exclusive-start id="452" timestamp="2024-07-17T19:33:33.378" intervalms="381.163">
+  <response-info timems="0.070" idlems="0.070" threads="0" lastid="00000000005FC700" lastname="Daemon worker" />
+</exclusive-start>
+<af-start id="453" threadId="00000000005FD138" totalBytesRequested="35432" timestamp="2024-07-17T19:33:33.379" intervalms="381.334" type="nursery" />
+<cycle-start id="454" type="scavenge" contextid="0" timestamp="2024-07-17T19:33:33.379" intervalms="381.467" />
+<gc-start id="455" type="scavenge" contextid="454" timestamp="2024-07-17T19:33:33.380">
+  <mem-info id="456" free="160565600" total="288620544" percent="55">
+    <mem type="nursery" free="0" total="87293952" percent="0">
+      <mem type="allocate" free="0" total="78512128" percent="0" />
+      <mem type="survivor" free="0" total="8781824" percent="0" />
+    </mem>
+    <mem type="tenure" free="160565600" total="201326592" percent="79">
+      <mem type="soa" free="150498656" total="191259648" percent="78" />
+      <mem type="loa" free="10066944" total="10066944" percent="100" />
+    </mem>
+    <remembered-set count="2069" />
+  </mem-info>
+</gc-start>
+<allocation-stats totalBytes="73927112" discardedBytes="2169240" >
+  <allocated-bytes non-tlh="167800" tlh="73759312" />
+  <largest-consumer threadName="Daemon worker" threadId="00000000005FC700" bytes="73685704" />
+</allocation-stats>
+<gc-op id="457" type="scavenge" timems="3.081" contextid="454" timestamp="2024-07-17T19:33:33.384">
+  <scavenger-info tenureage="10" tenuremask="4400" tiltratio="89" />
+  <memory-copied type="nursery" objects="40715" bytes="1642616" bytesdiscarded="102232" />
+  <memory-copied type="tenure" objects="2321" bytes="100648" bytesdiscarded="136" />
+  <finalization candidates="2" enqueued="2" />
+  <ownableSynchronizers candidates="2" cleared="0" />
+  <references type="soft" candidates="14" cleared="0" enqueued="0" dynamicThreshold="32" maxThreshold="32" />
+  <references type="weak" candidates="3205" cleared="13" enqueued="13" />
+  <references type="phantom" candidates="20" cleared="6" enqueued="6" />
+  <object-monitors candidates="11" cleared="0"  />
+</gc-op>
+<gc-end id="458" type="scavenge" contextid="454" durationms="4.899" usertimems="0.000" systemtimems="8.819" stalltimems="7.336" timestamp="2024-07-17T19:33:33.385" activeThreads="5">
+  <mem-info id="459" free="237201464" total="288620544" percent="82">
+    <mem type="nursery" free="76767192" total="87293952" percent="87">
+      <mem type="allocate" free="76767192" total="78512128" percent="97" />
+      <mem type="survivor" free="0" total="8781824" percent="0" />
+    </mem>
+    <mem type="tenure" free="160434272" total="201326592" percent="79">
+      <mem type="soa" free="150367328" total="191259648" percent="78" />
+      <mem type="loa" free="10066944" total="10066944" percent="100" />
+    </mem>
+    <pending-finalizers system="2" default="0" reference="19" classloader="0" />
+    <remembered-set count="1994" />
+  </mem-info>
+</gc-end>
+<cycle-end id="460" type="scavenge" contextid="454" timestamp="2024-07-17T19:33:33.385" />
+<allocation-satisfied id="461" threadId="00000000005FC700" bytesRequested="35432" />
+<af-end id="462" timestamp="2024-07-17T19:33:33.386" threadId="00000000005FD138" success="true" from="nursery"/>
+<exclusive-end id="463" timestamp="2024-07-17T19:33:33.386" durationms="8.156" />
+
+<exclusive-start id="464" timestamp="2024-07-17T19:33:33.720" intervalms="341.880">
+  <response-info timems="0.066" idlems="0.066" threads="0" lastid="00000000005FC700" lastname="Daemon worker" />
+</exclusive-start>
+<af-start id="465" threadId="00000000005FD138" totalBytesRequested="8200" timestamp="2024-07-17T19:33:33.720" intervalms="341.922" type="nursery" />
+<cycle-start id="466" type="scavenge" contextid="0" timestamp="2024-07-17T19:33:33.721" intervalms="341.925" />
+<gc-start id="467" type="scavenge" contextid="466" timestamp="2024-07-17T19:33:33.721">
+  <mem-info id="468" free="160434272" total="288620544" percent="55">
+    <mem type="nursery" free="0" total="87293952" percent="0">
+      <mem type="allocate" free="0" total="78512128" percent="0" />
+      <mem type="survivor" free="0" total="8781824" percent="0" />
+    </mem>
+    <mem type="tenure" free="160434272" total="201326592" percent="79">
+      <mem type="soa" free="150367328" total="191259648" percent="78" />
+      <mem type="loa" free="10066944" total="10066944" percent="100" />
+    </mem>
+    <remembered-set count="2006" />
+  </mem-info>
+</gc-start>
+<allocation-stats totalBytes="74597272" discardedBytes="2169920" >
+  <allocated-bytes non-tlh="552448" tlh="74044824" />
+  <largest-consumer threadName="Daemon worker" threadId="00000000005FC700" bytes="74461736" />
+</allocation-stats>
+<gc-op id="469" type="scavenge" timems="2.352" contextid="466" timestamp="2024-07-17T19:33:33.725">
+  <scavenger-info tenureage="7" tenuremask="7780" tiltratio="89" />
+  <memory-copied type="nursery" objects="32963" bytes="1483896" bytesdiscarded="122640" />
+  <memory-copied type="tenure" objects="10517" bytes="441304" bytesdiscarded="40" />
+  <ownableSynchronizers candidates="2" cleared="0" />
+  <references type="soft" candidates="14" cleared="0" enqueued="0" dynamicThreshold="32" maxThreshold="32" />
+  <references type="weak" candidates="2293" cleared="0" enqueued="0" />
+  <references type="phantom" candidates="7" cleared="0" enqueued="0" />
+  <object-monitors candidates="11" cleared="0"  />
+</gc-op>
+<gc-end id="470" type="scavenge" contextid="466" durationms="3.647" usertimems="6.675" systemtimems="0.000" stalltimems="2.391" timestamp="2024-07-17T19:33:33.725" activeThreads="4">
+  <mem-info id="471" free="236945792" total="288620544" percent="82">
+    <mem type="nursery" free="76905504" total="87293952" percent="88">
+      <mem type="allocate" free="76905504" total="78512128" percent="97" />
+      <mem type="survivor" free="0" total="8781824" percent="0" />
+    </mem>
+    <mem type="tenure" free="160040288" total="201326592" percent="79">
+      <mem type="soa" free="149973344" total="191259648" percent="78" />
+      <mem type="loa" free="10066944" total="10066944" percent="100" />
+    </mem>
+    <remembered-set count="1742" />
+  </mem-info>
+</gc-end>
+<cycle-end id="472" type="scavenge" contextid="466" timestamp="2024-07-17T19:33:33.726" />
+<allocation-satisfied id="473" threadId="00000000005FC700" bytesRequested="8200" />
+<af-end id="474" timestamp="2024-07-17T19:33:33.726" threadId="00000000005FD138" success="true" from="nursery"/>
+<exclusive-end id="475" timestamp="2024-07-17T19:33:33.727" durationms="6.800" />
+
+<exclusive-start id="476" timestamp="2024-07-17T19:33:34.134" intervalms="414.324">
+  <response-info timems="0.056" idlems="0.056" threads="0" lastid="00000000005FC700" lastname="Daemon worker" />
+</exclusive-start>
+<af-start id="477" threadId="00000000005FD138" totalBytesRequested="8200" timestamp="2024-07-17T19:33:34.135" intervalms="414.240" type="nursery" />
+<cycle-start id="478" type="scavenge" contextid="0" timestamp="2024-07-17T19:33:34.135" intervalms="414.231" />
+<gc-start id="479" type="scavenge" contextid="478" timestamp="2024-07-17T19:33:34.136">
+  <mem-info id="480" free="160040288" total="288620544" percent="55">
+    <mem type="nursery" free="0" total="87293952" percent="0">
+      <mem type="allocate" free="0" total="78512128" percent="0" />
+      <mem type="survivor" free="0" total="8781824" percent="0" />
+    </mem>
+    <mem type="tenure" free="160040288" total="201326592" percent="79">
+      <mem type="soa" free="149973344" total="191259648" percent="78" />
+      <mem type="loa" free="10066944" total="10066944" percent="100" />
+    </mem>
+    <remembered-set count="1760" />
+  </mem-info>
+</gc-start>
+<allocation-stats totalBytes="75410536" discardedBytes="1494968" >
+  <allocated-bytes non-tlh="323568" tlh="75086968" />
+  <largest-consumer threadName="Daemon worker" threadId="00000000005FC700" bytes="75230840" />
+</allocation-stats>
+<gc-op id="481" type="scavenge" timems="2.024" contextid="478" timestamp="2024-07-17T19:33:34.139">
+  <scavenger-info tenureage="4" tenuremask="40d0" tiltratio="89" />
+  <memory-copied type="nursery" objects="16329" bytes="657080" bytesdiscarded="192248" />
+  <memory-copied type="tenure" objects="15923" bytes="578776" bytesdiscarded="96" />
+  <ownableSynchronizers candidates="2" cleared="0" />
+  <references type="soft" candidates="14" cleared="0" enqueued="0" dynamicThreshold="32" maxThreshold="32" />
+  <references type="weak" candidates="905" cleared="0" enqueued="0" />
+  <references type="phantom" candidates="6" cleared="0" enqueued="0" />
+  <object-monitors candidates="11" cleared="0"  />
+</gc-op>
+<gc-end id="482" type="scavenge" contextid="478" durationms="3.607" usertimems="5.646" systemtimems="0.000" stalltimems="2.424" timestamp="2024-07-17T19:33:34.139" activeThreads="4">
+  <mem-info id="483" free="237232472" total="288620544" percent="82">
+    <mem type="nursery" free="77662712" total="87293952" percent="88">
+      <mem type="allocate" free="77662712" total="78512128" percent="98" />
+      <mem type="survivor" free="0" total="8781824" percent="0" />
+    </mem>
+    <mem type="tenure" free="159569760" total="201326592" percent="79">
+      <mem type="soa" free="149502816" total="191259648" percent="78" />
+      <mem type="loa" free="10066944" total="10066944" percent="100" />
+    </mem>
+    <remembered-set count="1303" />
+  </mem-info>
+</gc-end>
+<cycle-end id="484" type="scavenge" contextid="478" timestamp="2024-07-17T19:33:34.140" />
+<allocation-satisfied id="485" threadId="00000000005FC700" bytesRequested="8200" />
+<af-end id="486" timestamp="2024-07-17T19:33:34.141" threadId="00000000005FD138" success="true" from="nursery"/>
+<exclusive-end id="487" timestamp="2024-07-17T19:33:34.141" durationms="6.585" />
+
+<exclusive-start id="488" timestamp="2024-07-17T19:33:34.545" intervalms="410.713">
+  <response-info timems="0.051" idlems="0.051" threads="0" lastid="00000000005FC700" lastname="Daemon worker" />
+</exclusive-start>
+<af-start id="489" threadId="00000000005FD138" totalBytesRequested="8200" timestamp="2024-07-17T19:33:34.545" intervalms="410.714" type="nursery" />
+<cycle-start id="490" type="scavenge" contextid="0" timestamp="2024-07-17T19:33:34.546" intervalms="410.673" />
+<gc-start id="491" type="scavenge" contextid="490" timestamp="2024-07-17T19:33:34.546">
+  <mem-info id="492" free="159569760" total="288620544" percent="55">
+    <mem type="nursery" free="0" total="87293952" percent="0">
+      <mem type="allocate" free="0" total="78512128" percent="0" />
+      <mem type="survivor" free="0" total="8781824" percent="0" />
+    </mem>
+    <mem type="tenure" free="159569760" total="201326592" percent="79">
+      <mem type="soa" free="149502816" total="191259648" percent="78" />
+      <mem type="loa" free="10066944" total="10066944" percent="100" />
+    </mem>
+    <remembered-set count="1325" />
+  </mem-info>
+</gc-start>
+<allocation-stats totalBytes="76492592" discardedBytes="1170120" >
+  <allocated-bytes non-tlh="8200" tlh="76484392" />
+  <largest-consumer threadName="Daemon worker" threadId="00000000005FC700" bytes="76135600" />
+</allocation-stats>
+<gc-op id="493" type="scavenge" timems="1.673" contextid="490" timestamp="2024-07-17T19:33:34.549">
+  <scavenger-info tenureage="4" tenuremask="4050" tiltratio="89" />
+  <memory-copied type="nursery" objects="1471" bytes="66696" bytesdiscarded="243560" />
+  <memory-copied type="tenure" objects="13451" bytes="484816" bytesdiscarded="40" />
+  <ownableSynchronizers candidates="2" cleared="0" />
+  <references type="weak" candidates="7" cleared="0" enqueued="0" />
+  <references type="phantom" candidates="4" cleared="0" enqueued="0" />
+  <object-monitors candidates="11" cleared="0"  />
+</gc-op>
+<gc-end id="494" type="scavenge" contextid="490" durationms="2.697" usertimems="4.418" systemtimems="0.000" stalltimems="2.292" timestamp="2024-07-17T19:33:34.549" activeThreads="4">
+  <mem-info id="495" free="237387872" total="288620544" percent="82">
+    <mem type="nursery" free="78201856" total="87293952" percent="89">
+      <mem type="allocate" free="78201856" total="78512128" percent="99" />
+      <mem type="survivor" free="0" total="8781824" percent="0" />
+    </mem>
+    <mem type="tenure" free="159186016" total="201326592" percent="79">
+      <mem type="soa" free="149119072" total="191259648" percent="77" />
+      <mem type="loa" free="10066944" total="10066944" percent="100" />
+    </mem>
+    <remembered-set count="845" />
+  </mem-info>
+</gc-end>
+<cycle-end id="496" type="scavenge" contextid="490" timestamp="2024-07-17T19:33:34.550" />
+<allocation-satisfied id="497" threadId="00000000005FC700" bytesRequested="8200" />
+<af-end id="498" timestamp="2024-07-17T19:33:34.550" threadId="00000000005FD138" success="true" from="nursery"/>
+<exclusive-end id="499" timestamp="2024-07-17T19:33:34.551" durationms="5.568" />
+
+<exclusive-start id="500" timestamp="2024-07-17T19:33:35.184" intervalms="638.664">
+  <response-info timems="0.065" idlems="0.065" threads="0" lastid="00000000005FC700" lastname="Daemon worker" />
+</exclusive-start>
+<af-start id="501" threadId="00000000005FD138" totalBytesRequested="4472" timestamp="2024-07-17T19:33:35.184" intervalms="638.729" type="nursery" />
+<cycle-start id="502" type="scavenge" contextid="0" timestamp="2024-07-17T19:33:35.185" intervalms="638.763" />
+<gc-start id="503" type="scavenge" contextid="502" timestamp="2024-07-17T19:33:35.185">
+  <mem-info id="504" free="158754464" total="288620544" percent="55">
+    <mem type="nursery" free="0" total="87293952" percent="0">
+      <mem type="allocate" free="0" total="78512128" percent="0" />
+      <mem type="survivor" free="0" total="8781824" percent="0" />
+    </mem>
+    <mem type="tenure" free="158754464" total="201326592" percent="78">
+      <mem type="soa" free="148687520" total="191259648" percent="77" />
+      <mem type="loa" free="10066944" total="10066944" percent="100" />
+    </mem>
+    <remembered-set count="8424" />
+  </mem-info>
+</gc-start>
+<allocation-stats totalBytes="78559728" discardedBytes="73680" >
+  <allocated-bytes non-tlh="1773816" tlh="76785912" />
+  <largest-consumer threadName="Daemon worker" threadId="00000000005FC700" bytes="78050800" />
+</allocation-stats>
+<gc-op id="505" type="scavenge" timems="4.540" contextid="502" timestamp="2024-07-17T19:33:35.190">
+  <scavenger-info tenureage="14" tenuremask="4000" tiltratio="89" />
+  <memory-copied type="nursery" objects="94017" bytes="6451112" bytesdiscarded="142144" />
+  <finalization candidates="564" enqueued="564" />
+  <ownableSynchronizers candidates="366" cleared="22" />
+  <references type="soft" candidates="5589" cleared="0" enqueued="0" dynamicThreshold="32" maxThreshold="32" />
+  <references type="weak" candidates="6230" cleared="2790" enqueued="2788" />
+  <references type="phantom" candidates="540" cleared="235" enqueued="235" />
+  <object-monitors candidates="11" cleared="0"  />
+</gc-op>
+<gc-end id="506" type="scavenge" contextid="502" durationms="6.587" usertimems="15.517" systemtimems="1.336" stalltimems="2.592" timestamp="2024-07-17T19:33:35.192" activeThreads="4">
+  <mem-info id="507" free="227063984" total="288620544" percent="78">
+    <mem type="nursery" free="68309520" total="87293952" percent="78">
+      <mem type="allocate" free="68309520" total="74907648" percent="91" />
+      <mem type="survivor" free="0" total="12386304" percent="0" />
+    </mem>
+    <mem type="tenure" free="158754464" total="201326592" percent="78">
+      <mem type="soa" free="148687520" total="191259648" percent="77" />
+      <mem type="loa" free="10066944" total="10066944" percent="100" />
+    </mem>
+    <pending-finalizers system="564" default="0" reference="3023" classloader="0" />
+    <remembered-set count="7962" />
+  </mem-info>
+</gc-end>
+<cycle-end id="508" type="scavenge" contextid="502" timestamp="2024-07-17T19:33:35.192" />
+<allocation-satisfied id="509" threadId="00000000005FC700" bytesRequested="4472" />
+<af-end id="510" timestamp="2024-07-17T19:33:35.193" threadId="00000000005FD138" success="true" from="nursery"/>
+<exclusive-end id="511" timestamp="2024-07-17T19:33:35.193" durationms="9.667" />
+
+<exclusive-start id="512" timestamp="2024-07-17T19:33:37.559" intervalms="2375.541">
+  <response-info timems="0.072" idlems="0.072" threads="0" lastid="0000000001934900" lastname="Execution worker Thread 8" />
+</exclusive-start>
+<af-start id="513" threadId="0000000001935338" totalBytesRequested="200584" timestamp="2024-07-17T19:33:37.560" intervalms="2375.618" type="nursery" />
+<cycle-start id="514" type="scavenge" contextid="0" timestamp="2024-07-17T19:33:37.560" intervalms="2375.703" />
+<gc-start id="515" type="scavenge" contextid="514" timestamp="2024-07-17T19:33:37.561">
+  <mem-info id="516" free="158406496" total="288620544" percent="54">
+    <mem type="nursery" free="87560" total="87293952" percent="0">
+      <mem type="allocate" free="87560" total="74907648" percent="0" />
+      <mem type="survivor" free="0" total="12386304" percent="0" />
+    </mem>
+    <mem type="tenure" free="158318936" total="201326592" percent="78">
+      <mem type="soa" free="148251992" total="191259648" percent="77" />
+      <mem type="loa" free="10066944" total="10066944" percent="100" />
+    </mem>
+    <remembered-set count="14350" />
+  </mem-info>
+</gc-start>
+<allocation-stats totalBytes="66547440" discardedBytes="2110048" >
+  <allocated-bytes non-tlh="1573800" tlh="64973640" />
+  <largest-consumer threadName="Execution worker Thread 8" threadId="0000000001934900" bytes="34577904" />
+</allocation-stats>
+<gc-op id="517" type="scavenge" timems="5.902" contextid="514" timestamp="2024-07-17T19:33:37.568">
+  <scavenger-info tenureage="4" tenuremask="ffd0" tiltratio="85" />
+  <memory-copied type="nursery" objects="161421" bytes="9193576" bytesdiscarded="69024" />
+  <memory-copied type="tenure" objects="107" bytes="2360" bytesdiscarded="0" />
+  <finalization candidates="625" enqueued="624" />
+  <ownableSynchronizers candidates="525" cleared="107" />
+  <references type="soft" candidates="7747" cleared="0" enqueued="0" dynamicThreshold="32" maxThreshold="32" />
+  <references type="weak" candidates="8792" cleared="3627" enqueued="3627" />
+  <references type="phantom" candidates="606" cleared="271" enqueued="271" />
+  <object-monitors candidates="12" cleared="0"  />
+</gc-op>
+<gc-end id="518" type="scavenge" contextid="514" durationms="7.579" usertimems="24.545" systemtimems="0.000" stalltimems="5.365" timestamp="2024-07-17T19:33:37.569" activeThreads="5">
+  <mem-info id="519" free="222774256" total="288620544" percent="77">
+    <mem type="nursery" free="64455320" total="87293952" percent="73">
+      <mem type="allocate" free="64455320" total="73728000" percent="87" />
+      <mem type="survivor" free="0" total="13565952" percent="0" />
+    </mem>
+    <mem type="tenure" free="158318936" total="201326592" percent="78">
+      <mem type="soa" free="148251992" total="191259648" percent="77" />
+      <mem type="loa" free="10066944" total="10066944" percent="100" />
+    </mem>
+    <pending-finalizers system="623" default="1" reference="3898" classloader="0" />
+    <remembered-set count="13993" />
+  </mem-info>
+</gc-end>
+<cycle-end id="520" type="scavenge" contextid="514" timestamp="2024-07-17T19:33:37.569" />
+<allocation-satisfied id="521" threadId="0000000001934900" bytesRequested="200584" />
+<af-end id="522" timestamp="2024-07-17T19:33:37.570" threadId="0000000001935338" success="true" from="nursery"/>
+<exclusive-end id="523" timestamp="2024-07-17T19:33:37.570" durationms="11.098" />
+
+<exclusive-start id="524" timestamp="2024-07-17T19:33:38.105" intervalms="545.881">
+  <response-info timems="0.071" idlems="0.071" threads="0" lastid="0000000001934900" lastname="Execution worker Thread 8" />
+</exclusive-start>
+<af-start id="525" threadId="0000000001935338" totalBytesRequested="4104" timestamp="2024-07-17T19:33:38.106" intervalms="545.786" type="nursery" />
+<cycle-start id="526" type="scavenge" contextid="0" timestamp="2024-07-17T19:33:38.106" intervalms="545.713" />
+<gc-start id="527" type="scavenge" contextid="526" timestamp="2024-07-17T19:33:38.107">
+  <mem-info id="528" free="157790336" total="288620544" percent="54">
+    <mem type="nursery" free="0" total="87293952" percent="0">
+      <mem type="allocate" free="0" total="73728000" percent="0" />
+      <mem type="survivor" free="0" total="13565952" percent="0" />
+    </mem>
+    <mem type="tenure" free="157790336" total="201326592" percent="78">
+      <mem type="soa" free="147723392" total="191259648" percent="77" />
+      <mem type="loa" free="10066944" total="10066944" percent="100" />
+    </mem>
+    <remembered-set count="21837" />
+  </mem-info>
+</gc-start>
+<allocation-stats totalBytes="64924464" discardedBytes="59456" >
+  <allocated-bytes non-tlh="3659672" tlh="61264792" />
+  <largest-consumer threadName="Execution worker Thread 8" threadId="0000000001934900" bytes="64846336" />
+</allocation-stats>
+<gc-op id="529" type="scavenge" timems="7.981" contextid="526" timestamp="2024-07-17T19:33:38.116">
+  <scavenger-info tenureage="3" tenuremask="ff98" tiltratio="84" />
+  <memory-copied type="nursery" objects="180656" bytes="10162952" bytesdiscarded="82320" />
+  <memory-copied type="tenure" objects="451" bytes="11432" bytesdiscarded="0" />
+  <finalization candidates="325" enqueued="324" />
+  <ownableSynchronizers candidates="444" cleared="6" />
+  <references type="soft" candidates="8522" cleared="0" enqueued="0" dynamicThreshold="32" maxThreshold="32" />
+  <references type="weak" candidates="9792" cleared="3344" enqueued="3344" />
+  <references type="phantom" candidates="510" cleared="134" enqueued="134" />
+  <object-monitors candidates="13" cleared="0"  />
+</gc-op>
+<gc-end id="530" type="scavenge" contextid="526" durationms="9.765" usertimems="26.726" systemtimems="10.716" stalltimems="11.116" timestamp="2024-07-17T19:33:38.117" activeThreads="6">
+  <mem-info id="531" free="221771664" total="288620544" percent="76">
+    <mem type="nursery" free="64000016" total="87293952" percent="73">
+      <mem type="allocate" free="64000016" total="74252288" percent="86" />
+      <mem type="survivor" free="0" total="13041664" percent="0" />
+    </mem>
+    <mem type="tenure" free="157771648" total="201326592" percent="78">
+      <mem type="soa" free="147704704" total="191259648" percent="77" />
+      <mem type="loa" free="10066944" total="10066944" percent="100" />
+    </mem>
+    <pending-finalizers system="324" default="0" reference="3478" classloader="0" />
+    <remembered-set count="16852" />
+  </mem-info>
+</gc-end>
+<cycle-end id="532" type="scavenge" contextid="526" timestamp="2024-07-17T19:33:38.117" />
+<allocation-satisfied id="533" threadId="0000000001934900" bytesRequested="4104" />
+<af-end id="534" timestamp="2024-07-17T19:33:38.118" threadId="0000000001935338" success="true" from="nursery"/>
+<exclusive-end id="535" timestamp="2024-07-17T19:33:38.118" durationms="13.142" />
+
+<exclusive-start id="536" timestamp="2024-07-17T19:33:39.695" intervalms="1590.309">
+  <response-info timems="0.080" idlems="0.080" threads="0" lastid="0000000001EE8900" lastname="Unconstrained build operations Thread 116" />
+</exclusive-start>
+<af-start id="537" threadId="0000000001EE9338" totalBytesRequested="88" timestamp="2024-07-17T19:33:39.696" intervalms="1590.219" type="nursery" />
+<cycle-start id="538" type="scavenge" contextid="0" timestamp="2024-07-17T19:33:39.696" intervalms="1590.173" />
+<gc-start id="539" type="scavenge" contextid="538" timestamp="2024-07-17T19:33:39.697">
+  <mem-info id="540" free="157660336" total="288620544" percent="54">
+    <mem type="nursery" free="0" total="87293952" percent="0">
+      <mem type="allocate" free="0" total="74252288" percent="0" />
+      <mem type="survivor" free="0" total="13041664" percent="0" />
+    </mem>
+    <mem type="tenure" free="157660336" total="201326592" percent="78">
+      <mem type="soa" free="147593392" total="191259648" percent="77" />
+      <mem type="loa" free="10066944" total="10066944" percent="100" />
+    </mem>
+    <remembered-set count="18834" />
+  </mem-info>
+</gc-start>
+<allocation-stats totalBytes="64000776" discardedBytes="110552" >
+  <allocated-bytes non-tlh="644048" tlh="63356728" />
+  <largest-consumer threadName="Execution worker Thread 8" threadId="0000000001934900" bytes="14321072" />
+</allocation-stats>
+<gc-op id="541" type="scavenge" timems="8.596" contextid="538" timestamp="2024-07-17T19:33:39.706">
+  <scavenger-info tenureage="3" tenuremask="ffc8" tiltratio="85" />
+  <memory-copied type="nursery" objects="160734" bytes="7257600" bytesdiscarded="71504" />
+  <memory-copied type="tenure" objects="84840" bytes="6153632" bytesdiscarded="2120" />
+  <finalization candidates="114" enqueued="113" />
+  <ownableSynchronizers candidates="614" cleared="130" />
+  <references type="soft" candidates="3922" cleared="0" enqueued="0" dynamicThreshold="32" maxThreshold="32" />
+  <references type="weak" candidates="3985" cleared="546" enqueued="546" />
+  <references type="phantom" candidates="133" cleared="59" enqueued="59" />
+  <object-monitors candidates="13" cleared="0"  />
+</gc-op>
+<gc-end id="542" type="scavenge" contextid="538" durationms="9.417" usertimems="43.820" systemtimems="1.169" stalltimems="14.622" timestamp="2024-07-17T19:33:39.706" activeThreads="7">
+  <mem-info id="543" free="218630056" total="288620544" percent="75">
+    <mem type="nursery" free="67108968" total="87293952" percent="76">
+      <mem type="allocate" free="67108968" total="74448896" percent="90" />
+      <mem type="survivor" free="0" total="12845056" percent="0" />
+    </mem>
+    <mem type="tenure" free="151521088" total="201326592" percent="75">
+      <mem type="soa" free="141454144" total="191259648" percent="73" />
+      <mem type="loa" free="10066944" total="10066944" percent="100" />
+    </mem>
+    <pending-finalizers system="113" default="0" reference="605" classloader="0" />
+    <remembered-set count="13304" />
+  </mem-info>
+</gc-end>
+<cycle-end id="544" type="scavenge" contextid="538" timestamp="2024-07-17T19:33:39.706" />
+<allocation-satisfied id="545" threadId="0000000001EE8900" bytesRequested="88" />
+<af-end id="546" timestamp="2024-07-17T19:33:39.707" threadId="0000000001EE9338" success="true" from="nursery"/>
+<exclusive-end id="547" timestamp="2024-07-17T19:33:39.707" durationms="11.480" />
+
+<exclusive-start id="548" timestamp="2024-07-17T19:33:41.073" intervalms="1377.161">
+  <response-info timems="0.105" idlems="0.105" threads="0" lastid="000000000224C000" lastname="Build operations Thread 8" />
+</exclusive-start>
+<af-start id="549" threadId="000000000224CA38" totalBytesRequested="8200" timestamp="2024-07-17T19:33:41.073" intervalms="1377.311" type="nursery" />
+<cycle-start id="550" type="scavenge" contextid="0" timestamp="2024-07-17T19:33:41.074" intervalms="1377.452" />
+<gc-start id="551" type="scavenge" contextid="550" timestamp="2024-07-17T19:33:41.074">
+  <mem-info id="552" free="151083256" total="288620544" percent="52">
+    <mem type="nursery" free="0" total="87293952" percent="0">
+      <mem type="allocate" free="0" total="74448896" percent="0" />
+      <mem type="survivor" free="0" total="12845056" percent="0" />
+    </mem>
+    <mem type="tenure" free="151083256" total="201326592" percent="75">
+      <mem type="soa" free="141016312" total="191259648" percent="73" />
+      <mem type="loa" free="10066944" total="10066944" percent="100" />
+    </mem>
+    <remembered-set count="20920" />
+  </mem-info>
+</gc-start>
+<allocation-stats totalBytes="67476096" discardedBytes="70704" >
+  <allocated-bytes non-tlh="4337296" tlh="63138800" />
+  <largest-consumer threadName="Execution worker Thread 3" threadId="000000000191D900" bytes="48755224" />
+</allocation-stats>
+<gc-op id="553" type="scavenge" timems="7.002" contextid="550" timestamp="2024-07-17T19:33:41.082">
+  <scavenger-info tenureage="5" tenuremask="fee0" tiltratio="85" />
+  <memory-copied type="nursery" objects="190664" bytes="8649328" bytesdiscarded="193744" />
+  <finalization candidates="512" enqueued="499" />
+  <ownableSynchronizers candidates="287" cleared="82" />
+  <references type="soft" candidates="4208" cleared="0" enqueued="0" dynamicThreshold="32" maxThreshold="32" />
+  <references type="weak" candidates="6120" cleared="2107" enqueued="2106" />
+  <references type="phantom" candidates="314" cleared="198" enqueued="198" />
+  <object-monitors candidates="18" cleared="5"  />
+</gc-op>
+<gc-end id="554" type="scavenge" contextid="550" durationms="8.315" usertimems="33.829" systemtimems="2.962" stalltimems="18.545" timestamp="2024-07-17T19:33:41.083" activeThreads="8">
+  <mem-info id="555" free="216935408" total="288620544" percent="75">
+    <mem type="nursery" free="65852152" total="87293952" percent="75">
+      <mem type="allocate" free="65852152" total="74711040" percent="88" />
+      <mem type="survivor" free="0" total="12582912" percent="0" />
+    </mem>
+    <mem type="tenure" free="151083256" total="201326592" percent="75">
+      <mem type="soa" free="141016312" total="191259648" percent="73" />
+      <mem type="loa" free="10066944" total="10066944" percent="100" />
+    </mem>
+    <pending-finalizers system="455" default="44" reference="2304" classloader="0" />
+    <remembered-set count="13599" />
+  </mem-info>
+</gc-end>
+<cycle-end id="556" type="scavenge" contextid="550" timestamp="2024-07-17T19:33:41.083" />
+<allocation-satisfied id="557" threadId="000000000224C000" bytesRequested="8200" />
+<af-end id="558" timestamp="2024-07-17T19:33:41.084" threadId="000000000224CA38" success="true" from="nursery"/>
+<exclusive-end id="559" timestamp="2024-07-17T19:33:41.084" durationms="11.415" />
+
+<exclusive-start id="560" timestamp="2024-07-17T19:33:41.223" intervalms="149.883">
+  <response-info timems="0.097" idlems="0.090" threads="1" lastid="0000000001EDF400" lastname="Build operations Thread 6" />
+</exclusive-start>
+<af-start id="561" threadId="000000000191E338" totalBytesRequested="32" timestamp="2024-07-17T19:33:41.223" intervalms="149.703" type="nursery" />
+<cycle-start id="562" type="scavenge" contextid="0" timestamp="2024-07-17T19:33:41.223" intervalms="149.542" />
+<gc-start id="563" type="scavenge" contextid="562" timestamp="2024-07-17T19:33:41.224">
+  <mem-info id="564" free="151082264" total="288620544" percent="52">
+    <mem type="nursery" free="0" total="87293952" percent="0">
+      <mem type="allocate" free="0" total="74711040" percent="0" />
+      <mem type="survivor" free="0" total="12582912" percent="0" />
+    </mem>
+    <mem type="tenure" free="151082264" total="201326592" percent="75">
+      <mem type="soa" free="141015320" total="191259648" percent="73" />
+      <mem type="loa" free="10066944" total="10066944" percent="100" />
+    </mem>
+    <remembered-set count="13631" />
+  </mem-info>
+</gc-start>
+<allocation-stats totalBytes="65719056" discardedBytes="134088" >
+  <allocated-bytes non-tlh="9192" tlh="65709864" />
+  <largest-consumer threadName="Cache worker for Java compile cache (/gradle/caches/8.8/javaCompile)" threadId="000000000139E200" bytes="9212208" />
+</allocation-stats>
+<gc-op id="565" type="scavenge" timems="9.092" contextid="562" timestamp="2024-07-17T19:33:41.233">
+  <scavenger-info tenureage="3" tenuremask="fff8" tiltratio="85" />
+  <memory-copied type="nursery" objects="188566" bytes="7942288" bytesdiscarded="294552" />
+  <memory-copied type="tenure" objects="85400" bytes="3661224" bytesdiscarded="1848" />
+  <finalization candidates="25" enqueued="12" />
+  <ownableSynchronizers candidates="205" cleared="44" />
+  <references type="soft" candidates="1275" cleared="0" enqueued="0" dynamicThreshold="32" maxThreshold="32" />
+  <references type="weak" candidates="2326" cleared="7" enqueued="7" />
+  <references type="phantom" candidates="49" cleared="1" enqueued="1" />
+  <object-monitors candidates="13" cleared="0"  />
+</gc-op>
+<gc-end id="566" type="scavenge" contextid="562" durationms="9.929" usertimems="38.441" systemtimems="13.579" stalltimems="19.275" timestamp="2024-07-17T19:33:41.234" activeThreads="8">
+  <mem-info id="567" free="214640184" total="288620544" percent="74">
+    <mem type="nursery" free="66990968" total="87293952" percent="76">
+      <mem type="allocate" free="66990968" total="75235328" percent="89" />
+      <mem type="survivor" free="0" total="12058624" percent="0" />
+    </mem>
+    <mem type="tenure" free="147649216" total="201326592" percent="73">
+      <mem type="soa" free="137582272" total="191259648" percent="71" />
+      <mem type="loa" free="10066944" total="10066944" percent="100" />
+    </mem>
+    <pending-finalizers system="3" default="9" reference="8" classloader="0" />
+    <remembered-set count="8835" />
+  </mem-info>
+</gc-end>
+<cycle-end id="568" type="scavenge" contextid="562" timestamp="2024-07-17T19:33:41.234" />
+<allocation-satisfied id="569" threadId="000000000191D900" bytesRequested="32" />
+<af-end id="570" timestamp="2024-07-17T19:33:41.234" threadId="000000000191E338" success="true" from="nursery"/>
+<exclusive-end id="571" timestamp="2024-07-17T19:33:41.234" durationms="11.988" />
+
+<exclusive-start id="572" timestamp="2024-07-17T19:33:41.372" intervalms="149.060">
+  <response-info timems="0.084" idlems="0.084" threads="0" lastid="0000000001914000" lastname="Build operations Thread 4" />
+</exclusive-start>
+<af-start id="573" threadId="0000000001914A38" totalBytesRequested="2056" timestamp="2024-07-17T19:33:41.372" intervalms="149.163" type="nursery" />
+<cycle-start id="574" type="scavenge" contextid="0" timestamp="2024-07-17T19:33:41.372" intervalms="149.247" />
+<gc-start id="575" type="scavenge" contextid="574" timestamp="2024-07-17T19:33:41.373">
+  <mem-info id="576" free="147649216" total="288620544" percent="51">
+    <mem type="nursery" free="0" total="87293952" percent="0">
+      <mem type="allocate" free="0" total="75235328" percent="0" />
+      <mem type="survivor" free="0" total="12058624" percent="0" />
+    </mem>
+    <mem type="tenure" free="147649216" total="201326592" percent="73">
+      <mem type="soa" free="137582272" total="191259648" percent="71" />
+      <mem type="loa" free="10066944" total="10066944" percent="100" />
+    </mem>
+    <remembered-set count="8844" />
+  </mem-info>
+</gc-start>
+<allocation-stats totalBytes="66798720" discardedBytes="192248" >
+  <allocated-bytes non-tlh="252752" tlh="66545968" />
+  <largest-consumer threadName="Cache worker for Java compile cache (/gradle/caches/8.8/javaCompile)" threadId="000000000139E200" bytes="11621936" />
+</allocation-stats>
+<gc-op id="577" type="scavenge" timems="6.906" contextid="574" timestamp="2024-07-17T19:33:41.381">
+  <scavenger-info tenureage="3" tenuremask="4008" tiltratio="86" />
+  <memory-copied type="nursery" objects="184077" bytes="7562224" bytesdiscarded="226928" />
+  <memory-copied type="tenure" objects="35381" bytes="1589512" bytesdiscarded="616" />
+  <finalization candidates="31" enqueued="19" />
+  <ownableSynchronizers candidates="67" cleared="0" />
+  <references type="soft" candidates="286" cleared="0" enqueued="0" dynamicThreshold="32" maxThreshold="32" />
+  <references type="weak" candidates="2979" cleared="0" enqueued="0" />
+  <references type="phantom" candidates="45" cleared="0" enqueued="0" />
+  <object-monitors candidates="13" cleared="0"  />
+</gc-op>
+<heap-resize id="578" type="expand" space="nursery" amount="3145728" count="1" timems="0.062" reason="excessive time being spent scavenging" timestamp="2024-07-17T19:33:41.381" />
+<gc-end id="579" type="scavenge" contextid="574" durationms="8.460" usertimems="39.161" systemtimems="3.489" stalltimems="19.127" timestamp="2024-07-17T19:33:41.382" activeThreads="9">
+  <mem-info id="580" free="216445304" total="291766272" percent="74">
+    <mem type="nursery" free="70654752" total="90439680" percent="78">
+      <mem type="allocate" free="70654752" total="78446592" percent="90" />
+      <mem type="survivor" free="0" total="11993088" percent="0" />
+    </mem>
+    <mem type="tenure" free="145790552" total="201326592" percent="72">
+      <mem type="soa" free="135723608" total="191259648" percent="70" />
+      <mem type="loa" free="10066944" total="10066944" percent="100" />
+    </mem>
+    <pending-finalizers system="0" default="19" reference="0" classloader="0" />
+    <remembered-set count="4008" />
+  </mem-info>
+</gc-end>
+<cycle-end id="581" type="scavenge" contextid="574" timestamp="2024-07-17T19:33:41.382" />
+<allocation-satisfied id="582" threadId="0000000001914000" bytesRequested="2056" />
+<af-end id="583" timestamp="2024-07-17T19:33:41.383" threadId="0000000001914A38" success="true" from="nursery"/>
+<exclusive-end id="584" timestamp="2024-07-17T19:33:41.383" durationms="11.228" />
+
+<exclusive-start id="585" timestamp="2024-07-17T19:33:41.510" intervalms="138.827">
+  <response-info timems="0.086" idlems="0.085" threads="1" lastid="000000000224FD00" lastname="Build operations Thread 9" />
+</exclusive-start>
+<af-start id="586" threadId="0000000001EDFE38" totalBytesRequested="64" timestamp="2024-07-17T19:33:41.511" intervalms="138.860" type="nursery" />
+<cycle-start id="587" type="scavenge" contextid="0" timestamp="2024-07-17T19:33:41.511" intervalms="138.859" />
+<gc-start id="588" type="scavenge" contextid="587" timestamp="2024-07-17T19:33:41.512">
+  <mem-info id="589" free="145790552" total="291766272" percent="49">
+    <mem type="nursery" free="0" total="90439680" percent="0">
+      <mem type="allocate" free="0" total="78446592" percent="0" />
+      <mem type="survivor" free="0" total="11993088" percent="0" />
+    </mem>
+    <mem type="tenure" free="145790552" total="201326592" percent="72">
+      <mem type="soa" free="135723608" total="191259648" percent="70" />
+      <mem type="loa" free="10066944" total="10066944" percent="100" />
+    </mem>
+    <remembered-set count="4049" />
+  </mem-info>
+</gc-start>
+<allocation-stats totalBytes="70520504" discardedBytes="134248" >
+  <allocated-bytes non-tlh="2240944" tlh="68279560" />
+  <largest-consumer threadName="Build operations Thread 5" threadId="0000000001914C00" bytes="13631448" />
+</allocation-stats>
+<gc-op id="590" type="scavenge" timems="7.060" contextid="587" timestamp="2024-07-17T19:33:41.520">
+  <scavenger-info tenureage="14" tenuremask="4000" tiltratio="86" />
+  <memory-copied type="nursery" objects="190238" bytes="7509072" bytesdiscarded="269000" />
+  <finalization candidates="16" enqueued="10" />
+  <ownableSynchronizers candidates="31" cleared="0" />
+  <references type="soft" candidates="286" cleared="0" enqueued="0" dynamicThreshold="32" maxThreshold="32" />
+  <references type="weak" candidates="3918" cleared="0" enqueued="0" />
+  <references type="phantom" candidates="38" cleared="0" enqueued="0" />
+  <object-monitors candidates="13" cleared="0"  />
+</gc-op>
+<gc-end id="591" type="scavenge" contextid="587" durationms="8.180" usertimems="26.518" systemtimems="18.264" stalltimems="21.943" timestamp="2024-07-17T19:33:41.520" activeThreads="10">
+  <mem-info id="592" free="217439808" total="291766272" percent="74">
+    <mem type="nursery" free="71649256" total="90439680" percent="79">
+      <mem type="allocate" free="71649256" total="79429632" percent="90" />
+      <mem type="survivor" free="0" total="11010048" percent="0" />
+    </mem>
+    <mem type="tenure" free="145790552" total="201326592" percent="72">
+      <mem type="soa" free="135723608" total="191259648" percent="70" />
+      <mem type="loa" free="10066944" total="10066944" percent="100" />
+    </mem>
+    <pending-finalizers system="0" default="10" reference="0" classloader="0" />
+    <remembered-set count="3996" />
+  </mem-info>
+</gc-end>
+<cycle-end id="593" type="scavenge" contextid="587" timestamp="2024-07-17T19:33:41.520" />
+<allocation-satisfied id="594" threadId="0000000001EDF400" bytesRequested="64" />
+<af-end id="595" timestamp="2024-07-17T19:33:41.521" threadId="0000000001EDFE38" success="true" from="nursery"/>
+<exclusive-end id="596" timestamp="2024-07-17T19:33:41.521" durationms="10.834" />
+
+<exclusive-start id="597" timestamp="2024-07-17T19:33:41.655" intervalms="144.416">
+  <response-info timems="0.062" idlems="0.060" threads="1" lastid="000000000224FD00" lastname="Build operations Thread 9" />
+</exclusive-start>
+<af-start id="598" threadId="000000000224CA38" totalBytesRequested="1592" timestamp="2024-07-17T19:33:41.655" intervalms="144.399" type="nursery" />
+<cycle-start id="599" type="scavenge" contextid="0" timestamp="2024-07-17T19:33:41.656" intervalms="144.387" />
+<gc-start id="600" type="scavenge" contextid="599" timestamp="2024-07-17T19:33:41.656">
+  <mem-info id="601" free="145790552" total="291766272" percent="49">
+    <mem type="nursery" free="0" total="90439680" percent="0">
+      <mem type="allocate" free="0" total="79429632" percent="0" />
+      <mem type="survivor" free="0" total="11010048" percent="0" />
+    </mem>
+    <mem type="tenure" free="145790552" total="201326592" percent="72">
+      <mem type="soa" free="135723608" total="191259648" percent="70" />
+      <mem type="loa" free="10066944" total="10066944" percent="100" />
+    </mem>
+    <remembered-set count="4035" />
+  </mem-info>
+</gc-start>
+<allocation-stats totalBytes="71516968" discardedBytes="132288" >
+  <allocated-bytes non-tlh="1300808" tlh="70216160" />
+  <largest-consumer threadName="Build operations Thread 9" threadId="000000000224FD00" bytes="13795856" />
+</allocation-stats>
+<gc-op id="602" type="scavenge" timems="7.298" contextid="599" timestamp="2024-07-17T19:33:41.664">
+  <scavenger-info tenureage="14" tenuremask="4000" tiltratio="87" />
+  <memory-copied type="nursery" objects="196133" bytes="7513728" bytesdiscarded="349664" />
+  <finalization candidates="6" enqueued="2" />
+  <ownableSynchronizers candidates="31" cleared="0" />
+  <references type="soft" candidates="286" cleared="0" enqueued="0" dynamicThreshold="32" maxThreshold="32" />
+  <references type="weak" candidates="4942" cleared="0" enqueued="0" />
+  <references type="phantom" candidates="36" cleared="0" enqueued="0" />
+  <object-monitors candidates="13" cleared="0"  />
+</gc-op>
+<gc-end id="603" type="scavenge" contextid="599" durationms="8.402" usertimems="42.974" systemtimems="2.016" stalltimems="34.152" timestamp="2024-07-17T19:33:41.665" activeThreads="11">
+  <mem-info id="604" free="217813488" total="291766272" percent="74">
+    <mem type="nursery" free="72022936" total="90439680" percent="79">
+      <mem type="allocate" free="72022936" total="79888384" percent="90" />
+      <mem type="survivor" free="0" total="10551296" percent="0" />
+    </mem>
+    <mem type="tenure" free="145790552" total="201326592" percent="72">
+      <mem type="soa" free="135723608" total="191259648" percent="70" />
+      <mem type="loa" free="10066944" total="10066944" percent="100" />
+    </mem>
+    <pending-finalizers system="0" default="2" reference="0" classloader="0" />
+    <remembered-set count="3995" />
+  </mem-info>
+</gc-end>
+<cycle-end id="605" type="scavenge" contextid="599" timestamp="2024-07-17T19:33:41.665" />
+<allocation-satisfied id="606" threadId="000000000224C000" bytesRequested="1592" />
+<af-end id="607" timestamp="2024-07-17T19:33:41.666" threadId="000000000224CA38" success="true" from="nursery"/>
+<exclusive-end id="608" timestamp="2024-07-17T19:33:41.666" durationms="11.003" />
+
+<exclusive-start id="609" timestamp="2024-07-17T19:33:41.822" intervalms="166.999">
+  <response-info timems="0.064" idlems="0.064" threads="0" lastid="0000000001914C00" lastname="Build operations Thread 5" />
+</exclusive-start>
+<af-start id="610" threadId="0000000001915638" totalBytesRequested="224" timestamp="2024-07-17T19:33:41.822" intervalms="166.986" type="nursery" />
+<cycle-start id="611" type="scavenge" contextid="0" timestamp="2024-07-17T19:33:41.823" intervalms="166.989" />
+<gc-start id="612" type="scavenge" contextid="611" timestamp="2024-07-17T19:33:41.823">
+  <mem-info id="613" free="145790552" total="291766272" percent="49">
+    <mem type="nursery" free="0" total="90439680" percent="0">
+      <mem type="allocate" free="0" total="79888384" percent="0" />
+      <mem type="survivor" free="0" total="10551296" percent="0" />
+    </mem>
+    <mem type="tenure" free="145790552" total="201326592" percent="72">
+      <mem type="soa" free="135723608" total="191259648" percent="70" />
+      <mem type="loa" free="10066944" total="10066944" percent="100" />
+    </mem>
+    <remembered-set count="4036" />
+  </mem-info>
+</gc-start>
+<allocation-stats totalBytes="71982336" discardedBytes="40600" >
+  <allocated-bytes non-tlh="94096" tlh="71888240" />
+  <largest-consumer threadName="Build operations Thread 9" threadId="000000000224FD00" bytes="20635536" />
+</allocation-stats>
+<gc-op id="614" type="scavenge" timems="7.410" contextid="611" timestamp="2024-07-17T19:33:41.831">
+  <scavenger-info tenureage="5" tenuremask="4020" tiltratio="88" />
+  <memory-copied type="nursery" objects="147430" bytes="5679512" bytesdiscarded="243616" />
+  <memory-copied type="tenure" objects="57620" bytes="2169224" bytesdiscarded="448" />
+  <finalization candidates="4" enqueued="2" />
+  <ownableSynchronizers candidates="31" cleared="0" />
+  <references type="weak" candidates="6260" cleared="0" enqueued="0" />
+  <references type="phantom" candidates="15" cleared="0" enqueued="0" />
+  <object-monitors candidates="13" cleared="0"  />
+</gc-op>
+<heap-resize id="615" type="expand" space="nursery" amount="3276800" count="1" timems="0.027" reason="excessive time being spent scavenging" timestamp="2024-07-17T19:33:41.832" />
+<gc-end id="616" type="scavenge" contextid="611" durationms="9.560" usertimems="43.432" systemtimems="3.989" stalltimems="33.739" timestamp="2024-07-17T19:33:41.833" activeThreads="11">
+  <mem-info id="617" free="220434088" total="295043072" percent="74">
+    <mem type="nursery" free="77241952" total="93716480" percent="82">
+      <mem type="allocate" free="77241952" total="83165184" percent="92" />
+      <mem type="survivor" free="0" total="10551296" percent="0" />
+    </mem>
+    <mem type="tenure" free="143192136" total="201326592" percent="71">
+      <mem type="soa" free="133125192" total="191259648" percent="69" />
+      <mem type="loa" free="10066944" total="10066944" percent="100" />
+    </mem>
+    <pending-finalizers system="0" default="2" reference="0" classloader="0" />
+    <remembered-set count="1409" />
+  </mem-info>
+</gc-end>
+<cycle-end id="618" type="scavenge" contextid="611" timestamp="2024-07-17T19:33:41.833" />
+<allocation-satisfied id="619" threadId="0000000001914C00" bytesRequested="224" />
+<af-end id="620" timestamp="2024-07-17T19:33:41.834" threadId="0000000001915638" success="true" from="nursery"/>
+<exclusive-end id="621" timestamp="2024-07-17T19:33:41.834" durationms="12.170" />
+
+<exclusive-start id="622" timestamp="2024-07-17T19:33:42.210" intervalms="388.638">
+  <response-info timems="0.061" idlems="0.061" threads="0" lastid="000000000191D900" lastname="Execution worker Thread 3" />
+</exclusive-start>
+<af-start id="623" threadId="000000000191E338" totalBytesRequested="16" timestamp="2024-07-17T19:33:42.211" intervalms="388.636" type="nursery" />
+<cycle-start id="624" type="scavenge" contextid="0" timestamp="2024-07-17T19:33:42.211" intervalms="388.621" />
+<gc-start id="625" type="scavenge" contextid="624" timestamp="2024-07-17T19:33:42.212">
+  <mem-info id="626" free="143190544" total="295043072" percent="48">
+    <mem type="nursery" free="0" total="93716480" percent="0">
+      <mem type="allocate" free="0" total="83165184" percent="0" />
+      <mem type="survivor" free="0" total="10551296" percent="0" />
+    </mem>
+    <mem type="tenure" free="143190544" total="201326592" percent="71">
+      <mem type="soa" free="133123600" total="191259648" percent="69" />
+      <mem type="loa" free="10066944" total="10066944" percent="100" />
+    </mem>
+    <remembered-set count="1494" />
+  </mem-info>
+</gc-start>
+<allocation-stats totalBytes="77206744" discardedBytes="36800" >
+  <allocated-bytes non-tlh="421176" tlh="76785568" />
+  <largest-consumer threadName="Build operations Thread 6" threadId="0000000001EDF400" bytes="59520120" />
+</allocation-stats>
+<gc-op id="627" type="scavenge" timems="5.975" contextid="624" timestamp="2024-07-17T19:33:42.218">
+  <scavenger-info tenureage="14" tenuremask="4000" tiltratio="88" />
+  <memory-copied type="nursery" objects="169688" bytes="6371576" bytesdiscarded="180080" />
+  <finalization candidates="7" enqueued="7" />
+  <references type="soft" candidates="4" cleared="0" enqueued="0" dynamicThreshold="32" maxThreshold="32" />
+  <references type="weak" candidates="8463" cleared="16" enqueued="16" />
+  <references type="phantom" candidates="14" cleared="3" enqueued="3" />
+  <object-monitors candidates="13" cleared="0"  />
+</gc-op>
+<gc-end id="628" type="scavenge" contextid="624" durationms="7.541" usertimems="37.110" systemtimems="0.000" stalltimems="27.984" timestamp="2024-07-17T19:33:42.219" activeThreads="11">
+  <mem-info id="629" free="220590408" total="295043072" percent="74">
+    <mem type="nursery" free="77399864" total="93716480" percent="82">
+      <mem type="allocate" free="77399864" total="83951616" percent="92" />
+      <mem type="survivor" free="0" total="9764864" percent="0" />
+    </mem>
+    <mem type="tenure" free="143190544" total="201326592" percent="71">
+      <mem type="soa" free="133123600" total="191259648" percent="69" />
+      <mem type="loa" free="10066944" total="10066944" percent="100" />
+    </mem>
+    <pending-finalizers system="5" default="2" reference="19" classloader="0" />
+    <remembered-set count="1430" />
+  </mem-info>
+</gc-end>
+<cycle-end id="630" type="scavenge" contextid="624" timestamp="2024-07-17T19:33:42.220" />
+<allocation-satisfied id="631" threadId="000000000191D900" bytesRequested="16" />
+<af-end id="632" timestamp="2024-07-17T19:33:42.220" threadId="000000000191E338" success="true" from="nursery"/>
+<exclusive-end id="633" timestamp="2024-07-17T19:33:42.221" durationms="10.126" />
+
+<exclusive-start id="634" timestamp="2024-07-17T19:37:07.752" intervalms="205541.123">
+  <response-info timems="0.043" idlems="0.043" threads="0" lastid="00000000001C9000" lastname="VM Runtime State Listener" />
+</exclusive-start>
+<sys-start reason="vm idle" id="635" timestamp="2024-07-17T19:37:07.752" intervalms="223356.487" />
+<cycle-start id="636" type="global" contextid="0" timestamp="2024-07-17T19:37:07.753" intervalms="223357.102" />
+<gc-start id="637" type="global" contextid="636" timestamp="2024-07-17T19:37:07.754">
+  <mem-info id="638" free="210048040" total="295043072" percent="71">
+    <mem type="nursery" free="66902968" total="93716480" percent="71">
+      <mem type="allocate" free="66902968" total="83951616" percent="79" />
+      <mem type="survivor" free="0" total="9764864" percent="0" />
+    </mem>
+    <mem type="tenure" free="143145072" total="201326592" percent="71">
+      <mem type="soa" free="133078128" total="191259648" percent="69" />
+      <mem type="loa" free="10066944" total="10066944" percent="100" />
+    </mem>
+    <remembered-set count="3589" />
+  </mem-info>
+</gc-start>
+<allocation-stats totalBytes="10483456" discardedBytes="58912" >
+  <allocated-bytes non-tlh="175392" tlh="10308064" />
+  <largest-consumer threadName="Daemon periodic checks" threadId="00000000005A7900" bytes="1301616" />
+</allocation-stats>
+<gc-op id="639" type="mark" timems="30.642" contextid="636" timestamp="2024-07-17T19:37:07.785">
+  <trace-info objectcount="915519" scancount="793583" scanbytes="26921668" />
+  <finalization candidates="876" enqueued="148" />
+  <ownableSynchronizers candidates="5764" cleared="707" />
+  <references type="soft" candidates="29360" cleared="0" enqueued="0" dynamicThreshold="32" maxThreshold="32" />
+  <references type="weak" candidates="28671" cleared="4771" enqueued="4743" />
+  <references type="phantom" candidates="1476" cleared="69" enqueued="69" />
+  <stringconstants candidates="44823" cleared="1418"  />
+  <object-monitors candidates="14" cleared="6"  />
+</gc-op>
+<gc-op id="640" type="classunload" timems="1.474" contextid="636" timestamp="2024-07-17T19:37:07.787">
+  <classunload-info classloadercandidates="136" classloadersunloaded="11" classesunloaded="10" anonymousclassesunloaded="0" quiescems="0.000" setupms="1.380" scanms="0.078" postms="0.016" />
+</gc-op>
+<gc-op id="641" type="sweep" timems="2.148" contextid="636" timestamp="2024-07-17T19:37:07.790" />
+<gc-end id="642" type="global" contextid="636" durationms="42.365" usertimems="216.167" systemtimems="27.002" stalltimems="198.376" timestamp="2024-07-17T19:37:07.796" activeThreads="12">
+  <mem-info id="643" free="233603880" total="295043072" percent="79">
+    <mem type="nursery" free="79723976" total="93716480" percent="85">
+      <mem type="allocate" free="79723976" total="83951616" percent="94" />
+      <mem type="survivor" free="0" total="9764864" percent="0" />
+    </mem>
+    <mem type="tenure" free="153879904" total="201326592" percent="76" micro-fragmented="1274661" macro-fragmented="69015248">
+      <mem type="soa" free="143812960" total="191259648" percent="75" />
+      <mem type="loa" free="10066944" total="10066944" percent="100" />
+    </mem>
+    <pending-finalizers system="148" default="0" reference="4812" classloader="0" />
+    <remembered-set count="1514" />
+  </mem-info>
+</gc-end>
+<cycle-end id="644" type="global" contextid="636" timestamp="2024-07-17T19:37:07.797" />
+<heap-fixup timems="5.074" reason="class unloading"  timestamp="2024-07-17T19:37:07.797" />
+<sys-end id="645" timestamp="2024-07-17T19:37:07.797" />
+<exclusive-end id="646" timestamp="2024-07-17T19:37:07.797" durationms="45.784" />
+
+<heap-resize id="647" type="release free pages" space="tenure" amount="151322624" count="1" timems="1.993" reason="idle" timestamp="2024-07-17T19:37:07.800" />

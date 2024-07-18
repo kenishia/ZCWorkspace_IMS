@@ -1,0 +1,17 @@
+---
+version: "1.0"
+mappings:
+- body:
+    mappings:
+    - firstName:
+        template: "{{$zosAssetResponse.message.\"OUTPUT-MSG\".\"OUT-RECORD\".\"OUT-FIRST-NAME\"\
+          }}"
+    - lastName:
+        template: "{{$zosAssetResponse.message.\"OUTPUT-MSG\".\"OUT-RECORD\".\"OUT-LAST-NAME\"\
+          }}"
+    - extension:
+        template: "{{$zosAssetResponse.message.\"OUTPUT-MSG\".\"OUT-RECORD\".\"OUT-EXTENSION\"\
+          }}"
+    - zipCode:
+        template: "{{$zosAssetResponse.message.\"OUTPUT-MSG\".\"OUT-RECORD\".\"OUT-ZIP-CODE\"\
+          }}"

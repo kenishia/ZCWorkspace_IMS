@@ -1,0 +1,13 @@
+---
+version: "1.0"
+response_200.yaml:
+  condition: "$zosAssetResponse.message.\"OUTPUT-MSG\".\"OUT-MESSAGE\" = 'ENTRY WAS\
+    \ DISPLAYED'"
+  httpStatusCode: 200
+response_404.yaml:
+  condition: "$contains($zosAssetResponse.message.\"OUTPUT-MSG\".\"OUT-MESSAGE\",\
+    \ 'PERSON WAS NOT FOUND') = true"
+  httpStatusCode: 404
+response_500.yaml:
+  condition: true
+  httpStatusCode: 500

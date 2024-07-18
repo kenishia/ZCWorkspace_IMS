@@ -1,0 +1,494 @@
+------Start of DE processing------ = [7/17/24, 17:31:00:741 UTC]
+Exception = javax.resource.spi.IllegalStateException
+Source = com.ibm.zosconnect.zosasset.ims.internal.ImsTranZosAsset
+probeid = 228
+Stack Dump = javax.resource.spi.IllegalStateException: ICO0010E: com.ibm.connector2.ims.ico.IMSConnection@d4e73e55.close() error. The method was invoked on an invalid IMSConnection instance.
+	at com.ibm.connector2.ims.ico.IMSConnection.close(IMSConnection.java:264)
+	at com.ibm.zosconnect.zosasset.ims.internal.ImsZosAsset.flowRequest(ImsZosAsset.java:305)
+	at com.ibm.zosconnect.zosasset.ims.internal.ImsTranZosAsset.invoke(ImsTranZosAsset.java:90)
+	at com.ibm.zosconnect.engine.impl.ProviderInvokeOperationImpl.invokeEndpoint(ProviderInvokeOperationImpl.java:384)
+	at com.ibm.zosconnect.engine.impl.ProviderInvokeOperationImpl.processOperation(ProviderInvokeOperationImpl.java:151)
+	at com.ibm.zosconnect.engine.impl.ProviderInvokeOperationImpl$Proxy$_$$_WeldClientProxy.processOperation(Unknown Source)
+	at com.ibm.zosconnect.api.PhonebookApi.phonebookContactsLastNameGet(PhonebookApi.java:97)
+	at com.ibm.zosconnect.api.PhonebookApi$Proxy$_$$_WeldSubclass.phonebookContactsLastNameGet$$super(Unknown Source)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:574)
+	at org.jboss.weld.interceptor.proxy.TerminalAroundInvokeInvocationContext.proceedInternal(TerminalAroundInvokeInvocationContext.java:51)
+	at org.jboss.weld.interceptor.proxy.AroundInvokeInvocationContext.proceed(AroundInvokeInvocationContext.java:78)
+	at io.openliberty.microprofile.metrics.internal.cdi30.interceptors.SimplyTimedInterceptor.simplyTimedCallable(SimplyTimedInterceptor.java:101)
+	at io.openliberty.microprofile.metrics.internal.cdi30.interceptors.SimplyTimedInterceptor.timedMethod(SimplyTimedInterceptor.java:74)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:574)
+	at org.jboss.weld.interceptor.reader.SimpleInterceptorInvocation$SimpleMethodInvocation.invoke(SimpleInterceptorInvocation.java:73)
+	at org.jboss.weld.interceptor.proxy.NonTerminalAroundInvokeInvocationContext.proceedInternal(NonTerminalAroundInvokeInvocationContext.java:66)
+	at org.jboss.weld.interceptor.proxy.AroundInvokeInvocationContext.proceed(AroundInvokeInvocationContext.java:78)
+	at io.openliberty.microprofile.metrics.internal.cdi30.interceptors.CountedInterceptor.countedCallable(CountedInterceptor.java:99)
+	at io.openliberty.microprofile.metrics.internal.cdi30.interceptors.CountedInterceptor.countedMethod(CountedInterceptor.java:74)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:574)
+	at org.jboss.weld.interceptor.reader.SimpleInterceptorInvocation$SimpleMethodInvocation.invoke(SimpleInterceptorInvocation.java:73)
+	at org.jboss.weld.interceptor.proxy.InterceptorMethodHandler.executeAroundInvoke(InterceptorMethodHandler.java:84)
+	at org.jboss.weld.interceptor.proxy.InterceptorMethodHandler.executeInterception(InterceptorMethodHandler.java:72)
+	at org.jboss.weld.interceptor.proxy.InterceptorMethodHandler.invoke(InterceptorMethodHandler.java:56)
+	at org.jboss.weld.bean.proxy.CombinedInterceptorAndDecoratorStackMethodHandler.invoke(CombinedInterceptorAndDecoratorStackMethodHandler.java:79)
+	at org.jboss.weld.bean.proxy.CombinedInterceptorAndDecoratorStackMethodHandler.invoke(CombinedInterceptorAndDecoratorStackMethodHandler.java:68)
+	at com.ibm.zosconnect.api.PhonebookApi$Proxy$_$$_WeldSubclass.phonebookContactsLastNameGet(Unknown Source)
+	at com.ibm.zosconnect.api.PhonebookApi$Proxy$_$$_WeldClientProxy.phonebookContactsLastNameGet(Unknown Source)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:574)
+	at com.ibm.ws.jaxrs20.cdi.component.JaxRsFactoryImplicitBeanCDICustomizer.serviceInvoke(JaxRsFactoryImplicitBeanCDICustomizer.java:352)
+	at com.ibm.ws.jaxrs20.server.LibertyJaxRsServerFactoryBean.performInvocation(LibertyJaxRsServerFactoryBean.java:642)
+	at com.ibm.ws.jaxrs20.server.LibertyJaxRsInvoker.performInvocation(LibertyJaxRsInvoker.java:161)
+	at org.apache.cxf.service.invoker.AbstractInvoker.invoke(AbstractInvoker.java:101)
+	at com.ibm.ws.jaxrs20.server.LibertyJaxRsInvoker.invoke(LibertyJaxRsInvoker.java:276)
+	at org.apache.cxf.jaxrs.JAXRSInvoker.invoke(JAXRSInvoker.java:213)
+	at com.ibm.ws.jaxrs20.server.LibertyJaxRsInvoker.invoke(LibertyJaxRsInvoker.java:460)
+	at org.apache.cxf.jaxrs.JAXRSInvoker.invoke(JAXRSInvoker.java:112)
+	at org.apache.cxf.interceptor.ServiceInvokerInterceptor$1.run(ServiceInvokerInterceptor.java:69)
+	at org.apache.cxf.interceptor.ServiceInvokerInterceptor.handleMessage(ServiceInvokerInterceptor.java:120)
+	at org.apache.cxf.phase.PhaseInterceptorChain.doIntercept(PhaseInterceptorChain.java:325)
+	at org.apache.cxf.transport.ChainInitiationObserver.onMessage(ChainInitiationObserver.java:129)
+	at org.apache.cxf.transport.http.AbstractHTTPDestination.invoke(AbstractHTTPDestination.java:278)
+	at com.ibm.ws.jaxrs20.endpoint.AbstractJaxRsWebEndpoint.invoke(AbstractJaxRsWebEndpoint.java:139)
+	at com.ibm.websphere.jaxrs.server.IBMRestServlet.handleRequest(IBMRestServlet.java:148)
+	at com.ibm.websphere.jaxrs.server.IBMRestServlet.doGet(IBMRestServlet.java:114)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:686)
+	at com.ibm.websphere.jaxrs.server.IBMRestServlet.service(IBMRestServlet.java:98)
+	at com.ibm.ws.webcontainer.servlet.ServletWrapper.service(ServletWrapper.java:1260)
+	at com.ibm.ws.webcontainer.servlet.ServletWrapper.handleRequest(ServletWrapper.java:748)
+	at com.ibm.ws.webcontainer.servlet.ServletWrapper.handleRequest(ServletWrapper.java:445)
+	at com.ibm.ws.webcontainer.filter.WebAppFilterChain.invokeTarget(WebAppFilterChain.java:197)
+	at com.ibm.ws.webcontainer.filter.WebAppFilterChain.doFilter(WebAppFilterChain.java:100)
+	at com.ibm.zosconnect.provider.ApiFilter.doFilter(ApiFilter.java:44)
+	at com.ibm.ws.webcontainer.filter.FilterInstanceWrapper.doFilter(FilterInstanceWrapper.java:203)
+	at com.ibm.ws.webcontainer.filter.WebAppFilterChain.doFilter(WebAppFilterChain.java:93)
+	at com.ibm.ws.webcontainer.filter.WebAppFilterManager.doFilter(WebAppFilterManager.java:1068)
+	at com.ibm.ws.webcontainer.filter.WebAppFilterManager.invokeFilters(WebAppFilterManager.java:1259)
+	at com.ibm.ws.webcontainer.webapp.WebApp.handleRequest(WebApp.java:5095)
+	at com.ibm.ws.webcontainer.osgi.DynamicVirtualHost$2.handleRequest(DynamicVirtualHost.java:328)
+	at com.ibm.ws.webcontainer.WebContainer.handleRequest(WebContainer.java:1038)
+	at com.ibm.ws.webcontainer.osgi.DynamicVirtualHost$2.run(DynamicVirtualHost.java:293)
+	at com.ibm.ws.http.dispatcher.internal.channel.HttpDispatcherLink$TaskWrapper.run(HttpDispatcherLink.java:1260)
+	at com.ibm.ws.http.dispatcher.internal.channel.HttpDispatcherLink.wrapHandlerAndExecute(HttpDispatcherLink.java:476)
+	at com.ibm.ws.http.dispatcher.internal.channel.HttpDispatcherLink.ready(HttpDispatcherLink.java:435)
+	at com.ibm.ws.http.channel.internal.inbound.HttpInboundLink.handleDiscrimination(HttpInboundLink.java:569)
+	at com.ibm.ws.http.channel.internal.inbound.HttpInboundLink.handleNewRequest(HttpInboundLink.java:503)
+	at com.ibm.ws.http.channel.internal.inbound.HttpInboundLink.processRequest(HttpInboundLink.java:363)
+	at com.ibm.ws.http.channel.internal.inbound.HttpICLReadCallback.complete(HttpICLReadCallback.java:72)
+	at com.ibm.ws.tcpchannel.internal.WorkQueueManager.requestComplete(WorkQueueManager.java:516)
+	at com.ibm.ws.tcpchannel.internal.WorkQueueManager.attemptIO(WorkQueueManager.java:586)
+	at com.ibm.ws.tcpchannel.internal.WorkQueueManager.workerRun(WorkQueueManager.java:970)
+	at com.ibm.ws.tcpchannel.internal.WorkQueueManager$Worker.run(WorkQueueManager.java:1059)
+	at com.ibm.ws.threading.internal.ExecutorServiceImpl$RunnableWrapper.run(ExecutorServiceImpl.java:280)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
+	at java.base/java.lang.Thread.run(Thread.java:857)
+
+Dump of callerThis
+Object type = com.ibm.zosconnect.zosasset.ims.internal.ImsTranZosAsset
+  copyright_notice = "
+IBM Confidential. PID 5655-CE5. Copyright IBM Corp. 2021, 2023
+"
+  tc = class com.ibm.websphere.ras.TraceComponent@5dfab0c7
+    strings[0] = "TraceComponent[com.ibm.zosconnect.zosasset.ims.internal.ImsTranZosAsset,class com.ibm.zosconnect.zosasset.ims.internal.ImsTranZosAsset,[zosConnectIms],com.ibm.zosconnect.zosasset.ims.internal.resources.ImsMessages,null]"
+  REQUEST_DAI_FILENAME = "request.dai"
+  RESPONSE_DAI_FILENAME = "response.dai"
+  JSON_MSG_WRAPPER = "message"
+  isLDS = false
+  requestMessage = class com.ibm.zosconnect.wv.metadata.transaction.Message@bad8290b
+    message = class com.ibm.zosconnect.wv.metadata.transaction.MessageType@91cb296a
+      remarks = null
+      segment = class java.util.ArrayList@39ad76c2
+      id = class java.math.BigInteger@d8d9f82b
+      name = null
+      messageVersion = null
+    transactionCode = null
+    messageName = null
+    direction = class java.math.BigInteger@3942fc73
+      signum = "/* Could not access signum */"
+      mag = "/* Could not access mag */"
+      bitCountPlusOne = "/* Could not access bitCountPlusOne */"
+      bitLengthPlusOne = "/* Could not access bitLengthPlusOne */"
+      lowestSetBitPlusTwo = "/* Could not access lowestSetBitPlusTwo */"
+      firstNonzeroIntNumPlusTwo = "/* Could not access firstNonzeroIntNumPlusTwo */"
+      LONG_MASK = "/* Could not access LONG_MASK */"
+      MAX_MAG_LENGTH = "/* Could not access MAX_MAG_LENGTH */"
+      PRIME_SEARCH_BIT_LENGTH_LIMIT = "/* Could not access PRIME_SEARCH_BIT_LENGTH_LIMIT */"
+      KARATSUBA_THRESHOLD = "/* Could not access KARATSUBA_THRESHOLD */"
+      TOOM_COOK_THRESHOLD = "/* Could not access TOOM_COOK_THRESHOLD */"
+      KARATSUBA_SQUARE_THRESHOLD = "/* Could not access KARATSUBA_SQUARE_THRESHOLD */"
+      TOOM_COOK_SQUARE_THRESHOLD = "/* Could not access TOOM_COOK_SQUARE_THRESHOLD */"
+      BURNIKEL_ZIEGLER_THRESHOLD = "/* Could not access BURNIKEL_ZIEGLER_THRESHOLD */"
+      BURNIKEL_ZIEGLER_OFFSET = "/* Could not access BURNIKEL_ZIEGLER_OFFSET */"
+      SCHOENHAGE_BASE_CONVERSION_THRESHOLD = "/* Could not access SCHOENHAGE_BASE_CONVERSION_THRESHOLD */"
+      MULTIPLY_SQUARE_THRESHOLD = "/* Could not access MULTIPLY_SQUARE_THRESHOLD */"
+      MONTGOMERY_INTRINSIC_THRESHOLD = "/* Could not access MONTGOMERY_INTRINSIC_THRESHOLD */"
+      bitsPerDigit = "/* Could not access bitsPerDigit */"
+      SMALL_PRIME_THRESHOLD = "/* Could not access SMALL_PRIME_THRESHOLD */"
+      DEFAULT_PRIME_CERTAINTY = "/* Could not access DEFAULT_PRIME_CERTAINTY */"
+      SMALL_PRIME_PRODUCT = "/* Could not access SMALL_PRIME_PRODUCT */"
+      MAX_CONSTANT = "/* Could not access MAX_CONSTANT */"
+      posConst = "/* Could not access posConst */"
+      negConst = "/* Could not access negConst */"
+      powerCache = "/* Could not access powerCache */"
+      logCache = "/* Could not access logCache */"
+      LOG_TWO = "/* Could not access LOG_TWO */"
+      ZERO = class java.math.BigInteger@a2e4a11c
+      ONE = class java.math.BigInteger@ce151d3
+      TWO = class java.math.BigInteger@733e039c
+      NEGATIVE_ONE = "/* Could not access NEGATIVE_ONE */"
+      TEN = class java.math.BigInteger@4bdf3110
+      bnExpModThreshTable = "/* Could not access bnExpModThreshTable */"
+      NUM_ZEROS = "/* Could not access NUM_ZEROS */"
+      ZEROS = "/* Could not access ZEROS */"
+      digitsPerLong = "/* Could not access digitsPerLong */"
+      longRadix = "/* Could not access longRadix */"
+      digitsPerInt = "/* Could not access digitsPerInt */"
+      intRadix = "/* Could not access intRadix */"
+      serialVersionUID = "/* Could not access serialVersionUID */"
+      serialPersistentFields = "/* Could not access serialPersistentFields */"
+      $assertionsDisabled = "/* Could not access $assertionsDisabled */"
+      serialVersionUID = "/* Could not access serialVersionUID */"
+    messageVersion = null
+    version = null
+    modifiedBy = null
+    modifiedTime = null
+    serviceType = null
+  responseMessage = class com.ibm.zosconnect.wv.metadata.transaction.Message@578b483d
+    message = class com.ibm.zosconnect.wv.metadata.transaction.MessageType@b2b34d6e
+      remarks = null
+      segment = class java.util.ArrayList@f5c583c8
+      id = class java.math.BigInteger@e00679f1
+      name = null
+      messageVersion = null
+    transactionCode = null
+    messageName = null
+    direction = class java.math.BigInteger@e3d57b7b
+      signum = "/* Could not access signum */"
+      mag = "/* Could not access mag */"
+      bitCountPlusOne = "/* Could not access bitCountPlusOne */"
+      bitLengthPlusOne = "/* Could not access bitLengthPlusOne */"
+      lowestSetBitPlusTwo = "/* Could not access lowestSetBitPlusTwo */"
+      firstNonzeroIntNumPlusTwo = "/* Could not access firstNonzeroIntNumPlusTwo */"
+      LONG_MASK = "/* Could not access LONG_MASK */"
+      MAX_MAG_LENGTH = "/* Could not access MAX_MAG_LENGTH */"
+      PRIME_SEARCH_BIT_LENGTH_LIMIT = "/* Could not access PRIME_SEARCH_BIT_LENGTH_LIMIT */"
+      KARATSUBA_THRESHOLD = "/* Could not access KARATSUBA_THRESHOLD */"
+      TOOM_COOK_THRESHOLD = "/* Could not access TOOM_COOK_THRESHOLD */"
+      KARATSUBA_SQUARE_THRESHOLD = "/* Could not access KARATSUBA_SQUARE_THRESHOLD */"
+      TOOM_COOK_SQUARE_THRESHOLD = "/* Could not access TOOM_COOK_SQUARE_THRESHOLD */"
+      BURNIKEL_ZIEGLER_THRESHOLD = "/* Could not access BURNIKEL_ZIEGLER_THRESHOLD */"
+      BURNIKEL_ZIEGLER_OFFSET = "/* Could not access BURNIKEL_ZIEGLER_OFFSET */"
+      SCHOENHAGE_BASE_CONVERSION_THRESHOLD = "/* Could not access SCHOENHAGE_BASE_CONVERSION_THRESHOLD */"
+      MULTIPLY_SQUARE_THRESHOLD = "/* Could not access MULTIPLY_SQUARE_THRESHOLD */"
+      MONTGOMERY_INTRINSIC_THRESHOLD = "/* Could not access MONTGOMERY_INTRINSIC_THRESHOLD */"
+      bitsPerDigit = "/* Could not access bitsPerDigit */"
+      SMALL_PRIME_THRESHOLD = "/* Could not access SMALL_PRIME_THRESHOLD */"
+      DEFAULT_PRIME_CERTAINTY = "/* Could not access DEFAULT_PRIME_CERTAINTY */"
+      SMALL_PRIME_PRODUCT = "/* Could not access SMALL_PRIME_PRODUCT */"
+      MAX_CONSTANT = "/* Could not access MAX_CONSTANT */"
+      posConst = "/* Could not access posConst */"
+      negConst = "/* Could not access negConst */"
+      powerCache = "/* Could not access powerCache */"
+      logCache = "/* Could not access logCache */"
+      LOG_TWO = "/* Could not access LOG_TWO */"
+      ZERO = class java.math.BigInteger@a2e4a11c
+      ONE = class java.math.BigInteger@ce151d3
+      TWO = class java.math.BigInteger@733e039c
+      NEGATIVE_ONE = "/* Could not access NEGATIVE_ONE */"
+      TEN = class java.math.BigInteger@4bdf3110
+      bnExpModThreshTable = "/* Could not access bnExpModThreshTable */"
+      NUM_ZEROS = "/* Could not access NUM_ZEROS */"
+      ZEROS = "/* Could not access ZEROS */"
+      digitsPerLong = "/* Could not access digitsPerLong */"
+      longRadix = "/* Could not access longRadix */"
+      digitsPerInt = "/* Could not access digitsPerInt */"
+      intRadix = "/* Could not access intRadix */"
+      serialVersionUID = "/* Could not access serialVersionUID */"
+      serialPersistentFields = "/* Could not access serialPersistentFields */"
+      $assertionsDisabled = "/* Could not access $assertionsDisabled */"
+      serialVersionUID = "/* Could not access serialVersionUID */"
+    messageVersion = null
+    version = null
+    modifiedBy = null
+    modifiedTime = null
+    serviceType = null
+  serialVersionUID = -7714360601516864326
+  copyright_notice = "
+IBM Confidential. PID 5655-CE5. Copyright IBM Corp. 2021, 2023
+"
+  tc = class com.ibm.websphere.ras.TraceComponent@3d384546
+    strings[0] = "TraceComponent[com.ibm.zosconnect.zosasset.ims.internal.ImsZosAsset,class com.ibm.zosconnect.zosasset.ims.internal.ImsZosAsset,[zosConnectIms],com.ibm.zosconnect.zosasset.ims.internal.resources.ImsMessages,null]"
+  PROVIDER_FILES_PATH = "/providerFiles/"
+  name = "phonebook"
+  description = ""
+  version = 0.0
+  type = "imsTransaction-1.0"
+  language = "COBOL"
+  connectionRef = "imsConn"
+  trancode = "IVTNO"
+  bidiConfigRef = null
+  isLDS = false
+  NAME = "name"
+  DESCRIPTION = "description"
+  VERSION = "version"
+  LANGUAGE = "language"
+  CONNECTION_REF = "connectionRef"
+  TRANCODE = "transactionCode"
+  objectMapper = class com.fasterxml.jackson.databind.ObjectMapper@ffd6ea71
+    serialVersionUID = 2
+    DEFAULT_ANNOTATION_INTROSPECTOR = class com.fasterxml.jackson.databind.introspect.JacksonAnnotationIntrospector@a2e1dd13
+      serialVersionUID = 1
+      ANNOTATIONS_TO_INFER_SER = class java.lang.Class[8]
+      ANNOTATIONS_TO_INFER_DESER = class java.lang.Class[8]
+      _java7Helper = class com.fasterxml.jackson.databind.ext.Java7SupportImpl@1db866cf
+      _annotationsInside = class com.fasterxml.jackson.databind.util.LRUMap@ce4c769c
+      _cfgConstructorPropertiesImpliesCreator = true
+    DEFAULT_BASE = class com.fasterxml.jackson.databind.cfg.BaseSettings@793d5cc2
+      serialVersionUID = 1
+      DEFAULT_TIMEZONE = class sun.util.calendar.ZoneInfo@f891f45c
+      _typeFactory = class com.fasterxml.jackson.databind.type.TypeFactory@f2184741
+      _classIntrospector = null
+      _annotationIntrospector = class com.fasterxml.jackson.databind.introspect.JacksonAnnotationIntrospector@a2e1dd13
+      _propertyNamingStrategy = null
+      _accessorNaming = class com.fasterxml.jackson.databind.introspect.DefaultAccessorNamingStrategy$Provider@75fa65d1
+      _typeResolverBuilder = null
+      _typeValidator = class com.fasterxml.jackson.databind.jsontype.impl.LaissezFaireSubTypeValidator@d53997f6
+      _dateFormat = class com.fasterxml.jackson.databind.util.StdDateFormat@f842afa8
+      _handlerInstantiator = null
+      _locale = class java.util.Locale@bc01afe
+      _timeZone = null
+      _defaultBase64 = class com.fasterxml.jackson.core.Base64Variant@7070fbf4
+      _cacheProvider = class com.fasterxml.jackson.databind.cfg.DefaultCacheProvider@727d1664
+    _jsonFactory = class com.fasterxml.jackson.databind.MappingJsonFactory@5321d30b
+      serialVersionUID = -1
+      serialVersionUID = 2
+      FORMAT_NAME_JSON = "JSON"
+      DEFAULT_FACTORY_FEATURE_FLAGS = 31
+      DEFAULT_PARSER_FEATURE_FLAGS = 1
+      DEFAULT_GENERATOR_FEATURE_FLAGS = 2079
+      DEFAULT_ROOT_VALUE_SEPARATOR = class com.fasterxml.jackson.core.io.SerializedString@117f535a
+      DEFAULT_QUOTE_CHAR = "
+      _rootCharSymbols = class com.fasterxml.jackson.core.sym.CharsToNameCanonicalizer@dbaead6e
+      _byteSymbolCanonicalizer = class com.fasterxml.jackson.core.sym.ByteQuadsCanonicalizer@50e2f630
+      _factoryFeatures = 31
+      _parserFeatures = 1
+      _generatorFeatures = 2079
+      _recyclerPool = class com.fasterxml.jackson.core.util.JsonRecyclerPools$LockFreePool@661763ce
+      _objectCodec = class com.fasterxml.jackson.databind.ObjectMapper@ffd6ea71
+      _characterEscapes = null
+      _streamReadConstraints = class com.fasterxml.jackson.core.StreamReadConstraints@94c3c201
+      _errorReportConfiguration = class com.fasterxml.jackson.core.ErrorReportConfiguration@a7e12602
+      _streamWriteConstraints = class com.fasterxml.jackson.core.StreamWriteConstraints@665fa9b
+      _inputDecorator = null
+      _outputDecorator = null
+      _generatorDecorators = null
+      _rootValueSeparator = class com.fasterxml.jackson.core.io.SerializedString@117f535a
+      _maximumNonEscapedChar = 0
+      _quoteChar = "
+      serialVersionUID = 2
+    _typeFactory = class com.fasterxml.jackson.databind.type.TypeFactory@f2184741
+      serialVersionUID = 1
+      DEFAULT_MAX_CACHE_SIZE = 200
+      NO_TYPES = class com.fasterxml.jackson.databind.JavaType[0]
+      instance = class com.fasterxml.jackson.databind.type.TypeFactory@f2184741
+      EMPTY_BINDINGS = class com.fasterxml.jackson.databind.type.TypeBindings@ffac7fa2
+      CLS_STRING = class java.lang.Class@e6e28a9a
+      CLS_OBJECT = class java.lang.Class@49a2620c
+      CLS_COMPARABLE = class java.lang.Class@6bf8cdba
+      CLS_ENUM = class java.lang.Class@670f3f26
+      CLS_JSON_NODE = class java.lang.Class@f216108e
+      CLS_BOOL = class java.lang.Class@10820469
+      CLS_DOUBLE = class java.lang.Class@386a6959
+      CLS_INT = class java.lang.Class@ac2f6ead
+      CLS_LONG = class java.lang.Class@5de87116
+      CORE_TYPE_BOOL = class com.fasterxml.jackson.databind.type.SimpleType@48ed4895
+      CORE_TYPE_DOUBLE = class com.fasterxml.jackson.databind.type.SimpleType@cdba87c5
+      CORE_TYPE_INT = class com.fasterxml.jackson.databind.type.SimpleType@ea21ea8d
+      CORE_TYPE_LONG = class com.fasterxml.jackson.databind.type.SimpleType@d3d8f470
+      CORE_TYPE_STRING = class com.fasterxml.jackson.databind.type.SimpleType@b911741b
+      CORE_TYPE_OBJECT = class com.fasterxml.jackson.databind.type.SimpleType@b28a8829
+      CORE_TYPE_COMPARABLE = class com.fasterxml.jackson.databind.type.SimpleType@251bcccc
+      CORE_TYPE_ENUM = class com.fasterxml.jackson.databind.type.SimpleType@339145e
+      CORE_TYPE_JSON_NODE = class com.fasterxml.jackson.databind.type.SimpleType@b36773e6
+      _typeCache = class com.fasterxml.jackson.databind.util.LRUMap@82fa20ee
+      _modifiers = null
+      _parser = class com.fasterxml.jackson.databind.type.TypeParser@4534a70b
+      _classLoader = null
+    _injectableValues = null
+    _subtypeResolver = class com.fasterxml.jackson.databind.jsontype.impl.StdSubtypeResolver@e605d361
+      serialVersionUID = 1
+      _registeredSubtypes = null
+    _configOverrides = class com.fasterxml.jackson.databind.cfg.ConfigOverrides@3e08415b
+      serialVersionUID = 1
+      _overrides = null
+      _defaultInclusion = class com.fasterxml.jackson.annotation.JsonInclude$Value@4df242e9
+      _defaultSetterInfo = class com.fasterxml.jackson.annotation.JsonSetter$Value@af5c0913
+      _visibilityChecker = class com.fasterxml.jackson.databind.introspect.VisibilityChecker$Std@bac16d76
+      _defaultMergeable = null
+      _defaultLeniency = null
+    _coercionConfigs = class com.fasterxml.jackson.databind.cfg.CoercionConfigs@b80689ba
+      serialVersionUID = 1
+      TARGET_TYPE_COUNT = 13
+      _defaultAction = class com.fasterxml.jackson.databind.cfg.CoercionAction@510abc16
+      _defaultCoercions = class com.fasterxml.jackson.databind.cfg.MutableCoercionConfig@a962a9a7
+      _perTypeCoercions = null
+      _perClassCoercions = null
+    _mixIns = class com.fasterxml.jackson.databind.introspect.SimpleMixInResolver@679536f7
+      serialVersionUID = 1
+      _overrides = null
+      _localMixIns = null
+    _serializationConfig = class com.fasterxml.jackson.databind.SerializationConfig@a01da5a6
+      serialVersionUID = 1
+      DEFAULT_PRETTY_PRINTER = class com.fasterxml.jackson.core.util.DefaultPrettyPrinter@ccc912d4
+      SER_FEATURE_DEFAULTS = 21771068
+      _filterProvider = null
+      _defaultPrettyPrinter = class com.fasterxml.jackson.core.util.DefaultPrettyPrinter@ccc912d4
+      _serFeatures = 21771068
+      _generatorFeatures = 0
+      _generatorFeaturesToChange = 0
+      _formatWriteFeatures = 0
+      _formatWriteFeaturesToChange = 0
+      EMPTY_OVERRIDE = class com.fasterxml.jackson.databind.cfg.ConfigOverride$Empty@a3e118fd
+      DEFAULT_MAPPER_FEATURES = 12351074043
+      AUTO_DETECT_MASK = 248
+      _mixIns = class com.fasterxml.jackson.databind.introspect.SimpleMixInResolver@679536f7
+      _subtypeResolver = class com.fasterxml.jackson.databind.jsontype.impl.StdSubtypeResolver@e605d361
+      _rootName = null
+      _view = null
+      _attributes = class com.fasterxml.jackson.databind.cfg.ContextAttributes$Impl@8597c8d3
+      _rootNames = class com.fasterxml.jackson.databind.util.RootNameLookup@df562516
+      _configOverrides = class com.fasterxml.jackson.databind.cfg.ConfigOverrides@3e08415b
+      _datatypeFeatures = class com.fasterxml.jackson.databind.cfg.DatatypeFeatures@494c0cd3
+      serialVersionUID = 2
+      EMPTY_INCLUDE = class com.fasterxml.jackson.annotation.JsonInclude$Value@4df242e9
+      EMPTY_FORMAT = class com.fasterxml.jackson.annotation.JsonFormat$Value@7329e43e
+      _mapperFeatures = 12351074043
+      _base = class com.fasterxml.jackson.databind.cfg.BaseSettings@ec190f94
+    _serializerProvider = class com.fasterxml.jackson.databind.ser.DefaultSerializerProvider$Impl@36b0a3c
+      serialVersionUID = 1
+      serialVersionUID = 1
+      _seenObjectIds = null
+      _objectIdGenerators = null
+      _generator = null
+      CACHE_UNKNOWN_MAPPINGS = false
+      DEFAULT_NULL_KEY_SERIALIZER = class com.fasterxml.jackson.databind.ser.impl.FailingSerializer@c2c91e7f
+      DEFAULT_UNKNOWN_SERIALIZER = class com.fasterxml.jackson.databind.ser.impl.UnknownSerializer@7fa0451b
+      _config = null
+      _serializationView = null
+      _serializerFactory = null
+      _serializerCache = class com.fasterxml.jackson.databind.ser.SerializerCache@48e7cc51
+      _attributes = null
+      _unknownTypeSerializer = class com.fasterxml.jackson.databind.ser.impl.UnknownSerializer@7fa0451b
+      _keySerializer = null
+      _nullValueSerializer = class com.fasterxml.jackson.databind.ser.std.NullSerializer@a39da4f7
+      _nullKeySerializer = class com.fasterxml.jackson.databind.ser.impl.FailingSerializer@c2c91e7f
+      _knownSerializers = null
+      _dateFormat = null
+      _stdNullValueSerializer = true
+      MAX_ERROR_STR_LEN = 500
+    _serializerFactory = class com.fasterxml.jackson.databind.ser.BeanSerializerFactory@33670478
+      serialVersionUID = 1
+      instance = class com.fasterxml.jackson.databind.ser.BeanSerializerFactory@33670478
+      _concrete = class java.util.HashMap@fefee9f9
+      _concreteLazy = class java.util.HashMap@5c2d8307
+      _factoryConfig = class com.fasterxml.jackson.databind.cfg.SerializerFactoryConfig@8b2e5ef8
+    _deserializationConfig = class com.fasterxml.jackson.databind.DeserializationConfig@46c645b
+      serialVersionUID = 2
+      DESER_FEATURE_DEFAULTS = 473998480
+      _problemHandlers = null
+      _nodeFactory = class com.fasterxml.jackson.databind.node.JsonNodeFactory@f260c0c0
+      _coercionConfigs = class com.fasterxml.jackson.databind.cfg.CoercionConfigs@b80689ba
+      _ctorDetector = null
+      _deserFeatures = 473998480
+      _parserFeatures = 0
+      _parserFeaturesToChange = 0
+      _formatReadFeatures = 0
+      _formatReadFeaturesToChange = 0
+      EMPTY_OVERRIDE = class com.fasterxml.jackson.databind.cfg.ConfigOverride$Empty@a3e118fd
+      DEFAULT_MAPPER_FEATURES = 12351074043
+      AUTO_DETECT_MASK = 248
+      _mixIns = class com.fasterxml.jackson.databind.introspect.SimpleMixInResolver@679536f7
+      _subtypeResolver = class com.fasterxml.jackson.databind.jsontype.impl.StdSubtypeResolver@e605d361
+      _rootName = null
+      _view = null
+      _attributes = class com.fasterxml.jackson.databind.cfg.ContextAttributes$Impl@8597c8d3
+      _rootNames = class com.fasterxml.jackson.databind.util.RootNameLookup@df562516
+      _configOverrides = class com.fasterxml.jackson.databind.cfg.ConfigOverrides@3e08415b
+      _datatypeFeatures = class com.fasterxml.jackson.databind.cfg.DatatypeFeatures@494c0cd3
+      serialVersionUID = 2
+      EMPTY_INCLUDE = class com.fasterxml.jackson.annotation.JsonInclude$Value@4df242e9
+      EMPTY_FORMAT = class com.fasterxml.jackson.annotation.JsonFormat$Value@7329e43e
+      _mapperFeatures = 12351074043
+      _base = class com.fasterxml.jackson.databind.cfg.BaseSettings@ec190f94
+    _deserializationContext = class com.fasterxml.jackson.databind.deser.DefaultDeserializationContext$Impl@f6aa2576
+      serialVersionUID = 1
+      serialVersionUID = 1
+      _objectIds = null
+      _objectIdResolvers = null
+      serialVersionUID = 1
+      _cache = class com.fasterxml.jackson.databind.deser.DeserializerCache@686d2d01
+      _factory = class com.fasterxml.jackson.databind.deser.BeanDeserializerFactory@394cd8a3
+      _config = null
+      _featureFlags = 0
+      _readCapabilities = null
+      _view = null
+      _parser = null
+      _injectableValues = null
+      _arrayBuilders = null
+      _objectBuffer = null
+      _dateFormat = null
+      _attributes = null
+      _currentType = null
+      MAX_ERROR_STR_LEN = 500
+    _registeredModuleTypes = null
+    _rootDeserializers = class java.util.concurrent.ConcurrentHashMap@5b14bf21
+      serialVersionUID = "/* Could not access serialVersionUID */"
+      MAXIMUM_CAPACITY = "/* Could not access MAXIMUM_CAPACITY */"
+      DEFAULT_CAPACITY = "/* Could not access DEFAULT_CAPACITY */"
+      MAX_ARRAY_SIZE = "/* Could not access MAX_ARRAY_SIZE */"
+      DEFAULT_CONCURRENCY_LEVEL = "/* Could not access DEFAULT_CONCURRENCY_LEVEL */"
+      LOAD_FACTOR = "/* Could not access LOAD_FACTOR */"
+      TREEIFY_THRESHOLD = "/* Could not access TREEIFY_THRESHOLD */"
+      UNTREEIFY_THRESHOLD = "/* Could not access UNTREEIFY_THRESHOLD */"
+      MIN_TREEIFY_CAPACITY = "/* Could not access MIN_TREEIFY_CAPACITY */"
+      MIN_TRANSFER_STRIDE = "/* Could not access MIN_TRANSFER_STRIDE */"
+      RESIZE_STAMP_BITS = "/* Could not access RESIZE_STAMP_BITS */"
+      MAX_RESIZERS = "/* Could not access MAX_RESIZERS */"
+      RESIZE_STAMP_SHIFT = "/* Could not access RESIZE_STAMP_SHIFT */"
+      MOVED = "/* Could not access MOVED */"
+      TREEBIN = "/* Could not access TREEBIN */"
+      RESERVED = "/* Could not access RESERVED */"
+      HASH_BITS = "/* Could not access HASH_BITS */"
+      NCPU = "/* Could not access NCPU */"
+      serialPersistentFields = "/* Could not access serialPersistentFields */"
+      table = "/* Could not access table */"
+      nextTable = "/* Could not access nextTable */"
+      baseCount = "/* Could not access baseCount */"
+      sizeCtl = "/* Could not access sizeCtl */"
+      transferIndex = "/* Could not access transferIndex */"
+      cellsBusy = "/* Could not access cellsBusy */"
+      counterCells = "/* Could not access counterCells */"
+      keySet = "/* Could not access keySet */"
+      values = "/* Could not access values */"
+      entrySet = "/* Could not access entrySet */"
+      U = "/* Could not access U */"
+      SIZECTL = "/* Could not access SIZECTL */"
+      TRANSFERINDEX = "/* Could not access TRANSFERINDEX */"
+      BASECOUNT = "/* Could not access BASECOUNT */"
+      CELLSBUSY = "/* Could not access CELLSBUSY */"
+      CELLVALUE = "/* Could not access CELLVALUE */"
+      ABASE = "/* Could not access ABASE */"
+      ASHIFT = "/* Could not access ASHIFT */"
+      keySet = "/* Could not access keySet */"
+      values = "/* Could not access values */"
+  serialVersionUID = -5533490014128235709
+

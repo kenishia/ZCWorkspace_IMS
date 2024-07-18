@@ -1,0 +1,7 @@
+---
+version: "1.0"
+mappings:
+- body:
+    mappings:
+    - message:
+        template: "{{$zosAssetResponse.message.\"OUTPUT-MSG\".\"OUT-MESSAGE\"}}"

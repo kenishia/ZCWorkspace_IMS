@@ -1,0 +1,6 @@
+
+ Index  Count  Time of first Occurrence    Time of last Occurrence     Exception SourceId ProbeId
+------+------+---------------------------+---------------------------+---------------------------
+     0      1   7/18/24, 15:50:15:517 UTC   7/18/24, 15:50:15:517 UTC javax.resource.spi.EISSystemException com.ibm.zosconnect.zosasset.ims.internal.ImsTranZosAsset 221
+                                                                            - /logs/ffdc/ffdc_24.07.18_15.50.15.0.log
+------+------+---------------------------+---------------------------+---------------------------

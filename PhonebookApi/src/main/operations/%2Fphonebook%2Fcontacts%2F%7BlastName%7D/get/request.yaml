@@ -1,0 +1,13 @@
+---
+version: "1.0"
+mappings:
+- message:
+    mappings:
+    - INPUT-MSG:
+        mappings:
+        - IN-COMMAND:
+            template: "DISPLAY"
+        - IN-RECORD:
+            mappings:
+            - IN-LAST-NAME:
+                template: "{{$pathParameters.lastName}}"
